@@ -19,9 +19,12 @@ edition = "2021"
 rust-version = "1.74"
 
 [workspace.dependencies]
-soroban-sdk = "20.1.0"
-soroban-sdk-testutils = { version = "20.1.0" }
-soroban-env-host = "20.1.0"
+# Use the newer Soroban SDK across the workspace. Keep testutils and env-host
+# aligned to the same major version when available.
+soroban-sdk = "21.7.0"
+soroban-sdk-testutils = { version = "21.7.0" }
+soroban-env-host = "21.7.0"
+base64ct = "=1.6.0"
 
 [profile.release]
 opt-level = "z"

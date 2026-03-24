@@ -12,7 +12,7 @@
 use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Env, Symbol};
 
 #[contracttype]
-#[derive(Clone)]
+#[derive(Clone, Debug, Eq, PartialEq)]
 pub enum DataKey {
     Persistent(Symbol),
     Temporary(Symbol),
@@ -103,7 +103,7 @@ impl StorageContract {
     /// - Admin addresses
     /// - Contract metadata
     pub fn set_instance(env: Env, key: Symbol, value: u64) {
-        env.storage().instance().set(&DataKey::Instance(key), &value);
+        env.storage().instance().set(&DataKey::Instance(key.clone()), &value);
 
         // Extend instance storage TTL
         env.storage().instance().extend_ttl(100, 100);
@@ -116,17 +116,9 @@ impl StorageContract {
     }
 
     /// Retrieves a value from instance storage.
-    ///
-    /// # Returns
-<<<<<<< HEAD
-    /// `Some(value)` if the key exists, `None` if it doesn't.
+    /// Returns `Some(value)` if present, or `None`.
     pub fn get_instance(env: Env, key: Symbol) -> Option<u64> {
-        env.storage().instance().get(&key)
-=======
-    /// The stored value, or panics if key doesn't exist
-    pub fn get_instance(env: Env, key: Symbol) -> u64 {
-        env.storage().instance().get(&DataKey::Instance(key)).unwrap()
->>>>>>> b9af063 (Storage Patterns)
+        env.storage().instance().get(&DataKey::Instance(key))
     }
 
     /// Checks if a key exists in instance storage.
