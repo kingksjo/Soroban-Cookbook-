@@ -1,11 +1,9 @@
-//! # Storage Patterns Contract
+//! Storage Patterns Contract
 //!
 //! Demonstrates the three types of storage available in Soroban:
-//! - Persistent: Data that lives permanently (requires TTL management)
+//! - Persistent: Data that lives long-term and requires TTL management
 //! - Temporary: Data that only exists for the current ledger
-//! - Instance: Data tied to the contract instance lifetime
-//!
-//! Each storage type has different cost and lifetime characteristics.
+//! - Instance: Data tied to the contract instance lifetime (shared TTL)
 
 #![no_std]
 
@@ -31,28 +29,10 @@ impl StorageContract {
     pub fn set_persistent(env: Env, key: Symbol, value: u64) {
         let storage_key = DataKey::Persistent(key.clone());
         env.storage().persistent().set(&storage_key, &value);
-<<<<<<< HEAD
-        env.storage().persistent().extend_ttl(&storage_key, 100, 100);
-        env.events().publish((symbol_short!("persist"), symbol_short!("set")), (key, value));
-=======
-
-<<<<<<< HEAD
-        // Extend TTL to keep data alive
-        // Parameters: (key, threshold_ledgers, extend_to_ledgers)
-        // This extends TTL to 100 ledgers when it falls below 100
-        env.storage().persistent().extend_ttl(&key, 100, 100);
-
-=======
-        // Temporarily disabled for debugging
-        // env.storage().persistent().extend_ttl(&storage_key, 1000, 10000);
-        
->>>>>>> 0fee596 (new storage patterns)
-        // EVENT: Persistent storage updated
-        env.events().publish(
-            (symbol_short!("persist"), symbol_short!("set")),
-            (key, value),
-        );
->>>>>>> 33a6543 (new storage patterns)
+        // Extend TTL so data survives ledger advances in tests
+        env.storage().persistent().extend_ttl(&storage_key, 100, 1000);
+        env.events()
+            .publish((symbol_short!("persist"), symbol_short!("set")), (key, value));
     }
 
     /// Retrieves a value from persistent storage.
@@ -76,21 +56,6 @@ impl StorageContract {
     // ==================== TEMPORARY STORAGE ====================
 
     /// Stores a value in temporary storage.
-    /// Temporary data only exists for the current ledger - cheapest option.
-    ///
-    /// # Arguments
-            env.storage().persistent().extend_ttl(&storage_key, 100, 100);
-            env.events().publish((symbol_short!("persist"), symbol_short!("set")), (key, value));
-    /// * `key` - The storage key
-    /// * `value` - The value to store
-    ///
-    /// # Cost
-    /// Lowest cost, no rent required
-    ///
-    /// # Use Cases
-    /// - Intermediate calculations
-    /// - Transaction-scoped flags
-    /// - Temporary state within a single operation
     pub fn set_temporary(env: Env, key: Symbol, value: u64) {
         env.storage().temporary().set(&DataKey::Temporary(key.clone()), &value);
         env.events()
@@ -101,8 +66,6 @@ impl StorageContract {
     /// Returns `Some(value)` if present, or `None`.
     pub fn get_temporary(env: Env, key: Symbol) -> Option<u64> {
         env.storage().temporary().get(&DataKey::Temporary(key))
-            env.storage().instance().extend_ttl(100, 100);
-            env.events().publish((symbol_short!("instance"), symbol_short!("set")), (key, value));
     }
 
     /// Checks if a key exists in temporary storage.
@@ -112,37 +75,12 @@ impl StorageContract {
 
     // ==================== INSTANCE STORAGE ====================
 
-    /// Stores a value in instance storage.
-    /// Instance data lives as long as the contract instance exists.
-    ///
-    /// # Arguments
-    /// * `key` - The storage key
-    /// * `value` - The value to store
-    ///
-    /// # Cost
-    /// Medium cost, requires rent (but cheaper than persistent)
-    ///
-    /// # Use Cases
-    /// - Contract configuration
-    /// - Admin addresses
-    /// - Contract metadata
+    /// Stores a value in instance storage and extends the instance TTL.
     pub fn set_instance(env: Env, key: Symbol, value: u64) {
         env.storage().instance().set(&DataKey::Instance(key.clone()), &value);
-
-<<<<<<< HEAD
-        // Extend instance storage TTL
-        env.storage().instance().extend_ttl(100, 100);
-
-=======
-        // Temporarily disabled for debugging
-        // env.storage().instance().extend_ttl(1000, 10000);
-        
->>>>>>> 0fee596 (new storage patterns)
-        // EVENT: Instance storage updated
-        env.events().publish(
-            (symbol_short!("instance"), symbol_short!("set")),
-            (key, value),
-        );
+        env.storage().instance().extend_ttl(1000, 10000);
+        env.events()
+            .publish((symbol_short!("instance"), symbol_short!("set")), (key, value));
     }
 
     /// Retrieves a value from instance storage.
@@ -156,7 +94,7 @@ impl StorageContract {
         env.storage().instance().has(&DataKey::Instance(key))
     }
 
-    /// Removes a value from instance storage.
+    /// Removes a value from instance storage and emits an event.
     pub fn remove_instance(env: Env, key: Symbol) {
         env.storage().instance().remove(&DataKey::Instance(key.clone()));
         env.events()
