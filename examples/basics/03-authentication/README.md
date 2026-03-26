@@ -218,6 +218,7 @@ To test authentication patterns, use Soroban's test framework. Write unit tests 
 
 ## Further Reading
 - [Best Practices Guide](../../../docs/best-practices.md)
+- [Security Fundamentals Guide](../../../docs/security/fundamentals.md)
 - [Soroban Documentation](https://soroban.stellar.org/docs)
 - [Smart Contract Security Resources](https://consensys.github.io/smart-contract-best-practices/)
 

@@ -4,6 +4,9 @@ A comprehensive guide to writing secure, efficient, and maintainable Soroban sma
 
 ## 🔒 Security Best Practices
 
+> [!TIP]
+> This section covers high-level best practices. For a deeper dive into common vulnerabilities and secure development workflows, see our [Security Fundamentals Guide](./security/fundamentals.md).
+
 ### 1. Always Use Authorization Checks
 
 ✅ **DO:** Always verify authorization before state changes

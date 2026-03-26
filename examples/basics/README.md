@@ -137,5 +137,6 @@ cargo build -p hello-world --target wasm32-unknown-unknown --release
 ## Next Steps
 
 - [Intermediate Examples](../intermediate/) — token interactions, multi-contract patterns
+- [Security Fundamentals](../../docs/security/fundamentals.md) — comprehensive security guide
 - [Advanced Examples](../advanced/) — protocols, timelocks, multi-party auth
 - [DeFi / NFT / Governance](../defi/) — real-world use-case examples

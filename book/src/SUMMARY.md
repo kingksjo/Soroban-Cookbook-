@@ -26,6 +26,7 @@
 
 - [Quick Reference](./docs/quick-reference.md)
 - [Best Practices](./docs/best-practices.md)
+- [Security Fundamentals](./docs/security/fundamentals.md)
 - [Glossary](./docs/glossary.md)
 
 # Contributing
