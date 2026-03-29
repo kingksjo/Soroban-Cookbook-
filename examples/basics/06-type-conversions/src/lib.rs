@@ -255,14 +255,15 @@ impl TypeConversionsContract {
                     valid = false;
                     break;
                 }
-                acc =
-                    match acc.checked_mul(10).and_then(|v| v.checked_add((b - b'0') as i64)) {
-                        Some(v) => v,
-                        None => {
-                            valid = false;
-                            break;
-                        }
-                    };
+<<<<<<< HEAD
+                // checked_mul / checked_add to avoid overflow panics
+                acc = match acc.checked_mul(10).and_then(|v| v.checked_add((b - b'0') as i64)) {
+                    Some(v) => v,
+                    None => {
+                        valid = false;
+                        break;
+                    }
+                };
             }
 
             if valid {
@@ -290,4 +291,3 @@ impl TypeConversionsContract {
 
 #[cfg(test)]
 mod test;
->>>>>>> 99867cb (feat:implement Show Type Conversions)
