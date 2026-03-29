@@ -1,27 +1,18 @@
-//! # Panic vs Error Handling
-//!
-//! Demonstrates when to use panic! vs Result<T, Error> in Soroban contracts.
-//!
-//! ## Key Principles
-//!
-//! **Use Result<T, Error> for:**
-//! - Expected failures (validation, business logic)
-//! - Recoverable conditions
-//! - User input errors
-//! - Better gas efficiency (no stack unwinding)
-//!
-<<<<<<< HEAD
-//! ## Performance Note
-//!
-//! Both aborts consume the submitted fee; there is no gas "refund" for a
-//! cleaner error path. Prefer typed errors for *user-facing* failures because
-//! they allow the client to react without re-submitting a doomed transaction.
-//!
-//! ## Anatomy
-//!
 //! # Panic vs. Errors in Soroban
 //!
-//! Demonstrates when to use `panic!` vs `Result<T, E>` in Soroban contracts.
+//! Soroban contracts have two failure modes: **panics** (unrecoverable aborts)
+//! and **errors** (typed, recoverable values the caller can inspect).
+//!
+//! ## Decision Rule
+//!
+//! | Situation | Mechanism | Why |
+//! |-----------|-----------|-----|
+//! | Invariant that should never be false | `panic!` / `panic_with_error!` | Signals a bug; no recovery makes sense |
+//! | Auth failure (`require_auth`) | Soroban panics internally | Unauthorized callers must be rejected hard |
+//! | Expected bad input from caller | `Err(ContractError::…)` | Caller can handle and retry |
+//! | Business-logic constraint violated | `Err(ContractError::…)` | Predictable; documentable; testable |
+//! | Reached truly impossible branch | `panic!("unreachable: …")` | Defensive; keeps the type system happy |
+//!
 #![no_std]
 
 use soroban_sdk::{
@@ -65,6 +56,10 @@ pub struct LedgerEventData {
     pub amount: i128,
     pub action: Symbol,
 }
+
+// ---------------------------------------------------------------------------
+// Contract
+// ---------------------------------------------------------------------------
 
 #[contract]
 pub struct ErrorDemoContract;
@@ -179,4 +174,3 @@ impl ErrorDemoContract {
 
 #[cfg(test)]
 mod test;
-    pub fn transfer(amount: u64, balance: u64) -> Result<u64, Error> {
