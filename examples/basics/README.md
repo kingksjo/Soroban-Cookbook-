@@ -2,131 +2,44 @@
 
 Core Soroban fundamentals, one concept per example. Perfect for beginners starting their journey with Soroban smart contracts.
 
-## 📋 Examples
+## 🚀 Suggested Learning Path
 
-### [01-hello-world](./01-hello-world/)
-The simplest possible Soroban contract — a single `hello` function.
-- **Concepts:** `#[contract]`, `#[contractimpl]`, `Symbol`, `Vec`, unit tests.
+Follow these examples in order to build a solid foundation in Soroban development:
 
----
-
-### [02-storage-patterns](./02-storage-patterns/)
-All three Soroban storage layers (persistent, instance, temporary) + TTL management.
-- **Concepts:** `persistent`, `instance`, `temporary` storage; TTL extension; data keys.
+1.  **The Basics**: Start with [01-hello-world](./01-hello-world/) and [09-primitive-types](./09-primitive-types/) to understand contract structure and basic Rust types.
+2.  **Data Modeling**: Explore [06-soroban-types](./06-soroban-types/), [07-enum-types](./07-enum-types/), and [08-custom-structs](./08-custom-structs/) to learn how to represent data.
+3.  **Storage Layers**: Dive into [instance-storage](./instance-storage/), [persistent-storage](./persistent-storage/), and [temporary_storage](./temporary_storage/) to understand how data persists on-chain.
+4.  **Interactivity**: Learn about [basic-event-emission](./basic-event-emission/) and [03-custom-errors](./03-custom-errors/) to communicate with the outside world and handle failures.
+5.  **Advanced Fundamentals**: Master [03-authentication](./03-authentication/) and [06-validation-patterns](./06-validation-patterns/) to build secure and robust contracts.
 
 ---
 
-### [03-authentication](./03-authentication/)
-Address-based authorization using `require_auth()` and role management.
-- **Concepts:** `require_auth()`, admin roles, balances, allowances.
+## 📋 Example Index
 
----
+| # | Example | Difficulty | Description | Key Concepts |
+|:---:|:---|:---:|:---|:---|
+| 1 | [01-hello-world](./01-hello-world/) | ⭐ | The "Hello World" of Soroban. | `#[contract]`, `Symbol`, Tests |
+| 2 | [09-primitive-types](./09-primitive-types/) | ⭐ | Integer types and overflow safety. | `u32`, `i128`, Arithmetic safety |
+| 3 | [06-soroban-types](./06-soroban-types/) | ⭐ | Built-in Soroban types. | `Address`, `Symbol`, `Bytes` |
+| 4 | [10-data-types](./10-data-types/) | ⭐ | Comprehensive type exploration. | Data representation |
+| 5 | [06-type-conversions](./06-type-conversions/) | ⭐⭐ | Secure type casting and conversion. | `Into`, `From`, `TryInto` |
+| 6 | [07-enum-types](./07-enum-types/) | ⭐ | Using enums in contract logic. | Enums, Pattern matching |
+| 7 | [08-custom-structs](./08-custom-structs/) | ⭐ | Complex data structures. | Structs, `#[contracttype]` |
+| 8 | [11-collection-types](./11-collection-types/) | ⭐⭐ | Working with `Vec` and `Map`. | Collections, Iteration |
+| 9 | [instance-storage](./instance-storage/) | ⭐⭐ | Shared contract-instance storage. | Instance storage, TTL |
+| 10 | [persistent-storage](./persistent-storage/) | ⭐⭐ | Long-term data persistence. | Persistent storage, Keys |
+| 11 | [temporary_storage](./temporary_storage/) | ⭐⭐ | Cost-optimized transient data. | Temporary storage, TTL mgmt |
+| 12 | [02-storage-patterns](./02-storage-patterns/) | ⭐⭐⭐ | Advanced storage management. | Combined storage layers |
+| 13 | [basic-event-emission](./basic-event-emission/) | ⭐ | Simple event publishing. | `env.events().publish()` |
+| 14 | [events](./events/) | ⭐ | General event counter example. | State changes, Events |
+| 15 | [04-events](./04-events/) | ⭐⭐ | Structured event topics and design. | Topic indexing, Layouts |
+| 16 | [11-event-filtering](./11-event-filtering/) | ⭐⭐⭐ | Complex multi-topic filters. | Advanced event queries |
+| 17 | [03-custom-errors](./03-custom-errors/) | ⭐⭐ | Custom contract error enums. | `#[contracterror]` |
+| 18 | [05-error-handling](./05-error-handling/) | ⭐⭐⭐ | Propagation and validation patterns. | Result, Panic vs Return |
+| 19 | [03-authentication](./03-authentication/) | ⭐⭐ | Authorization with `require_auth()`. | Auth, Addresses, Roles |
+| 20 | [05-auth-context](./05-auth-context/) | ⭐⭐⭐ | Cross-contract execution context. | Invoker, Contract address |
+| 21 | [06-validation-patterns](./06-validation-patterns/) | ⭐⭐⭐ | Security and validation best practices. | Preconditions, State gating |
 
-### [03-custom-errors](./03-custom-errors/)
-Custom error enums and structured error handling.
-- **Concepts:** `#[contracterror]`, error codes, panic vs. graceful errors.
-
----
-
-### [04-events](./04-events/)
-Structured event emission with query-friendly topic layouts.
-- **Concepts:** `env.events().publish()`, topic design, indexing.
-
----
-
-### [05-auth-context](./05-auth-context/)
-Understanding execution context in cross-contract calls.
-- **Concepts:** `env.current_contract_address()`, invoker detection, proxy calls.
-
----
-
-### [05-error-handling](./05-error-handling/)
-Comprehensive error handling patterns and error propagation.
-- **Concepts:** Error enums, contract errors, validation, event logging.
-
----
-
-### [06-soroban-types](./06-soroban-types/)
-Working with Soroban's built-in type system.
-- **Concepts:** `Address`, `Symbol`, `Bytes`, `Map`, `Vec`, type conversions.
-
----
-
-### [06-type-conversions](./06-type-conversions/)
-Converting between different Soroban and Rust types.
-- **Concepts:** `Into`, `From`, `TryInto`, type safety.
-
----
-
-### [06-validation-patterns](./06-validation-patterns/)
-Input validation, range checks, and state machine gating.
-- **Concepts:** Precondition checks, overflow-safe arithmetic, state validation.
-
----
-
-### [07-enum-types](./07-enum-types/)
-Contract-level enumerations and their use in storage and logic.
-- **Concepts:** `#[contracttype]` enums, matching, operation dispatch.
-
----
-
-### [08-custom-structs](./08-custom-structs/)
-Complex data structures stored on-chain.
-- **Concepts:** `#[contracttype]` structs, nested types, data modeling.
-
----
-
-### [09-primitive-types](./09-primitive-types/)
-Integer types, overflow behaviour, and type conversions.
-- **Concepts:** `u32`, `u64`, `i128`, arithmetic safety, type casting.
-
----
-
-### [10-data-types](./10-data-types/)
-In-depth exploration of Soroban data types.
-- **Concepts:** Comprehensive type coverage and use cases.
-
----
-
-### [11-collection-types](./11-collection-types/)
-Working with `Vec` and `Map` collections in Soroban.
-- **Concepts:** Collection operations, iteration, storage efficiency.
-
----
-
-### [11-event-filtering](./11-event-filtering/)
-Advanced event filtering and indexing patterns.
-- **Concepts:** Multi-topic filters, efficient event retrieval.
-
----
-
-### [basic-event-emission](./basic-event-emission/)
-Simplified event emission for beginners.
-- **Concepts:** Basic `env.events().publish()` usage.
-
----
-
-### [events](./events/)
-General event examples and patterns.
-- **Concepts:** Event structure, naming conventions, audit logs.
-
----
-
-### [instance-storage](./instance-storage/)
-Deep dive into Instance storage layer.
-- **Concepts:** Shared TTL, contract configuration, state management.
-
----
-
-### [persistent-storage](./persistent-storage/)
-Deep dive into Persistent storage layer.
-- **Concepts:** Per-key TTL, user balances, long-term data.
-
----
-
-### [temporary_storage](./temporary_storage/)
-Deep dive into Temporary storage layer.
-- **Concepts:** Short-lived caches, cost optimization, TTL management.
 
 ## 📋 Planned Examples
 
