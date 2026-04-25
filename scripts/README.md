@@ -1,10 +1,10 @@
 # Utility Scripts
 
-Helper scripts for building, testing, and deploying Soroban contracts.
+Helper scripts for building, testing, and deploying Stellar smart contracts.
 
 ## Overview
 
-This directory contains three essential utility scripts that streamline the Soroban smart contract development workflow:
+This directory contains three essential utility scripts that streamline the Stellar smart contract development workflow:
 
 - **build.sh** - Compile contracts to optimized WASM binaries
 - **test.sh** - Run tests with comprehensive validation options
@@ -16,7 +16,7 @@ These scripts provide consistent, automated workflows for common development tas
 
 ### 🏗️ build.sh
 
-Build Soroban smart contracts to optimized WASM.
+Build smart contracts to optimized WASM.
 
 **Usage:**
 
@@ -38,7 +38,7 @@ Build Soroban smart contracts to optimized WASM.
 
 ### 🧪 test.sh
 
-Run tests for Soroban contracts with comprehensive options and coverage reporting.
+Run tests for smart contracts with comprehensive options and coverage reporting.
 
 **Usage:**
 
@@ -90,7 +90,7 @@ Run tests for Soroban contracts with comprehensive options and coverage reportin
 
 ### 🚀 deploy.sh
 
-Deploy Soroban contracts to testnet or mainnet.
+Deploy smart contracts to testnet or mainnet.
 
 **Usage:**
 
@@ -125,7 +125,7 @@ All scripts require:
 
 - Rust and Cargo installed
 - `wasm32-unknown-unknown` target added
-- Soroban CLI installed
+- Stellar CLI installed
 
 **Install requirements:**
 
@@ -173,7 +173,7 @@ cargo init --lib
 ./scripts/deploy.sh examples/defi/liquidity-pool testnet alice
 
 # Verify deployment
-soroban contract invoke \
+stellar contract invoke \
   --id $(cat examples/defi/liquidity-pool/.contract-id-testnet) \
   --source alice \
   --network testnet \
@@ -233,7 +233,7 @@ xdg-open coverage/index.html  # Linux
 ./scripts/deploy.sh examples/basics/01-hello-world testnet alice
 
 # 4. Interact with deployed contract
-soroban contract invoke \
+stellar contract invoke \
   --id $(cat examples/basics/01-hello-world/.contract-id-testnet) \
   --source alice \
   --network testnet \
@@ -418,7 +418,7 @@ cargo clean
 3. **Verify deployment**
 
    ```bash
-   soroban contract invoke \
+   stellar contract invoke \
      --id $(cat examples/my-contract/.contract-id-testnet) \
      --source alice \
      --network testnet \
@@ -548,8 +548,8 @@ stellar contract invoke \
 - [Getting Started Guide](../guides/getting-started.md)
 - [Testing Guide](../guides/testing.md)
 - [Deployment Guide](../guides/deployment.md)
-- [Soroban CLI Reference](https://developers.stellar.org/docs/tools/developer-tools/cli)
+- [Stellar CLI Reference](https://developers.stellar.org/docs/tools/developer-tools/cli)
 
 ---
 
-**Automate your Soroban development workflow!** 🚀
+**Automate your Stellar development workflow!** 🚀

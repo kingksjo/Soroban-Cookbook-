@@ -29,9 +29,14 @@ print_build() {
     echo -e "${BLUE}[BUILD]${NC} $1"
 }
 
-# Check if Rust is installed
+# Check dependencies
 if ! command -v cargo &> /dev/null; then
     print_error "Rust/Cargo is not installed. Please install from https://rustup.rs/"
+    exit 1
+fi
+
+if ! command -v stellar &> /dev/null; then
+    print_error "Stellar CLI is not installed. Install with: cargo install --locked stellar-cli --version 22.1.0"
     exit 1
 fi
 
@@ -51,24 +56,30 @@ build_contract() {
     
     print_build "Building contract: $contract_path"
     
-    cd "$contract_path"
-    
-    # Build WASM with optimizations
-    if ! cargo build --target wasm32-unknown-unknown --release --quiet; then
+    # Build WASM with Stellar CLI
+    if ! (cd "$contract_path" && stellar contract build --quiet); then
         print_error "Build failed for $contract_path"
-        cd - > /dev/null
         return 1
     fi
     
-    # Find and display WASM file info
-    local wasm_file=$(find target/wasm32-unknown-unknown/release -name "*.wasm" | grep -v ".d" | head -n 1)
+    # Find WASM file
+    local wasm_file=$(find "$contract_path/target/wasm32-unknown-unknown/release" -name "*.wasm" ! -name "*.d" | head -n 1)
     
     if [ -n "$wasm_file" ]; then
         local size=$(du -h "$wasm_file" | cut -f1)
         print_info "✓ Built: $wasm_file ($size)"
+        
+        # Optimize WASM
+        local optimized_wasm="${wasm_file%.wasm}.optimized.wasm"
+        print_info "Optimizing WASM..."
+        if stellar contract optimize --wasm "$wasm_file" --wasm-out "$optimized_wasm" &> /dev/null; then
+            local opt_size=$(du -h "$optimized_wasm" | cut -f1)
+            print_info "✓ Optimized: $optimized_wasm ($opt_size)"
+        else
+            print_warn "Optimization failed, using unoptimized WASM"
+        fi
     fi
     
-    cd - > /dev/null
     return 0
 }
 
