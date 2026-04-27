@@ -12,7 +12,7 @@ Runs on every pull request and push to the main branch.
 Runs all unit and integration tests across the examples and shared tooling.
 - **Tasks:** Executes `cargo test` for all packages in the workspace.
 
-### [Deploy Docs](./deploy-docs.md)
+### [Deploy Docs](./deploy-docs.yml)
 Automatically builds and deploys the mdBook documentation to GitHub Pages.
 - **Tasks:** Builds the book from `book/src/` and pushes the output to the `gh-pages` branch.
 

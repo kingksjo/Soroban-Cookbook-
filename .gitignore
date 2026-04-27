@@ -32,7 +32,7 @@ test_snapshots/
 *.dll
 
 # Documentation
-book-output/
+book/book-output/
 docs/_build/
 
 # Temporary files
