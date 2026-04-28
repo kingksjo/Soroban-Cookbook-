@@ -144,6 +144,8 @@ jobs:
 
   # ─────────────────────────────────────────────────────────────────────────
   # Job 5: Coverage (tarpaulin)
+  # Configured via tarpaulin.toml at the workspace root.
+  # Reports are uploaded to Codecov for historical tracking and badge display.
   # ─────────────────────────────────────────────────────────────────────────
   coverage:
     name: Code Coverage
@@ -156,27 +158,52 @@ jobs:
         with:
           toolchain: ${{ env.RUST_VERSION }}
 
-      - name: Cache Cargo registry
+      # Cache the Cargo registry AND the compiled tarpaulin binary together
+      # so repeated runs don't rebuild tarpaulin from source every time.
+      - name: Cache Cargo registry and tarpaulin binary
         uses: actions/cache@v4
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
+            ~/.cargo/bin/cargo-tarpaulin
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
             target
           key: ${{ runner.os }}-cargo-coverage-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-coverage-
 
       - name: Install cargo-tarpaulin
-        run: cargo install cargo-tarpaulin --locked
+        run: |
+          if ! command -v cargo-tarpaulin &> /dev/null; then
+            cargo install cargo-tarpaulin --locked
+          fi
 
+      # tarpaulin.toml controls output format (xml + html + lcov),
+      # output directory (coverage/), timeout, and exclusions.
       - name: Run tarpaulin
-        run: cargo tarpaulin --workspace --all-features --out xml --timeout 300
+        run: cargo tarpaulin
 
-      - name: Upload coverage report
+      # Keep the full coverage report as a downloadable artifact for
+      # historical review — retained for 90 days.
+      - name: Upload coverage artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 90
+
+      # Upload Cobertura XML to Codecov for badge + historical trend graphs.
+      # CODECOV_TOKEN is required for private repos; harmless for public ones.
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          files: ./cobertura.xml
+          files: ./coverage/cobertura.xml
+          flags: workspace
+          name: soroban-cookbook
           fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   # ─────────────────────────────────────────────────────────────────────────
   # Job 6: Build Wasm

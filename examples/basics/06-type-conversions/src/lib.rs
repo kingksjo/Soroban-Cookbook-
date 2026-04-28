@@ -109,7 +109,7 @@ impl TypeConversionsContract {
             // We need to convert String to &str first
             let input_str = "hello"; // Simplified for demo - in real code you'd extract from String
             let symbol = Symbol::new(&env, input_str);
-            (input.clone(), symbol)
+            (input, symbol)
         } else {
             // Create Symbol first, then convert back to String
             let symbol = Symbol::new(&env, "hello");

@@ -1,4 +1,4 @@
-# Advanced Examples
+# Advanced Examples.
 
 Complex smart contract patterns and architectural designs for experienced developers building production-grade systems on Soroban.
 

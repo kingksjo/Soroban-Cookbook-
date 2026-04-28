@@ -295,16 +295,13 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --coverage)
+            GENERATE_COVERAGE=true
             RUN_COVERAGE=true
             shift
             ;;
         -a|--all)
             RUN_CLIPPY=true
             CHECK_FORMAT=true
-            shift
-            ;;
-        --coverage)
-            GENERATE_COVERAGE=true
             shift
             ;;
         -h|--help)

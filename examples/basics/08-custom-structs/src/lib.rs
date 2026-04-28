@@ -400,7 +400,7 @@ impl CustomStructsContract {
     ) -> Result<UserProfile, ContractError> {
         let profile = UserProfile {
             address: address.clone(),
-            name: name.clone(),
+            name,
             email,
             avatar_hash: None,
             reputation: 0,
@@ -411,7 +411,7 @@ impl CustomStructsContract {
         // Store the profile
         env.storage()
             .instance()
-            .set(&(symbol_short!("profile"), address.clone()), &profile);
+            .set(&(symbol_short!("profile"), address), &profile);
 
         Ok(profile)
     }
@@ -454,7 +454,7 @@ impl CustomStructsContract {
         // Store updated profile
         env.storage()
             .instance()
-            .set(&(symbol_short!("profile"), address.clone()), &profile);
+            .set(&(symbol_short!("profile"), address), &profile);
 
         Ok(profile)
     }
@@ -489,10 +489,9 @@ impl CustomStructsContract {
         };
 
         // Store the portfolio
-        env.storage().instance().set(
-            &(symbol_short!("portfolio"), owner.clone(), name.clone()),
-            &portfolio,
-        );
+        env.storage()
+            .instance()
+            .set(&(symbol_short!("portfolio"), owner, name), &portfolio);
 
         Ok(portfolio)
     }
@@ -532,7 +531,7 @@ impl CustomStructsContract {
 
         // Create new holding
         let holding = AssetHolding {
-            asset: asset.clone(),
+            asset,
             quantity,
             avg_purchase_price: price,
             current_value: None,
@@ -606,10 +605,9 @@ impl CustomStructsContract {
         };
 
         // Store extended profile
-        env.storage().instance().set(
-            &(symbol_short!("ext_prof"), address.clone()),
-            &extended_profile,
-        );
+        env.storage()
+            .instance()
+            .set(&(symbol_short!("ext_prof"), address), &extended_profile);
 
         Ok(extended_profile)
     }
@@ -687,7 +685,7 @@ impl CustomStructsContract {
         owner: Address,
         portfolio_name: String,
     ) -> Result<i128, ContractError> {
-        let portfolio: Portfolio = Self::get_portfolio(env.clone(), owner, portfolio_name)?;
+        let portfolio: Portfolio = Self::get_portfolio(env, owner, portfolio_name)?;
 
         let mut total_value = 0i128;
 

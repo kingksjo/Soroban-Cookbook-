@@ -40,6 +40,11 @@ A comprehensive collection of Soroban smart contract examples, ranging from basi
 - **Key Topics:** Voting systems, treasury management, proposal lifecycles.
 - **Status:** 📋 Planned and coming soon.
 
+### [Storage](./storage/)
+**State archival and storage tiers** on Soroban.
+- **Key Topics:** Persistent, Instance, and Temporary storage, TTL management, state archival.
+- **Status:** ✅ High-level conceptual guide and foundational examples available.
+
 ## 🚀 How to Use These Examples
 
 1. **Clone the repository:**
@@ -99,6 +104,10 @@ DAO and voting system examples.
 ### [Tokens](./tokens/)
 Token standards and custom token implementations.
 - SEP-41, Custom tokens, Wrapper tokens
+
+### [Storage](./storage/)
+Soroban's unique storage model and state-archival system.
+- Persistent, Instance, Temporary, TTL, State Archival
 
 ---
 
