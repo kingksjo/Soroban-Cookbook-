@@ -10,13 +10,13 @@ assignees: ''
 ## Use Case
 
 <!-- Describe the use case or problem this feature addresses.
-     Who needs this? What are they trying to accomplish? -->
+     Who needs this, and what are they trying to accomplish? -->
 
 ## Proposed Solution
 
 <!-- Describe the feature you'd like to see implemented.
-     Be as specific as possible — include file paths, function names,
-     or code snippets if applicable. -->
+     Be as specific as possible and include file paths, function names,
+     or code snippets when applicable. -->
 
 ```rust
 // Optional: sketch of the proposed implementation
@@ -25,7 +25,7 @@ assignees: ''
 ## Alternative Solutions
 
 <!-- Have you considered other approaches?
-     List any alternatives and explain why the proposed solution is preferred. -->
+     List alternatives and explain why the proposed solution is preferred. -->
 
 ## Additional Context
 

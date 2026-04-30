@@ -19,6 +19,7 @@
 
 ## Intermediate
 - [Multi-sig patterns](./examples/intermediate.md)
+- [Ajo Factory](./examples/ajo-factory.md)
 
 ## Advanced (2 examples)
 - [Multi-party auth](./examples/advanced.md)

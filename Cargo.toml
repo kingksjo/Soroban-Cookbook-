@@ -19,6 +19,7 @@ rust-version = "1.74"
 
 [workspace.dependencies]
 soroban-sdk = "21.7.0"
+base64ct = "=1.6.0"
 
 [profile.release]
 opt-level = "z"
@@ -32,4 +33,12 @@ lto = true
 
 [profile.release-with-logs]
 inherits = "release"
+debug-assertions = true
+
+[profile.test]
+# Keep overflow checks and debug assertions active during testing so that
+# arithmetic bugs surface as panics rather than silent wrapping.
+opt-level = 0
+debug = true
+overflow-checks = true
 debug-assertions = true

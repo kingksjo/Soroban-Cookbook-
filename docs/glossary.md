@@ -20,7 +20,7 @@ In Soroban, an Address is a generic identifier that can represent an account, a 
 
 A representation of value on the Stellar network. Assets can be native (XLM) or issued by accounts (custom tokens).
 
-**See also:** [Lumens](#lumens-xlm), [Token](#token)
+**See also:** [Lumens / XLM](#lumens--xlm), [Token](#token)
 
 ### Authorization
 
@@ -39,13 +39,19 @@ let data: Bytes = Bytes::from_slice(&env, &[1, 2, 3]);
 let hash: BytesN<32> = BytesN::from_array(&env, &[0u8; 32]);
 ```
 
+### Bump
+
+An operation that extends the TTL (time to live) of contract data or code in the ledger. Must be performed before data expires to keep it accessible.
+
+**See also:** [TTL / Time To Live](#ttl--time-to-live), [State Archival](#state-archival)
+
 ## C
 
 ### Contract
 
 A smart contract deployed on the Stellar network using Soroban. Contracts are written in Rust and compiled to WebAssembly.
 
-**See also:** [WASM](#wasm-webassembly), [Invocation](#invocation)
+**See also:** [WASM / WebAssembly](#wasm--webassembly), [Invocation](#invocation)
 
 ### Contract ID
 
@@ -79,6 +85,12 @@ pub struct MyData {
 }
 ```
 
+### Cross-contract Invocation
+
+Calling a function in one Soroban contract from another Soroban contract. Enables composability and complex interactions between contracts on the network.
+
+**See also:** [Contract](#contract), [Invocation](#invocation)
+
 ## D
 
 ### Deploy
@@ -108,6 +120,12 @@ env.events().publish((symbol_short!("transfer"),), (from, to, amount));
 ```
 
 **See also:** [Publish](#publish)
+
+### Errors and Validation
+
+The process of handling errors in Soroban contracts and validating input/state. Soroban supports custom error types with the `#[derive(Debug)]` macro and uses error propagation patterns similar to Rust's `Result<T, E>`.
+
+**See also:** [Panic](#panic)
 
 ## F
 
@@ -159,11 +177,17 @@ The act of calling a contract function. Can be done via transactions or from oth
 
 The Stellar ledger is the record of all accounts, balances, and contracts on the network. Each ledger close represents a new block.
 
+**See also:** [Ledger Close](#ledger-close), [Ledger Entry](#ledger-entry)
+
+### Ledger Close
+
+The moment when the Stellar network validates and closes the current ledger, creating a new ledger and advancing all validators' ledger state. Occurs approximately every 5 seconds.
+
 ### Ledger Entry
 
 A piece of data stored on the Stellar ledger, such as an account, contract code, or contract data.
 
-### Lumens (XLM)
+### Lumens / XLM
 
 The native cryptocurrency of the Stellar network. Used for paying transaction fees and maintaining minimum account balances.
 
@@ -200,13 +224,13 @@ A string that uniquely identifies a Stellar network (mainnet, testnet, or custom
 
 An unrecoverable error in Rust. In Soroban, panics cause the entire transaction to fail and revert.
 
-**See also:** [Error Handling](#error-handling)
+**See also:** [Errors and Validation](#errors-and-validation)
 
 ### Persistent Storage
 
 Contract storage that persists indefinitely (with proper TTL extension). Most expensive storage type but guarantees data persistence.
 
-**See also:** [Instance Storage](#instance-storage), [Temporary Storage](#temporary-storage), [TTL](#ttl-time-to-live)
+**See also:** [Instance Storage](#instance-storage), [Temporary Storage](#temporary-storage), [TTL / Time To Live](#ttl--time-to-live)
 
 ### Publish
 
@@ -264,6 +288,14 @@ A preflight execution step that estimates resource usage, resolves the transacti
 
 **Official docs:** [Simulate Transactions](https://developers.stellar.org/docs/tools/sdks/build-tx/transaction-simulation)
 
+### State Archival
+
+Stellar's mechanism for managing long-term storage of contract state. Infrequently-accessed data is archived, and contracts must periodically extend the TTL of their data to keep it accessible.
+
+**Official docs:** [Storage and TTL](https://developers.stellar.org/docs/build/smart-contracts/storage/state-archival)
+
+**See also:** [TTL / Time To Live](#ttl--time-to-live), [Bump](#bump)
+
 ### Stellar
 
 The blockchain network that Soroban contracts run on. Known for fast, low-cost transactions and built-in asset support.
@@ -278,7 +310,7 @@ Persistent data storage for contracts. Soroban provides three storage types: Per
 
 The smallest unit of XLM. 1 XLM = 10,000,000 stroops.
 
-**See also:** [Lumens](#lumens-xlm)
+**See also:** [Lumens / XLM](#lumens--xlm)
 
 ### Symbol
 
@@ -309,7 +341,7 @@ A test version of the Stellar network for development. Uses test XLM with no rea
 
 A fungible asset on Stellar or Soroban. Can be native (XLM) or custom tokens following standards like SEP-41.
 
-**See also:** [Asset](#asset), [SEP-41](#sep-41)
+**See also:** [Asset](#asset), [Lumens / XLM](#lumens--xlm), [SEP-41](#sep-41)
 
 ### Transaction
 
@@ -319,11 +351,11 @@ A collection of operations signed by one or more accounts. In Soroban, transacti
 
 A Stellar concept where an account explicitly trusts and can hold a specific asset issued by another account.
 
-### TTL (Time To Live)
+### TTL / Time To Live
 
 The number of ledgers that contract data will persist before expiring. Must be extended to keep data alive.
 
-**See also:** [Storage](#storage)
+**See also:** [Storage](#storage), [Bump](#bump), [State Archival](#state-archival)
 
 ### TTL Extension
 
@@ -362,7 +394,7 @@ vec.push_back(42);
 
 ## W
 
-### WASM (WebAssembly)
+### WASM / WebAssembly
 
 The binary format that Soroban contracts are compiled to. Provides portability and security.
 

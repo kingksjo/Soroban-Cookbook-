@@ -1,42 +1,14 @@
 # Basic Examples
 
-Core Soroban fundamentals, one concept per example. Perfect for beginners starting their journey with Soroban smart contracts.
+This category contains beginner-friendly examples that introduce the core concepts of Soroban smart contract development, one at a time. Each example is designed to be minimal, focused, and easy to understand.
 
-## 🎯 Learning Path
+## What's Inside?
 
-Follow this recommended sequence to build your understanding progressively:
+- **Fundamental Concepts**: Learn about contract structure, storage types, authentication, custom errors, and event emission.
+- **Core Data Types**: Understand how to work with Soroban's built-in types like `Address`, `Symbol`, `Vec`, `Map`, and primitive types.
+- **Best Practices**: See simple, effective patterns for validation, error handling, and writing clean, testable code.
 
-```
-Beginner
-  │
-  ├── 01-hello-world          ← Start here: contract structure basics
-  ├── basic-event-emission    ← Emit your first event
-  ├── 02-storage-patterns     ← Understand all three storage tiers
-  ├── instance-storage        ← Deep dive: instance storage
-  ├── persistent-storage      ← Deep dive: persistent storage
-  ├── temporary_storage       ← Deep dive: temporary storage
-  │
-Intermediate
-  │
-  ├── 03-custom-errors        ← Structured error handling
-  ├── 05-error-handling       ← Error propagation patterns
-  ├── 03-authentication       ← Auth with require_auth()
-  ├── 05-auth-context         ← Cross-contract auth context
-  ├── 04-events               ← Structured, production-grade events
-  ├── events                  ← Counter contract with events
-  ├── 11-event-filtering      ← Design events for off-chain filtering
-  │
-Advanced
-  │
-  ├── 06-soroban-types        ← Full type system overview
-  ├── 06-type-conversions     ← Safe type conversion patterns
-  ├── 09-primitive-types      ← Integer types and overflow safety
-  ├── 10-data-types           ← Comprehensive data type reference
-  ├── 11-collection-types     ← Vec and Map in depth
-  ├── 06-validation-patterns  ← Input, state, and auth validation
-  ├── 07-enum-types           ← Enums, state machines, dispatch
-  └── 08-custom-structs       ← Complex on-chain data structures
-```
+## Planned Examples
 
 ## 📋 All Examples
 
@@ -127,15 +99,23 @@ Designing Soroban events specifically for efficient off-chain filtering.
 
 ### Types
 
-#### [06-soroban-types](./06-soroban-types/) — 🟠 Advanced
-Working with all of Soroban's built-in types in one place.
-- **Concepts:** `Address`, `Bytes`, `BytesN<N>`, `Symbol`, `String`, `Vec`, `Map`, type selection guidelines, gas trade-offs
-- **Best for:** Reference when choosing the right type for a use case
 
-#### [06-type-conversions](./06-type-conversions/) — 🟠 Advanced
-Safe and unsafe conversions between Soroban and Rust types.
-- **Concepts:** `TryFrom`/`TryInto`, `Val` roundtrips, numeric conversions, overflow-safe casting
-- **Best for:** Contracts that bridge external data or perform complex type coercions
+### [12-error-handling](./12-error-handling/)
+
+Foundational error handling patterns using Result and panic.
+
+**Concepts:** `#[contracterror]`, `Result<T, E>`, error codes, `try_*` client methods, invariant panics
+
+---
+
+## Supporting Packages
+
+### [11-collection-types](./11-collection-types/)
+Working with `Vec` and `Map` collections in Soroban.
+- **Concepts:** Collection operations, iteration, storage efficiency.
+
+
+---
 
 #### [09-primitive-types](./09-primitive-types/) — 🟠 Advanced
 Integer types, overflow behaviour, boolean logic, and financial arithmetic.
@@ -156,10 +136,9 @@ Comprehensive reference for every Soroban data type with gas cost comparisons.
 
 ### Validation & Data Modeling
 
-#### [06-validation-patterns](./06-validation-patterns/) — 🟠 Advanced
-Comprehensive input, state, and authorization validation with structured error codes.
-- **Concepts:** Parameter validation (100–199), state validation (200–299), auth validation (300–399), fail-fast ordering, cooldowns, blacklists
-- **Best for:** Production contracts that need defense-in-depth validation
+### [instance-storage](./instance-storage/)
+Focused demonstration of the Instance storage layer for small contract-wide state.
+- **Concepts:** Shared instance TTL, bounded configuration, counters, persistent-storage trade-offs.
 
 #### [07-enum-types](./07-enum-types/) — 🟠 Advanced
 Contract-level enumerations for type-safe state, roles, and operation dispatch.
