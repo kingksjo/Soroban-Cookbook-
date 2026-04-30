@@ -192,6 +192,7 @@ Reference docs in [docs/](./docs/):
 - [Style Guide](./docs/style-guide.md) — Naming, documentation, and testing standards
 - [Quick Reference](./docs/quick-reference.md) — Cheat sheet for common patterns
 - [Glossary](./docs/glossary.md) — Key terms and concepts
+- [Troubleshooting](./docs/troubleshooting.md) — Common build, test, and deployment issues with solutions
 
 The full documentation site is built with [mdBook](https://rust-lang.github.io/mdBook/) and deployed to GitHub Pages on every push to `main`.
 

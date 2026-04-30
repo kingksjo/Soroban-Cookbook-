@@ -45,6 +45,7 @@
 - [Style Guide](./docs/style-guide.md)
 - [Glossary](./docs/glossary.md)
 - [Common Patterns](./docs/common-patterns.md)
+- [Troubleshooting](./docs/troubleshooting.md)
 
 # Contributing
 
