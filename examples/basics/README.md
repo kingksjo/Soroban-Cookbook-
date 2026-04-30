@@ -1,14 +1,14 @@
 # Basic Examples
 
-Core Soroban fundamentals, one concept per example. Perfect for beginners starting their journey with Soroban smart contracts.
+This category contains beginner-friendly examples that introduce the core concepts of Soroban smart contract development, one at a time. Each example is designed to be minimal, focused, and easy to understand.
 
-## 📋 Examples
+## What's Inside?
 
-### [01-hello-world](./01-hello-world/)
-The simplest possible Soroban contract — a single `hello` function.
-- **Concepts:** `#[contract]`, `#[contractimpl]`, `Symbol`, `Vec`, unit tests.
+- **Fundamental Concepts**: Learn about contract structure, storage types, authentication, custom errors, and event emission.
+- **Core Data Types**: Understand how to work with Soroban's built-in types like `Address`, `Symbol`, `Vec`, `Map`, and primitive types.
+- **Best Practices**: See simple, effective patterns for validation, error handling, and writing clean, testable code.
 
----
+## Planned Examples
 
 ### [02-storage-patterns](./02-storage-patterns/)
 All three Soroban storage layers (persistent, instance, temporary) + TTL management.
