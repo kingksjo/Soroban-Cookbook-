@@ -9,7 +9,13 @@
 #![cfg(test)]
 
 use multi_party_auth;
-use soroban_sdk::{symbol_short, testutils::Address as _, Address, Env, IntoVal, Symbol, Vec};
+use soroban_sdk::{
+    symbol_short,
+    testutils::{Address as _, IssuerFlags},
+    token::{StellarAssetClient, TokenClient},
+    Address, Env, IntoVal, Symbol, Vec,
+};
+use token_wrapper;
 
 // ---------------------------------------------------------------------------
 // Test 1: Multi-Contract Workflow — Hello World + Storage + Events counter
@@ -78,7 +84,60 @@ fn test_greeting_system_workflow() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 2: Authentication + Storage Integration
+// Test 2: Token Wrapper End-to-End Flow
+// ---------------------------------------------------------------------------
+
+#[test]
+fn test_token_wrapper_multi_user_flow() {
+    let env = Env::default();
+    env.mock_all_auths();
+
+    let admin = Address::generate(&env);
+    let asset = env.register_stellar_asset_contract_v2(admin.clone());
+    asset.issuer().set_flag(IssuerFlags::ClawbackEnabledFlag);
+
+    let underlying_id = asset.address();
+    let underlying = TokenClient::new(&env, &underlying_id);
+    let underlying_admin = StellarAssetClient::new(&env, &underlying_id);
+
+    let wrapper_id = env.register_contract(None, token_wrapper::TokenWrapper);
+    let wrapper = token_wrapper::TokenWrapperClient::new(&env, &wrapper_id);
+    wrapper.initialize(&underlying_id);
+
+    let alice = Address::generate(&env);
+    let bob = Address::generate(&env);
+    underlying_admin.mint(&alice, &600);
+    underlying_admin.mint(&bob, &400);
+
+    assert_eq!(wrapper.wrap(&alice, &250), 250);
+    assert_eq!(wrapper.wrap(&bob, &100), 100);
+    wrapper.transfer(&alice, &bob, &50);
+
+    assert_eq!(wrapper.balance(&alice), 200);
+    assert_eq!(wrapper.balance(&bob), 150);
+    assert_eq!(underlying.balance(&alice), 350);
+    assert_eq!(underlying.balance(&bob), 300);
+    assert_eq!(underlying.balance(&wrapper_id), 350);
+
+    assert_eq!(wrapper.unwrap(&bob, &120), 30);
+
+    assert_eq!(wrapper.balance(&bob), 30);
+    assert_eq!(underlying.balance(&bob), 420);
+    assert_eq!(underlying.balance(&wrapper_id), 230);
+
+    let backing = wrapper.backing();
+    assert!(backing.fully_backed);
+    assert!(backing.exactly_backed);
+    assert_eq!(backing.surplus, 0);
+
+    assert_eq!(
+        wrapper.try_unwrap(&alice, &999),
+        Err(Ok(token_wrapper::WrapperError::InsufficientWrappedBalance))
+    );
+}
+
+// ---------------------------------------------------------------------------
+// Test 3: Authentication + Storage Integration
 // ---------------------------------------------------------------------------
 
 #[test]
@@ -201,7 +260,7 @@ fn test_authenticated_storage_workflow() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 5: Validation + Custom Errors Integration
+// Test 6: Validation + Custom Errors Integration
 // ---------------------------------------------------------------------------
 
 #[test]
@@ -245,7 +304,7 @@ fn test_validation_and_errors_integration() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 6: Ajo Factory + Authentication Lifecycle
+// Test 7: Ajo Factory + Authentication Lifecycle
 // ---------------------------------------------------------------------------
 
 #[test]
@@ -303,7 +362,7 @@ fn test_ajo_factory_lifecycle_integration() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 7: Multi-Sig Governance + Events Tracking
+// Test 8: Multi-Sig Governance + Events Tracking
 // ---------------------------------------------------------------------------
 
 #[test]
@@ -375,7 +434,7 @@ fn test_multi_sig_governance_integration() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 3: Cross-Contract Coordination — Auth + Events + Storage
+// Test 4: Cross-Contract Coordination — Auth + Events + Storage
 // ---------------------------------------------------------------------------
 
 #[test]
@@ -458,7 +517,7 @@ fn test_cross_contract_event_tracking() {
 }
 
 // ---------------------------------------------------------------------------
-// Test 4: Storage Type Comparison — End-to-End
+// Test 5: Storage Type Comparison — End-to-End
 // ---------------------------------------------------------------------------
 
 #[test]
