@@ -5,6 +5,7 @@
 # Getting Started
 
 - [Setup Environment](./guides/getting-started.md)
+- [macOS Setup Guide](./guides/macos-setup.md)
 - [Testing Guide](./guides/testing.md)
 - [Local Simulation](./guides/local-simulation.md)
 - [Deployment Guide](./guides/deployment.md)
@@ -20,6 +21,7 @@
 
 ## Intermediate
 - [Multi-sig patterns](./examples/intermediate.md)
+- [Ajo Factory](./examples/ajo-factory.md)
 
 ## Advanced (2 examples)
 - [Multi-party auth](./examples/advanced.md)
@@ -45,6 +47,7 @@
 - [Style Guide](./docs/style-guide.md)
 - [Glossary](./docs/glossary.md)
 - [Common Patterns](./docs/common-patterns.md)
+- [Troubleshooting](./docs/troubleshooting.md)
 
 # Contributing
 
