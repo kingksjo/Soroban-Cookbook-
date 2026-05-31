@@ -21,8 +21,9 @@
 - [Multi-sig patterns](./examples/intermediate.md)
 - [Ajo Factory](./examples/ajo-factory.md)
 
-## Advanced (2 examples)
+## Advanced (3 examples)
 - [Multi-party auth](./examples/advanced.md)
+- [Oracle Pattern](./examples/advanced.md)
 
 # Use Cases
 
