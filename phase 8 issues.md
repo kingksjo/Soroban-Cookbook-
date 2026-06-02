@@ -1,4 +1,4 @@
-# Phase 8: Community & Ecosystem - Issues
+# Phase 8: Community & Ecosystem
 
 **Phase Status:**  PLANNED  
 **Completion:** 0%  
