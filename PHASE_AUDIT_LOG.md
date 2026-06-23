@@ -25,3 +25,22 @@ Removed completed issues during Agent 2 reconciliation (June 22, 2026).
 ## Phase 8 — removed 0 issues
 (none)
 
+---
+
+## June 23, 2026 — 100 issues exported to GitHub
+
+See [ISSUES_CREATED_LOG.md](ISSUES_CREATED_LOG.md) for GitHub issue numbers and URLs.
+
+| Phase file | Removed (exported) | Remaining in file |
+|------------|-------------------:|------------------:|
+| phase 1 issues.md | 0 | 0 |
+| phase 2 issues.md | 0 | 2 |
+| phase 3 issues.md | 0 | 45 |
+| phase 4 issues.md | 20 | 42 |
+| phase 5 issues.md | 20 | 35 |
+| phase 6 issues.md | 20 | 39 |
+| phase 7 issues.md | 20 | 38 |
+| phase 8 issues.md | 20 | 49 |
+
+Manifest: `ISSUES_CREATED_MANIFEST.json`
+

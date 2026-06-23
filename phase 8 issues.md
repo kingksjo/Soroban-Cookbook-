@@ -1,8 +1,8 @@
 # Phase 8: Community & Ecosystem -
 
 **Phase Status:** 📋 PLANNED (Ongoing)  
-**Completion:** 0% (0/65)  
-**Last Audit Date:** June 22, 2026
+**Completion:** 0% (0/49)
+**Last Audit Date:** June 23, 2026
 
 Community and ecosystem initiatives — no in-repo deliverables yet.
 
@@ -42,25 +42,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Date scheduled
   - Promotion campaign
   - Recording and notes
-
-
-### Issue #381: Create Call Template
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Template for monthly calls
-- **Acceptance Criteria:**
-  - Agenda templa
-  - Format guidelines
-  - Moderation guide
-  - Q&A process
-  - Follow-up process
 
 
 ### Issue #382: Establish Call Schedule
@@ -103,44 +84,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
 ## Bug Bounty Program
 
 
-### Issue #384: Design Bug Bounty Program
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Design bug bounty program structure
-- **Acceptance Criteria:**
-  - Program structure defined
-  - Reward tiers established
-  - Scope defined
-  - Rules and guidelines
-  - Budget allocated
-
-
-### Issue #385: Create Bug Bounty Platform
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Set up bug bounty platform
-- **Acceptance Criteria:**
-  - Platform selected (HackerOne, etc.)
-  - Program configured
-  - Submission process
-  - Triage workflow
-  - Documentation
-
-
 ### Issue #386: Launch Bug Bounty Program
 
 
@@ -158,84 +101,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Marketing campaign
   - Community notified
   - Initial participants
-
-
-### Issue #387: Establish Triage Process
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Process for triaging bug reports
-- **Acceptance Criteria:**
-  - Triage team identified
-  - Response SLAs defined
-  - Severity assessment
-  - Reward determination
-  - Communication templates
-
-
-### Issue #388: Create Bug Bounty Documentation
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Documentation for bug bounty program
-- **Acceptance Criteria:**
-  - How to participate
-  - Submission guidelines
-  - Reward structure
-  - Hall of fame
-  - FAQ
-
-## Contributor Recognition System
-
-
-### Issue #389: Design Recognition System
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** System for recognizing contributors
-- **Acceptance Criteria:**
-  - Recognition criteria defined
-  - Levels/tiers established
-  - Rewards identified
-  - Automation plan
-  - Documentation
-
-
-### Issue #390: Create Contributors Page
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Page highlighting contributors
-- **Acceptance Criteria:**
-  - Contributors page created
-  - Automatic updates from Git
-  - Contribution statistics
-  - Profile links
-  - Thank you messages
 
 
 ### Issue #391: Implement Contributor Badges
@@ -335,122 +200,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Partnership established
 
 
-### Issue #396: Get Featured in Official Docs
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Feature cookbook in Stellar docs
-- **Acceptance Criteria:**
-  - Proposal submitted
-  - Content provided
-  - Link added to official docs
-  - Cross-promotion
-  - Announcement
-
-
-### Issue #397: Collaborate on Content
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Collaborative content with Stellar
-- **Acceptance Criteria:**
-  - Joint blog posts
-  - Co-hosted events
-  - Shared examples
-  - Cross-linking
-  - Regular sync meetings
-
-
-### Issue #398: Participate in Stellar Events
-
-
-- **Priority:** Medium
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Present at Stellar events
-- **Acceptance Criteria:**
-  - Event participation
-  - Presentation/workshop
-  - Booth/presence
-  - Networking
-  - Follow-up
-
-## Integration with Popular Wallets
-
-
-### Issue #399: Research Wallet Ecosystem
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Research Soroban-compatible wallets
-- **Acceptance Criteria:**
-  - Wallet survey completed
-  - Features compared
-  - Integration requirements
-  - Priority list created
-  - Documentation
-
-
-### Issue #400: Create Wallet Integration Guide
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Guide for wallet integration
-- **Acceptance Criteria:**
-  - docs/wallet-integration.md
-  - Integration examples
-  - Testing guide
-  - Best practices
-  - Multiple wallets covered
-
-
-### Issue #401: Integrate with Freighter Wallet
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Examples using Freighter
-- **Acceptance Criteria:**
-  - Freighter examples
-  - Connection guide
-  - Transaction signing
-  - Testing guide
-  - Documentation
-
-
 ### Issue #402: Integrate with Other Wallets
 
 
@@ -489,25 +238,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Repository and docs
 
 ## Showcase of Built Projects
-
-
-### Issue #404: Create Project Showcase Page
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Showcase projects using cookbook
-- **Acceptance Criteria:**
-  - Showcase page created
-  - Submission process
-  - Project templates
-  - Categories
-  - Search and filter
 
 
 ### Issue #405: Establish Submission Guidelines
@@ -685,25 +415,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Rules and guidelines
 
 
-### Issue #414: Setup GitHub Discussions
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Enable GitHub Discussions
-- **Acceptance Criteria:**
-  - Discussions enabled
-  - Categories created
-  - Pinned posts
-  - Moderation guidelines
-  - Welcome post
-
-
 ### Issue #415: Create Twitter/X Account
 
 
@@ -761,44 +472,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Comment system
 
 ## Documentation & Resources
-
-
-### Issue #418: Create Community Guidelines
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Guidelines for community participation
-- **Acceptance Criteria:**
-  - Community guidelines document
-  - Code of conduct reinforced
-  - Reporting process
-  - Enforcement procedures
-  - Published prominently
-
-
-### Issue #419: Create Onboarding Guide
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Onboarding for new community members
-- **Acceptance Criteria:**
-  - Welcome guide created
-  - How to get started
-  - Where to ask questions
-  - How to contribute
-  - Resources list
 
 
 ### Issue #420: Create Mentorship Program
@@ -919,25 +592,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
 ## Metrics & Analytics
 
 
-### Issue #426: Setup Community Analytics
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Track community metrics
-- **Acceptance Criteria:**
-  - Metrics defined
-  - Tracking tools setup
-  - Dashboard created
-  - Regular reporting
-  - Documentation
-
-
 ### Issue #427: Track GitHub Metrics
 
 
@@ -1014,44 +668,6 @@ Community and ecosystem initiatives — no in-repo deliverables yet.
   - Action items
 
 ## Feedback & Improvement
-
-
-### Issue #431: Create Feedback System
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** System for collecting feedback
-- **Acceptance Criteria:**
-  - Feedback forms
-  - Survey tools
-  - Review process
-  - Action tracking
-  - Communication
-
-
-### Issue #432: Conduct User Surveys
-
-
-- **Priority:** High
-- **Status:** Planned
-
-- **Current state:** No in-repo deliverables; operational/community work tracked for planning.
-- **Implementation hints:** Document outcomes in README or `CONTRIBUTING.md` when completed; link external resources.
-- **Verification:** Manual verification against acceptance criteria; update phase file when done.
-- **Scope:** M
-- **Description:** Regular user surveys
-- **Acceptance Criteria:**
-  - Survey designed
-  - Distributed quarterly
-  - Responses analyzed
-  - Actions taken
-  - Results shared
 
 
 ### Issue #433: Implement Feature Voting
@@ -1344,4 +960,3 @@ Community categories:
 - Success Milestones: 5 issues
 
 **Target: 100+ stars, 50+ contributors, 10+ projects**
-
