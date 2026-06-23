@@ -45,6 +45,7 @@
 use super::*;
 use soroban_sdk::testutils::{Events as _, Ledger as _};
 use soroban_sdk::{symbol_short, Env, Symbol, TryFromVal};
+use soroban_validation::test_events::EventList;
 
 #[test]
 fn test_persistent_storage() {
@@ -62,7 +63,7 @@ fn test_persistent_storage() {
     client.set_persistent(&key, &value);
 
     // Verify set event
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let (_, topics, data) = events.last().unwrap();
     assert_eq!(topics.len(), 2);
     let t0: Symbol = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();
@@ -83,7 +84,7 @@ fn test_persistent_storage() {
     client.remove_persistent(&key);
 
     // Verify remove event
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let (_, topics, data) = events.last().unwrap();
     assert_eq!(topics.len(), 2);
     let t0: Symbol = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();
@@ -113,7 +114,7 @@ fn test_temporary_storage() {
     client.set_temporary(&key, &value);
 
     // Verify event
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let (_, topics, data) = events.last().unwrap();
     assert_eq!(topics.len(), 2);
     let t0: Symbol = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();
@@ -147,7 +148,7 @@ fn test_instance_storage() {
     client.set_instance(&key, &value);
 
     // Verify event
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let (_, topics, data) = events.last().unwrap();
     assert_eq!(topics.len(), 2);
     let t0: Symbol = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();
@@ -168,7 +169,7 @@ fn test_instance_storage() {
     client.remove_instance(&key);
 
     // Verify remove event
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let (_, topics, data) = events.last().unwrap();
     assert_eq!(topics.len(), 2);
     let t0: Symbol = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();

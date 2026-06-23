@@ -1,3 +1,4 @@
+use soroban_validation::test_events::EventList;
 #![cfg(test)]
 
 use soroban_sdk::testutils::Address as _;
@@ -122,7 +123,7 @@ fn test_liquidity_events_are_emitted() {
     token_a.mint(&alice, &200i128);
     token_b.mint(&alice, &200i128);
     client.add_liquidity(&alice, &200i128, &200i128);
-    assert!(!env.events().all().is_empty());
+    assert!(!EventList::new(&env, env.events().all()).is_empty());
 }
 
 #[test]

@@ -1,6 +1,7 @@
 #![cfg(test)]
 
 use super::*;
+use soroban_validation::test_events::EventList;
 use soroban_sdk::{testutils::{Address as _, Events as _}, Address, Env, Symbol, String, TryFromVal};
 
 struct Fixture {
@@ -55,7 +56,7 @@ fn transfer_moves_tokens_and_emits_transfer_event() {
     assert_eq!(f.token.balance(&f.admin), 500_000);
     assert_eq!(f.token.balance(&f.alice), 500_000);
 
-    let events = f.env.events().all();
+    let events = EventList::new(&f.env, f.env.events().all());
     assert_eq!(events.len(), 1);
 
     let (_id, topics, data) = events.get(0).unwrap();

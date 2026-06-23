@@ -4,7 +4,7 @@ use super::*;
 use soroban_sdk::{
     testutils::{Address as _, Events as _},
     token::{StellarAssetClient, TokenClient},
-    vec, Address, Env, String, TryFromVal,
+    vec, Address, Env, String,
 };
 
 struct Fixture {

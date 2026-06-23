@@ -191,16 +191,12 @@ fn emits_wrap_and_unwrap_events() {
     };
 
     f.wrapper.wrap(&f.alice, &100);
-    f.wrapper.unwrap(&f.alice, &40);
+    let wrap_events = f.env.events().all().filter_by_contract(&f.wrapper_id);
+    assert_eq!(wrap_events, [wrap_event.to_xdr(&f.env, &f.wrapper_id)]);
 
-    let events = f.env.events().all().filter_by_contract(&f.wrapper_id);
-    assert_eq!(
-        events,
-        [
-            wrap_event.to_xdr(&f.env, &f.wrapper_id),
-            unwrap_event.to_xdr(&f.env, &f.wrapper_id),
-        ]
-    );
+    f.wrapper.unwrap(&f.alice, &40);
+    let unwrap_events = f.env.events().all().filter_by_contract(&f.wrapper_id);
+    assert_eq!(unwrap_events, [unwrap_event.to_xdr(&f.env, &f.wrapper_id)]);
 }
 
 // ---------------------------------------------------------------------------

@@ -100,6 +100,11 @@ impl IterableMappings {
         keys.len()
     }
 
+    /// Return whether the indexed map has no entries.
+    pub fn is_empty(env: Env) -> bool {
+        Self::len(env) == 0
+    }
+
     /// Return a page of keys for iteration.
     pub fn keys(env: Env, page: u32, page_size: u32) -> Vec<Symbol> {
         if page_size == 0 {
@@ -112,7 +117,7 @@ impl IterableMappings {
             .get(&DataKey::Keys)
             .unwrap_or_else(|| Vec::new(&env));
 
-        let start = (page.saturating_sub(1) * page_size) as u32;
+        let start = page.saturating_sub(1).saturating_mul(page_size);
         let end = start.saturating_add(page_size).min(keys.len());
 
         let mut page_keys = Vec::new(&env);

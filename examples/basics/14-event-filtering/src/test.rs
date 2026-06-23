@@ -11,6 +11,7 @@ use soroban_sdk::{
     testutils::{Address as _, Events as _},
     Address, Env, Symbol, TryFromVal,
 };
+use soroban_validation::test_events::EventList;
 
 fn setup() -> (Env, Address, EventFilteringContractClient<'static>) {
     let env = Env::default();
@@ -28,7 +29,7 @@ fn test_transfer_simple_topics() {
     let (env, _, client) = setup();
     client.transfer_simple(&500);
 
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     assert_eq!(events.len(), 1);
 
     let (_, topics, _) = events.get(0).unwrap();
@@ -45,7 +46,7 @@ fn test_transfer_simple_data() {
     let (env, _, client) = setup();
     client.transfer_simple(&999);
 
-    let (_, _, data) = env.events().all().get(0).unwrap();
+    let (_, _, data) = EventList::new(&env, env.events().all()).get(0).unwrap();
     let payload = TransferData::try_from_val(&env, &data).unwrap();
     assert_eq!(payload.amount, 999);
 }
@@ -60,7 +61,7 @@ fn test_transfer_from_topics() {
     let alice = Address::generate(&env);
     client.transfer_from(&alice, &100);
 
-    let (_, topics, _) = env.events().all().get(0).unwrap();
+    let (_, topics, _) = EventList::new(&env, env.events().all()).get(0).unwrap();
     assert_eq!(topics.len(), 3);
 
     let t2 = Address::try_from_val(&env, &topics.get(2).unwrap()).unwrap();
@@ -78,7 +79,7 @@ fn test_transfer_full_four_topics() {
     let bob = Address::generate(&env);
     client.transfer_full(&alice, &bob, &250);
 
-    let (_, topics, _) = env.events().all().get(0).unwrap();
+    let (_, topics, _) = EventList::new(&env, env.events().all()).get(0).unwrap();
     assert_eq!(topics.len(), 4);
 
     let t2 = Address::try_from_val(&env, &topics.get(2).unwrap()).unwrap();
@@ -94,7 +95,7 @@ fn test_transfer_full_data() {
     let bob = Address::generate(&env);
     client.transfer_full(&alice, &bob, &777);
 
-    let (_, _, data) = env.events().all().get(0).unwrap();
+    let (_, _, data) = EventList::new(&env, env.events().all()).get(0).unwrap();
     let payload = TransferData::try_from_val(&env, &data).unwrap();
     assert_eq!(payload.amount, 777);
 }
@@ -110,7 +111,7 @@ fn test_record_sale_topics_and_data() {
     let buyer = Address::generate(&env);
     client.record_sale(&seller, &buyer, &1000, &42);
 
-    let (_, topics, data) = env.events().all().get(0).unwrap();
+    let (_, topics, data) = EventList::new(&env, env.events().all()).get(0).unwrap();
     assert_eq!(topics.len(), 4);
 
     let t1 = Symbol::try_from_val(&env, &topics.get(1).unwrap()).unwrap();
@@ -138,7 +139,7 @@ fn test_update_status_topics_and_data() {
     let new_s = symbol_short!("active");
     client.update_status(&entity, &old, &new_s);
 
-    let (_, topics, data) = env.events().all().get(0).unwrap();
+    let (_, topics, data) = EventList::new(&env, env.events().all()).get(0).unwrap();
     assert_eq!(topics.len(), 3);
 
     let t1 = Symbol::try_from_val(&env, &topics.get(1).unwrap()).unwrap();
@@ -163,21 +164,49 @@ fn test_multiple_events_share_namespace() {
     let bob = Address::generate(&env);
 
     client.transfer_simple(&1);
+    let events = EventList::new(&env, env.events().all());
+    assert_eq!(events.len(), 1);
+    let (_, topics, _) = events.get(0).unwrap();
+    assert_eq!(
+        Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap(),
+        NS
+    );
+
     client.transfer_from(&alice, &2);
+    let events = EventList::new(&env, env.events().all());
+    assert_eq!(events.len(), 1);
+    let (_, topics, _) = events.get(0).unwrap();
+    assert_eq!(
+        Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap(),
+        NS
+    );
+
     client.transfer_full(&alice, &bob, &3);
+    let events = EventList::new(&env, env.events().all());
+    assert_eq!(events.len(), 1);
+    let (_, topics, _) = events.get(0).unwrap();
+    assert_eq!(
+        Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap(),
+        NS
+    );
+
     client.record_sale(&alice, &bob, &100, &1);
+    let events = EventList::new(&env, env.events().all());
+    assert_eq!(events.len(), 1);
+    let (_, topics, _) = events.get(0).unwrap();
+    assert_eq!(
+        Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap(),
+        NS
+    );
+
     client.update_status(&alice, &symbol_short!("off"), &symbol_short!("on"));
-
-    let events = env.events().all();
-    assert_eq!(events.len(), 5);
-
-    // All events share the same namespace in topic_0 — simulates a
-    // "filter by contract namespace" query.
-    for i in 0..5u32 {
-        let (_, topics, _) = events.get(i).unwrap();
-        let t0 = Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap();
-        assert_eq!(t0, NS, "event {i} must have namespace topic");
-    }
+    let events = EventList::new(&env, env.events().all());
+    assert_eq!(events.len(), 1);
+    let (_, topics, _) = events.get(0).unwrap();
+    assert_eq!(
+        Symbol::try_from_val(&env, &topics.get(0).unwrap()).unwrap(),
+        NS
+    );
 }
 
 #[test]
@@ -187,19 +216,19 @@ fn test_filter_by_action_topic() {
     let bob = Address::generate(&env);
 
     client.transfer_simple(&1);
-    client.record_sale(&alice, &bob, &50, &7);
-    client.transfer_full(&alice, &bob, &2);
-
-    // Simulate: filter topic_1 == "transfer" → should match events 0 and 2
     let mut transfer_count = 0u32;
-    for (_, topics, _) in env.events().all().iter() {
-        if let Some(raw) = topics.get(1) {
-            if let Ok(s) = Symbol::try_from_val(&env, &raw) {
-                if s == ACT_TRANSFER {
-                    transfer_count += 1;
-                }
-            }
-        }
+    let (_, topics, _) = EventList::new(&env, env.events().all()).get(0).unwrap();
+    if Symbol::try_from_val(&env, &topics.get(1).unwrap()).unwrap() == ACT_TRANSFER {
+        transfer_count += 1;
     }
+
+    client.record_sale(&alice, &bob, &50, &7);
+
+    client.transfer_full(&alice, &bob, &2);
+    let (_, topics, _) = EventList::new(&env, env.events().all()).get(0).unwrap();
+    if Symbol::try_from_val(&env, &topics.get(1).unwrap()).unwrap() == ACT_TRANSFER {
+        transfer_count += 1;
+    }
+
     assert_eq!(transfer_count, 2);
 }

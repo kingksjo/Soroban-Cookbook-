@@ -44,7 +44,7 @@ pub struct StandardTokenOps;
 
 #[contractimpl]
 impl StandardTokenOps {
-    pub fn initialize(env: Env, underlying: Address) -> Result<(), StandardError> {
+    pub fn standard_initialize(env: Env, underlying: Address) -> Result<(), StandardError> {
         env.storage()
             .instance()
             .set(&StandardDataKey::Underlying, &underlying);
@@ -54,7 +54,7 @@ impl StandardTokenOps {
         Ok(())
     }
 
-    pub fn wrap(env: Env, user: Address, amount: i128) -> Result<i128, StandardError> {
+    pub fn standard_wrap(env: Env, user: Address, amount: i128) -> Result<i128, StandardError> {
         if amount <= 0 {
             return Err(StandardError::InvalidAmount);
         }
@@ -100,7 +100,7 @@ impl StandardTokenOps {
         Ok(new_balance)
     }
 
-    pub fn balance(env: Env, user: Address) -> i128 {
+    pub fn standard_balance(env: Env, user: Address) -> i128 {
         env.storage()
             .persistent()
             .get(&StandardDataKey::Balance(user))

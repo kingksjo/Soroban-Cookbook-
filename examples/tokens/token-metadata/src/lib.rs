@@ -335,7 +335,7 @@ fn require_positive(amount: i128) -> Result<(), MetadataError> {
 }
 
 fn require_non_empty(s: &String) -> Result<(), MetadataError> {
-    if s.len() == 0 {
+    if s.is_empty() {
         Err(MetadataError::EmptyString)
     } else {
         Ok(())

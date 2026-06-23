@@ -1,3 +1,4 @@
+use soroban_validation::test_events::EventList;
 #![cfg(test)]
 
 use soroban_sdk::testutils::Address as _;
@@ -149,7 +150,7 @@ fn test_swap_emits_event() {
     token_b.mint(&env.current_contract_address(), &5000i128);
 
     swap_client.swap(&token_a_id, &100i128, &200i128, &alice);
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     assert!(!events.is_empty());
 }
 

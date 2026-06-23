@@ -5,8 +5,7 @@
 #![no_std]
 
 use soroban_sdk::{
-    contract, contracterror, contractimpl, contracttype, symbol_short, vec, Address, Env, Symbol,
-    Vec,
+    contract, contracterror, contractimpl, contracttype, symbol_short, Address, Env, Symbol, Vec,
 };
 
 #[contracttype]
@@ -79,7 +78,7 @@ impl OptimizedToken {
             .persistent()
             .set(&DataKey::Balance(to.clone()), &to_balance);
         env.events()
-            .publish((EVENT_TRANSFER, from.clone(), to.clone()), &amount);
+            .publish((EVENT_TRANSFER, from.clone(), to.clone()), amount);
 
         Ok(())
     }
@@ -113,10 +112,8 @@ impl OptimizedToken {
                 .set(&DataKey::Balance(payment.recipient.clone()), &to_balance);
         }
 
-        env.events().publish(
-            (EVENT_BATCH_TRANSFER, from.clone()),
-            &(payments.len() as i128),
-        );
+        env.events()
+            .publish((EVENT_BATCH_TRANSFER, from.clone()), payments.len() as i128);
         Ok(())
     }
 
@@ -149,10 +146,8 @@ impl OptimizedToken {
                 .set(&DataKey::Balance(payment.recipient.clone()), &to_balance);
         }
 
-        env.events().publish(
-            (EVENT_BATCH_TRANSFER, from.clone()),
-            &(payments.len() as i128),
-        );
+        env.events()
+            .publish((EVENT_BATCH_TRANSFER, from.clone()), payments.len() as i128);
         Ok(())
     }
 

@@ -44,7 +44,7 @@ jobs:
           target: wasm32-unknown-unknown
 
       - name: Run Clippy
-        run: cargo clippy --workspace --all-targets --target x86_64-unknown-linux-gnu -- -D warnings
+        run: ./scripts/ci-workspace.sh clippy --tests --lib --target x86_64-unknown-linux-gnu -- -D warnings
 
   test:
     name: Test Suite
@@ -91,7 +91,7 @@ jobs:
 
       - name: Run tests (fallback)
         if: github.event_name != 'pull_request'
-        run: cargo test --workspace --target x86_64-unknown-linux-gnu
+        run: ./scripts/ci-workspace.sh test --target x86_64-unknown-linux-gnu
 
   build:
     name: Build Contracts
@@ -119,7 +119,7 @@ jobs:
         run: cargo install --locked stellar-cli --version ${{ env.STELLAR_CLI_VERSION }}
 
       - name: Build all contracts
-        run: cargo build --workspace --target wasm32v1-none --release
+        run: ./scripts/ci-workspace.sh build --target wasm32v1-none --release
 
   security-audit:
     name: Security Audit
@@ -183,7 +183,16 @@ jobs:
       # tarpaulin.toml controls output format (xml + html + lcov),
       # output directory (coverage/), timeout, and exclusions.
       - name: Generate coverage
-        run: cargo tarpaulin
+        run: |
+          EXCLUDE_ARGS=""
+          while IFS= read -r pkg || [[ -n "${pkg:-}" ]]; do
+            pkg="${pkg%%#*}"
+            pkg="$(echo "$pkg" | xargs)"
+            [[ -z "$pkg" ]] && continue
+            EXCLUDE_ARGS="$EXCLUDE_ARGS --exclude $pkg"
+          done < scripts/ci-exclude-packages.txt
+          # shellcheck disable=SC2086
+          cargo tarpaulin $EXCLUDE_ARGS
 
       # Keep the full coverage report as a downloadable artifact for
       # historical review — retained for 90 days.

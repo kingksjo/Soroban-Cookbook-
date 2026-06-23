@@ -1,5 +1,7 @@
 //! Tests for collection type operations.
 
+extern crate std;
+
 use super::*;
 use soroban_sdk::{symbol_short, vec, Env, Map, Symbol, Vec};
 
@@ -332,19 +334,19 @@ fn test_vec_iteration_patterns_benchmark() {
     let client = CollectionTypesContractClient::new(&env, &contract_id);
     let items = benchmark_vec(&env);
 
-    println!("--- Vec sum over 32 items Benchmark ---");
+    std::println!("--- Vec sum over 32 items Benchmark ---");
     env.budget().reset_default();
     let sum = client.vec_sum(&items);
     env.budget().print();
     assert_eq!(sum, 496);
 
-    println!("--- Vec filter over 32 items Benchmark ---");
+    std::println!("--- Vec filter over 32 items Benchmark ---");
     env.budget().reset_default();
     let positive = client.vec_filter_positive(&items);
     env.budget().print();
     assert_eq!(positive.len(), 31);
 
-    println!("--- Vec contains missing item Benchmark ---");
+    std::println!("--- Vec contains missing item Benchmark ---");
     env.budget().reset_default();
     let found = client.vec_contains(&items, &99);
     env.budget().print();
@@ -358,7 +360,7 @@ fn test_vec_mutation_patterns_benchmark() {
     let contract_id = env.register_contract(None, CollectionTypesContract);
     let client = CollectionTypesContractClient::new(&env, &contract_id);
 
-    println!("--- Vec push_back with instance storage Benchmark ---");
+    std::println!("--- Vec push_back with instance storage Benchmark ---");
     env.budget().reset_default();
     for value in 0..16 {
         client.vec_push(&value);
@@ -366,7 +368,7 @@ fn test_vec_mutation_patterns_benchmark() {
     env.budget().print();
     assert_eq!(client.vec_list().len(), 16);
 
-    println!("--- Vec pop_back with instance storage Benchmark ---");
+    std::println!("--- Vec pop_back with instance storage Benchmark ---");
     env.budget().reset_default();
     for _ in 0..16 {
         let _ = client.vec_pop();
@@ -383,19 +385,19 @@ fn test_map_operation_patterns_benchmark() {
     let client = CollectionTypesContractClient::new(&env, &contract_id);
     let data = benchmark_map(&env);
 
-    println!("--- Map sum values over 16 entries Benchmark ---");
+    std::println!("--- Map sum values over 16 entries Benchmark ---");
     env.budget().reset_default();
     let sum = client.map_sum_values(&data);
     env.budget().print();
     assert_eq!(sum, 120);
 
-    println!("--- Map keys extraction over 16 entries Benchmark ---");
+    std::println!("--- Map keys extraction over 16 entries Benchmark ---");
     env.budget().reset_default();
     let keys = client.map_keys(&data);
     env.budget().print();
     assert_eq!(keys.len(), 16);
 
-    println!("--- Map max key scan over 16 entries Benchmark ---");
+    std::println!("--- Map max key scan over 16 entries Benchmark ---");
     env.budget().reset_default();
     let max_key = client.map_max_key(&data);
     env.budget().print();
@@ -409,7 +411,7 @@ fn test_map_mutation_patterns_benchmark() {
     let contract_id = env.register_contract(None, CollectionTypesContract);
     let client = CollectionTypesContractClient::new(&env, &contract_id);
 
-    println!("--- Map set with instance storage Benchmark ---");
+    std::println!("--- Map set with instance storage Benchmark ---");
     env.budget().reset_default();
     for (key, value) in benchmark_map(&env).iter() {
         client.map_set(&key, &value);
@@ -417,19 +419,19 @@ fn test_map_mutation_patterns_benchmark() {
     env.budget().print();
     assert_eq!(client.map_get_all().len(), 16);
 
-    println!("--- Map overwrite with instance storage Benchmark ---");
+    std::println!("--- Map overwrite with instance storage Benchmark ---");
     env.budget().reset_default();
     client.map_set(&symbol_short!("k08"), &800);
     env.budget().print();
     assert_eq!(client.map_get(&symbol_short!("k08")), Some(800));
 
-    println!("--- Map lookup with instance storage Benchmark ---");
+    std::println!("--- Map lookup with instance storage Benchmark ---");
     env.budget().reset_default();
     let value = client.map_get(&symbol_short!("k15"));
     env.budget().print();
     assert_eq!(value, Some(15));
 
-    println!("--- Map remove with instance storage Benchmark ---");
+    std::println!("--- Map remove with instance storage Benchmark ---");
     env.budget().reset_default();
     client.map_remove(&symbol_short!("k15"));
     env.budget().print();

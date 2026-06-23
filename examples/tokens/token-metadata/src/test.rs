@@ -190,10 +190,10 @@ fn update_with_empty_name_is_rejected() {
 fn mint_increases_balance_and_supply() {
     let f = setup();
 
-    f.contract.mint(&f.alice, &1_000_0000000i128);
+    f.contract.mint(&f.alice, &1_000_000_000i128);
 
-    assert_eq!(f.contract.balance(&f.alice), 1_000_0000000);
-    assert_eq!(f.contract.total_supply(), 1_000_0000000);
+    assert_eq!(f.contract.balance(&f.alice), 1_000_000_000);
+    assert_eq!(f.contract.total_supply(), 1_000_000_000);
 }
 
 #[test]
@@ -320,7 +320,7 @@ mod bench {
     fn bench_mint() {
         let (env, client, admin) = setup_bench();
         env.budget().reset_default();
-        client.mint(&admin, &1_000_0000000i128);
+        client.mint(&admin, &1_000_000_000i128);
         let cpu = env.budget().cpu_instruction_cost();
         let mem = env.budget().memory_bytes_cost();
         std::println!("[bench] token-metadata::mint  cpu={cpu}  mem={mem}");
@@ -330,9 +330,9 @@ mod bench {
     fn bench_transfer() {
         let (env, client, admin) = setup_bench();
         let recipient = Address::generate(&env);
-        client.mint(&admin, &1_000_0000000i128);
+        client.mint(&admin, &1_000_000_000i128);
         env.budget().reset_default();
-        client.transfer(&admin, &recipient, &500_0000000i128);
+        client.transfer(&admin, &recipient, &500_000_000i128);
         let cpu = env.budget().cpu_instruction_cost();
         let mem = env.budget().memory_bytes_cost();
         std::println!("[bench] token-metadata::transfer  cpu={cpu}  mem={mem}");

@@ -36,7 +36,7 @@
 //! * Spending preserves the original expiration ledger of the allowance.
 
 use soroban_sdk::{
-    contract, contracterror, contractimpl, contracttype, symbol_short, Address, Env, Symbol,
+    contract, contracterror, contractevent, contractimpl, contracttype, Address, Env,
 };
 
 /// Storage keys for balances, allowances, and contract metadata.
@@ -60,19 +60,22 @@ pub struct AllowanceValue {
     pub expiration_ledger: u32,
 }
 
-/// Event payload emitted by [`AllowancePattern::approve`] and
-/// [`AllowancePattern::revoke`].
-#[contracttype]
-#[derive(Clone)]
-pub struct ApproveEventData {
+/// Event emitted by [`AllowancePattern::approve`] and [`AllowancePattern::revoke`].
+#[contractevent(topics = ["events", "approve"])]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct ApproveEvent {
+    pub owner: Address,
+    pub spender: Address,
     pub amount: i128,
     pub expiration_ledger: u32,
 }
 
-/// Event payload emitted by [`AllowancePattern::transfer_from`].
-#[contracttype]
-#[derive(Clone)]
-pub struct TransferEventData {
+/// Event emitted by [`AllowancePattern::transfer_from`].
+#[contractevent(topics = ["events", "transfer"])]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct TransferEvent {
+    pub from: Address,
+    pub to: Address,
     pub amount: i128,
 }
 
@@ -96,10 +99,6 @@ pub enum AllowanceError {
     /// A balance update would overflow `i128`.
     ArithmeticOverflow = 7,
 }
-
-const EVENT_NAMESPACE: Symbol = symbol_short!("events");
-const EVENT_APPROVE: Symbol = symbol_short!("approve");
-const EVENT_TRANSFER: Symbol = symbol_short!("transfer");
 
 #[contract]
 pub struct AllowancePattern;
@@ -311,20 +310,17 @@ fn publish_approve(
     amount: i128,
     expiration_ledger: u32,
 ) {
-    env.events().publish(
-        (EVENT_NAMESPACE, EVENT_APPROVE, owner, spender),
-        ApproveEventData {
-            amount,
-            expiration_ledger,
-        },
-    );
+    ApproveEvent {
+        owner,
+        spender,
+        amount,
+        expiration_ledger,
+    }
+    .publish(env);
 }
 
 fn publish_transfer(env: &Env, from: Address, to: Address, amount: i128) {
-    env.events().publish(
-        (EVENT_NAMESPACE, EVENT_TRANSFER, from, to),
-        TransferEventData { amount },
-    );
+    TransferEvent { from, to, amount }.publish(env);
 }
 
 mod test;

@@ -1,3 +1,4 @@
+use soroban_validation::test_events::EventList;
 #![cfg(test)]
 
 use soroban_sdk::testutils::Address as _;
@@ -94,7 +95,7 @@ fn test_oracle_emits_update_event() {
     pool.deposit(&alice, &100i128, &200i128);
     oracle.update();
 
-    assert!(!env.events().all().is_empty());
+    assert!(!EventList::new(&env, env.events().all()).is_empty());
 }
 
 #[test]

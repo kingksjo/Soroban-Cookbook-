@@ -3,6 +3,7 @@
 use super::*;
 use soroban_sdk::testutils::{Address as _, Events};
 use soroban_sdk::{vec, Address, Env, IntoVal};
+use soroban_validation::test_events::EventList;
 
 // Mock Receiver Contract
 #[contract]
@@ -249,7 +250,7 @@ fn test_events_emitted() {
 
     flash_loan_client.flash_loan(&receiver_address, &token_client.address, &1000);
 
-    let events = env.events().all();
+    let events = EventList::new(&env, env.events().all());
     let last_event = events.last().unwrap();
 
     assert_eq!(last_event.contract_id, flash_loan_address);

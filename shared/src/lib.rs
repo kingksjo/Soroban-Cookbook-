@@ -17,6 +17,9 @@
 #![no_std]
 use soroban_sdk::{contracterror, Address, Env, String, Vec};
 
+#[cfg(feature = "testutils")]
+pub mod test_events;
+
 // ---------------------------------------------------------------------------
 // Error Types
 // ---------------------------------------------------------------------------

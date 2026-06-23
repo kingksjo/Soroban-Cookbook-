@@ -127,7 +127,7 @@ pub struct StrategyParams {
 ///
 /// This function acts as the strategy registry / factory.  Adding a new
 /// strategy means adding a new variant to [`StrategyType`] and a new arm here.
-pub fn strategy_params(env: &Env, strategy: &StrategyType) -> StrategyParams {
+pub fn strategy_params(_env: &Env, strategy: &StrategyType) -> StrategyParams {
     match strategy {
         // ── Conservative ────────────────────────────────────────────────────
         // Deposits into a stable money-market; principal is protected.

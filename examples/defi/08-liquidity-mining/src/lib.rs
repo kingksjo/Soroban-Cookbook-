@@ -214,7 +214,7 @@ impl LiquidityMining {
 
         // Pull LP tokens from user
         let lp_client = token::Client::new(&env, &pool.lp_token);
-        lp_client.transfer(&user, &env.current_contract_address(), &amount);
+        lp_client.transfer(&user, env.current_contract_address(), &amount);
 
         // Update state
         info.staked = info.staked.checked_add(amount).expect("Overflow");

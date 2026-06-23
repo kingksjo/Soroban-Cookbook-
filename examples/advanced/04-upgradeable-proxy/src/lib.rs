@@ -6,7 +6,7 @@
 
 #![no_std]
 
-use soroban_sdk::{contract, contractimpl, symbol_short, vec, Address, Env, Symbol};
+use soroban_sdk::{contract, contractimpl, symbol_short, vec, Address, Env, IntoVal, Symbol};
 
 const ADMIN_KEY: Symbol = symbol_short!("admin");
 const IMPLEMENTATION_KEY: Symbol = symbol_short!("impl");
@@ -79,9 +79,13 @@ impl ProxyContract {
     /// # Returns
     /// The sum of a and b
     pub fn add(env: Env, a: i128, b: i128) -> i128 {
-        let implementation: Address = Self::get_implementation(&env);
+        let implementation: Address = Self::get_implementation(env.clone());
 
-        env.invoke_contract(&implementation, &symbol_short!("add"), vec![&env, a, b])
+        env.invoke_contract(
+            &implementation,
+            &symbol_short!("add"),
+            vec![&env, a.into_val(&env), b.into_val(&env)],
+        )
     }
 
     /// Forward a call to the implementation contract's subtract function.
@@ -94,51 +98,15 @@ impl ProxyContract {
     /// # Returns
     /// The difference (a - b)
     pub fn subtract(env: Env, a: i128, b: i128) -> i128 {
-        let implementation: Address = Self::get_implementation(&env);
+        let implementation: Address = Self::get_implementation(env.clone());
 
-        env.invoke_contract(&implementation, &symbol_short!("sub"), vec![&env, a, b])
+        env.invoke_contract(
+            &implementation,
+            &symbol_short!("sub"),
+            vec![&env, a.into_val(&env), b.into_val(&env)],
+        )
     }
 }
 
 #[cfg(test)]
-mod tests {
-    use super::*;
-    use soroban_sdk::Env;
-
-    #[test]
-    fn test_proxy_initialization() {
-        let env = Env::default();
-        let admin = soroban_sdk::Address::random(&env);
-        let implementation = soroban_sdk::Address::random(&env);
-
-        ProxyContract::init(&env, admin.clone(), implementation.clone());
-        assert_eq!(ProxyContract::get_implementation(&env), implementation);
-    }
-
-    #[test]
-    #[should_panic(expected = "Already initialized")]
-    fn test_double_initialization_fails() {
-        let env = Env::default();
-        let admin = soroban_sdk::Address::random(&env);
-        let implementation = soroban_sdk::Address::random(&env);
-
-        ProxyContract::init(&env, admin.clone(), implementation.clone());
-        ProxyContract::init(&env, admin.clone(), implementation.clone());
-    }
-
-    #[test]
-    fn test_upgrade_only_by_admin() {
-        let env = Env::default();
-        let admin = soroban_sdk::Address::random(&env);
-        let impl_v1 = soroban_sdk::Address::random(&env);
-        let impl_v2 = soroban_sdk::Address::random(&env);
-
-        ProxyContract::init(&env, admin.clone(), impl_v1.clone());
-        assert_eq!(ProxyContract::get_implementation(&env), impl_v1);
-
-        // Admin upgrades the implementation
-        admin.require_auth();
-        ProxyContract::upgrade(&env, impl_v2.clone());
-        assert_eq!(ProxyContract::get_implementation(&env), impl_v2);
-    }
-}
+mod test;

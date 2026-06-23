@@ -12,6 +12,7 @@ use soroban_sdk::{
 mod security_tests {
     use super::*;
     use crate::security::{SecureReceiverContract, SecureReceiverContractClient};
+    use soroban_validation::test_events::EventList;
 
     fn setup(env: &Env) -> (Address, Address, Address, SecureReceiverContractClient) {
         let owner = Address::generate(env);
@@ -94,7 +95,7 @@ mod security_tests {
         let (token_addr, _) = make_token(&env, &receiver_addr, 1050);
         client.on_flash_loan(&provider, &token_addr, &1000, &50);
 
-        let events = env.events().all();
+        let events = EventList::new(&env, env.events().all());
         let last = events.last().unwrap();
         assert_eq!(last.contract_id, receiver_addr);
         assert_eq!(

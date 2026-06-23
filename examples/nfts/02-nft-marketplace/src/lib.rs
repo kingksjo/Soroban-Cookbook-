@@ -100,7 +100,7 @@ impl NftMarketplaceContract {
         royalty_bps: u32,
     ) -> Result<u32, MarketplaceError> {
         seller.require_auth();
-        if items.len() == 0 || price <= 0 {
+        if items.is_empty() || price <= 0 {
             return Err(MarketplaceError::InvalidPrice);
         }
         if royalty_bps > 1000 {
@@ -147,7 +147,7 @@ impl NftMarketplaceContract {
         royalty_bps: u32,
     ) -> Result<u32, MarketplaceError> {
         seller.require_auth();
-        if items.len() == 0 || reserve_price <= 0 || duration == 0 {
+        if items.is_empty() || reserve_price <= 0 || duration == 0 {
             return Err(MarketplaceError::InvalidPrice);
         }
         if royalty_bps > 1000 {
