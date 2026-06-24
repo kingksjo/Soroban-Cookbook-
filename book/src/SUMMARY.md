@@ -47,12 +47,15 @@
 
 - [Quick Reference](./docs/quick-reference.md)
 - [Best Practices](./docs/best-practices.md)
+- [Common Pitfalls](./docs/common-pitfalls.md)
 - [Style Guide](./docs/style-guide.md)
 - [Performance Benchmarks](./docs/benchmarks.md)
 - [Glossary](./docs/glossary.md)
 - [Common Patterns](./docs/common-patterns.md)
 - [Factory, Proxy, and Registry Patterns](./docs/cross-contract-patterns.md)
 - [Troubleshooting](./docs/troubleshooting.md)
+- [Token Development Walkthrough](./docs/token-development-video.md)
+
 
 # Contributing
 
