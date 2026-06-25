@@ -53,6 +53,8 @@ New to Soroban? Start here:
 - **[Performance Benchmarks](./benchmarks.md)** - Resource usage comparison and optimization tips
 - **[Common Pitfalls](./common-pitfalls.md)** - Avoid these mistakes
 - **[Security Guide](./security.md)** - Security checklist
+- **[Token Development Walkthrough](./token-development-video.md)** - Video tutorial and script
+
 
 ### Technical References
 
