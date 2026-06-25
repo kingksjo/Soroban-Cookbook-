@@ -55,6 +55,7 @@
 - [Factory, Proxy, and Registry Patterns](./docs/cross-contract-patterns.md)
 - [Troubleshooting](./docs/troubleshooting.md)
 - [Token Development Walkthrough](./docs/token-development-video.md)
+- [Security Best Practices](./docs/security-best-practices.md)
 
 
 # Contributing
