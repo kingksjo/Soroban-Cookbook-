@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light sidebar-visible" dir="ltr">
+<html lang="en" class="rust sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -33,12 +33,12 @@
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../";
-            const default_light_theme = "light";
+            const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-5061486f.js";
+            window.path_to_searchindex_js = "../searchindex-3ccc4abe.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-ecdbaa17.js"></script>
+        <script src="../toc-6d4fb062.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -76,7 +76,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -143,6 +143,12 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
+                        <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook/edit/main/src/guides/testing.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
+                        </a>
 
                     </div>
                 </div>
@@ -189,21 +195,41 @@
 <h2 id="-test-types"><a class="header" href="#-test-types">🧪 Test Types</a></h2>
 <h3 id="unit-tests"><a class="header" href="#unit-tests">Unit Tests</a></h3>
 <p>Test individual contract functions in isolation.</p>
+<h4 id="example-from-hello-world-contract"><a class="header" href="#example-from-hello-world-contract">Example from Hello World Contract</a></h4>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>#[cfg(test)]
-mod test {
-    use super::*;
-    use soroban_sdk::Env;
+</span>use super::*;
+use soroban_sdk::{symbol_short, vec, Env, Symbol};
 
-    #[test]
-    fn test_single_function() {
-        let env = Env::default();
-        let contract_id = env.register_contract(None, MyContract);
-        let client = MyContractClient::new(&amp;env, &amp;contract_id);
+#[test]
+fn test_hello_returns_greeting_vec() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
 
-        let result = client.my_function(&amp;42);
-        assert_eq!(result, 42);
+    let result = client.hello(&amp;symbol_short!("World"));
+
+    assert_eq!(
+        result,
+        vec![&amp;env, symbol_short!("Hello"), symbol_short!("World")]
+    );
+}
+
+#[test]
+fn test_hello_with_different_names() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
+
+    for name in [
+        symbol_short!("Alice"),
+        symbol_short!("Bob"),
+        symbol_short!("Dev"),
+    ] {
+        let result = client.hello(&amp;name);
+        assert_eq!(result.len(), 2);
+        assert_eq!(result.get(0).unwrap(), symbol_short!("Hello"));
+        assert_eq!(result.get(1).unwrap(), name);
     }
 }
 <span class="boring">}</span></code></pre>
@@ -255,6 +281,7 @@ impl MyContract {
 }
 
 // Keep tests in separate file
+#[cfg(test)]
 mod test;
 <span class="boring">}</span></code></pre>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -342,7 +369,7 @@ fn test_auth() {
 <h2 id="-best-practices"><a class="header" href="#-best-practices">✅ Best Practices</a></h2>
 <h3 id="1-use-descriptive-test-names"><a class="header" href="#1-use-descriptive-test-names">1. Use Descriptive Test Names</a></h3>
 <p>Test names should clearly describe what is being tested and the expected outcome.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -354,7 +381,7 @@ fn test_transfer_fails_with_insufficient_balance() { }
 #[test]
 fn test_transfer_fails_when_sender_not_authorized() { }
 <span class="boring">}</span></code></pre>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -368,7 +395,7 @@ fn test_error() { }
 <span class="boring">}</span></code></pre>
 <h3 id="2-test-both-happy-path-and-error-cases"><a class="header" href="#2-test-both-happy-path-and-error-cases">2. Test Both Happy Path and Error Cases</a></h3>
 <p>Every function should have tests for success and failure scenarios.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -384,7 +411,7 @@ fn test_withdraw_fails_with_insufficient_balance() {
 <span class="boring">}</span></code></pre>
 <h3 id="3-use-assertions-with-descriptive-messages"><a class="header" href="#3-use-assertions-with-descriptive-messages">3. Use Assertions with Descriptive Messages</a></h3>
 <p>Include context in assertion messages to aid debugging.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>assert_eq!(
@@ -397,23 +424,34 @@ fn test_withdraw_fails_with_insufficient_balance() {
 <span class="boring">}</span></code></pre>
 <h3 id="4-keep-tests-focused-and-independent"><a class="header" href="#4-keep-tests-focused-and-independent">4. Keep Tests Focused and Independent</a></h3>
 <p>Each test should verify one behavior. Tests should not depend on other tests.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_increment_increases_counter_by_one() {
+fn test_persistent_storage() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, Counter);
-    let client = CounterClient::new(&amp;env, &amp;contract_id);
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-    assert_eq!(client.value(), 0);
-    client.increment();
-    assert_eq!(client.value(), 1);
+    let key = symbol_short!("balance");
+    let value = 1000u64;
+
+    // Initially, key should not exist
+    assert!(!client.has_persistent(&amp;key));
+
+    // Set value
+    client.set_persistent(&amp;key, &amp;value);
+
+    // Key should now exist
+    assert!(client.has_persistent(&amp;key));
+
+    // Retrieved value should match
+    assert_eq!(client.get_persistent(&amp;key), Some(value));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="5-mock-authorization-appropriately"><a class="header" href="#5-mock-authorization-appropriately">5. Mock Authorization Appropriately</a></h3>
 <p>Use <code>env.mock_all_auths()</code> for unit tests, but test authorization logic explicitly when needed.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -440,27 +478,41 @@ fn test_transfer_requires_sender_authorization() {
 <span class="boring">}</span></code></pre>
 <h3 id="6-test-edge-cases"><a class="header" href="#6-test-edge-cases">6. Test Edge Cases</a></h3>
 <p>Include tests for boundary conditions and edge cases.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_transfer_zero_amount() {
-    // Test edge case: zero transfer
+fn test_hello_with_single_character_name() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
+
+    let name = symbol_short!("A");
+    let result = client.hello(&amp;name);
+
+    assert_eq!(result, vec![&amp;env, symbol_short!("Hello"), name]);
 }
 
 #[test]
-fn test_transfer_max_u64_amount() {
-    // Test edge case: maximum value
-}
+fn test_zero_and_boundary_values() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-#[test]
-fn test_transfer_to_self() {
-    // Test edge case: self-transfer
+    let key = symbol_short!("boundary");
+
+    // Test zero value
+    client.set_persistent(&amp;key, &amp;0);
+    assert_eq!(client.get_persistent(&amp;key), Some(0));
+
+    // Test max u64 value
+    client.set_persistent(&amp;key, &amp;u64::MAX);
+    assert_eq!(client.get_persistent(&amp;key), Some(u64::MAX));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="7-use-fixtures-for-common-setup"><a class="header" href="#7-use-fixtures-for-common-setup">7. Use Fixtures for Common Setup</a></h3>
 <p>Create helper functions to reduce test boilerplate.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn setup_test_env() -&gt; (Env, Address, Address) {
@@ -479,23 +531,59 @@ fn test_transfer() {
     // ... test logic
 }
 <span class="boring">}</span></code></pre>
-<h3 id="8-test-edge-cases-existing"><a class="header" href="#8-test-edge-cases-existing">8. Test Edge Cases (Existing)</a></h3>
+<h3 id="8-test-storage-behavior"><a class="header" href="#8-test-storage-behavior">8. Test Storage Behavior</a></h3>
+<p>Example from Storage Patterns Contract:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_edge_cases() {
+fn test_persistent_storage() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-    // Test zero
-    assert_eq!(client.divide(&amp;10, &amp;0), Err(...));
+    let key = symbol_short!("balance");
+    let value = 1000u64;
 
-    // Test maximum values
-    assert_eq!(client.add(&amp;i128::MAX, &amp;1), Err(...));
+    // Initially, key should not exist
+    assert!(!client.has_persistent(&amp;key));
 
-    // Test negative values
-    assert_eq!(client.absolute(&amp;-42), 42);
+    // Set value
+    client.set_persistent(&amp;key, &amp;value);
+
+    // Verify set event
+    let events = env.events().all();
+    let (_, topics, data) = events.last().unwrap();
+    assert_eq!(topics.len(), 2);
+    let t0: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(0).unwrap()).unwrap();
+    let t1: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(1).unwrap()).unwrap();
+    assert_eq!(t0, symbol_short!("persist"));
+    assert_eq!(t1, symbol_short!("set"));
+    let (d_key, d_value): (Symbol, u64) = &lt;(Symbol, u64)&gt;::try_from_val(&amp;env, &amp;data).unwrap();
+    assert_eq!(d_key, key);
+    assert_eq!(d_value, value);
+
+    // Key should now exist
+    assert!(client.has_persistent(&amp;key));
+
+    // Retrieved value should match
+    assert_eq!(client.get_persistent(&amp;key), Some(value));
+
+    // Remove value
+    client.remove_persistent(&amp;key);
+
+    // Verify remove event
+    let events = env.events().all();
+    let (_, topics, data) = events.last().unwrap();
+    assert_eq!(topics.len(), 2);
+    let t0: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(0).unwrap()).unwrap();
+    let t1: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(1).unwrap()).unwrap();
+    assert_eq!(t0, symbol_short!("persist"));
+    assert_eq!(t1, symbol_short!("remove"));
+    let d_key: Symbol = Symbol::try_from_val(&amp;env, &amp;data).unwrap();
+    assert_eq!(d_key, key);
+
+    // Key should no longer exist
+    assert!(!client.has_persistent(&amp;key));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="9-test-error-conditions"><a class="header" href="#9-test-error-conditions">9. Test Error Conditions</a></h3>
@@ -514,47 +602,7 @@ fn test_insufficient_balance() {
     client.transfer(&amp;user, &amp;recipient, &amp;1000);
 }
 <span class="boring">}</span></code></pre>
-<h3 id="10-use-descriptive-test-names-existing"><a class="header" href="#10-use-descriptive-test-names-existing">10. Use Descriptive Test Names (Existing)</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>// Good ✅
-#[test]
-fn transfer_succeeds_with_sufficient_balance() { }
-
-#[test]
-fn transfer_fails_when_balance_insufficient() { }
-
-#[test]
-fn transfer_emits_event_on_success() { }
-
-// Bad ❌
-#[test]
-fn test1() { }
-
-#[test]
-fn transfer() { }
-<span class="boring">}</span></code></pre>
-<h3 id="11-test-storage-behavior"><a class="header" href="#11-test-storage-behavior">11. Test Storage Behavior</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_storage_persistence() {
-    let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
-
-    // Set value
-    client.set_value(&amp;42);
-
-    // Verify persistence
-    assert_eq!(client.get_value(), 42);
-
-    // Update value
-    client.set_value(&amp;100);
-    assert_eq!(client.get_value(), 100);
-}
-<span class="boring">}</span></code></pre>
-<h3 id="12-test-events"><a class="header" href="#12-test-events">12. Test Events</a></h3>
+<h3 id="10-test-events"><a class="header" href="#10-test-events">10. Test Events</a></h3>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -575,7 +623,7 @@ fn test_events() {
 <span class="boring">}</span></code></pre>
 <h2 id="-common-testing-pitfalls"><a class="header" href="#-common-testing-pitfalls">⚠️ Common Testing Pitfalls</a></h2>
 <h3 id="1-forgetting-to-mock-authorization"><a class="header" href="#1-forgetting-to-mock-authorization">1. Forgetting to Mock Authorization</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -590,7 +638,7 @@ fn test_transfer() {
     client.transfer(&amp;from, &amp;to, &amp;100);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -605,7 +653,7 @@ fn test_transfer() {
 }
 <span class="boring">}</span></code></pre>
 <h3 id="2-not-extending-ttl-for-persistent-storage"><a class="header" href="#2-not-extending-ttl-for-persistent-storage">2. Not Extending TTL for Persistent Storage</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -620,7 +668,7 @@ fn test_persistent_storage() {
     assert_eq!(value, 1000);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -636,7 +684,7 @@ fn test_persistent_storage() {
 }
 <span class="boring">}</span></code></pre>
 <h3 id="3-testing-multiple-behaviors-in-one-test"><a class="header" href="#3-testing-multiple-behaviors-in-one-test">3. Testing Multiple Behaviors in One Test</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -645,20 +693,20 @@ fn test_everything() {
     // Hard to debug when it fails
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_initialization() { }
+fn test_initialization() {}
 
 #[test]
-fn test_transfer() { }
+fn test_transfer() {}
 
 #[test]
-fn test_withdrawal() { }
+fn test_withdrawal() {}
 <span class="boring">}</span></code></pre>
 <h3 id="4-ignoring-error-cases"><a class="header" href="#4-ignoring-error-cases">4. Ignoring Error Cases</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -668,7 +716,7 @@ fn test_transfer() {
     assert_eq!(client.balance(&amp;to), 100);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -733,14 +781,14 @@ fn emits_expected_event_shape() {
     insta::assert_snapshot!(rendered);
 }
 <span class="boring">}</span></code></pre>
-<p><strong>When to use:</strong></p>
+<p><strong>When to use</strong>:</p>
 <ul>
 <li>Testing complex data structures</li>
 <li>Verifying serialization/deserialization</li>
 <li>Regression testing for output changes</li>
 <li>Testing event emissions</li>
 </ul>
-<p><strong>Tips:</strong></p>
+<p><strong>Tips</strong>:</p>
 <ul>
 <li>Prefer deterministic inputs (fixed timestamps/amounts) before snapshot assertions.</li>
 <li>Snapshot only stable values (avoid non-deterministic IDs unless normalized first).</li>
@@ -753,133 +801,23 @@ insta = "1"
 <h2 id="-coverage-tools"><a class="header" href="#-coverage-tools">📊 Coverage Tools</a></h2>
 <p>The repository CI already uses <code>cargo-tarpaulin</code> and uploads Cobertura XML to Codecov.</p>
 <h3 id="cargo-tarpaulin"><a class="header" href="#cargo-tarpaulin">Cargo Tarpaulin</a></h3>
-<p><strong>Installation:</strong></p>
+<p><strong>Installation</strong>:</p>
 <pre><code class="language-bash">cargo install cargo-tarpaulin --locked
 </code></pre>
-<p><strong>Usage:</strong></p>
-<pre><code class="language-bash"># Generate HTML coverage report
-cargo tarpaulin --workspace --all-features --out Html --output-dir ./coverage --timeout 300
-
-# Generate Cobertura XML for CI/CD
-cargo tarpaulin --workspace --all-features --out Xml --output-dir ./coverage --timeout 300
-
-# Exclude specific files
-cargo tarpaulin --exclude-files tests/* --workspace
+<p><strong>Usage</strong>:</p>
+<pre><code class="language-bash">cargo tarpaulin --out Xml --out Html
 </code></pre>
-<h3 id="alternative-llvm-based-coverage"><a class="header" href="#alternative-llvm-based-coverage">Alternative: LLVM-based Coverage</a></h3>
-<pre><code class="language-bash">cargo install cargo-llvm-cov --locked
-cargo llvm-cov --workspace --all-features --lcov --output-path lcov.info
-</code></pre>
-<h3 id="coverage-goals"><a class="header" href="#coverage-goals">Coverage Goals</a></h3>
-<ul>
-<li><strong>Minimum:</strong> &gt;80% line coverage</li>
-<li><strong>Target:</strong> &gt;90% line coverage</li>
-<li><strong>Ideal:</strong> &gt;95% line coverage</li>
-</ul>
-<p>Focus on covering critical paths and error conditions, not just achieving high percentages.</p>
-<p>Use coverage reports to identify untested error paths, auth branches, and storage edge cases.</p>
-<h3 id="5-test-events"><a class="header" href="#5-test-events">5. Test Events</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_events() {
-    let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
-
-    client.transfer(&amp;from, &amp;to, &amp;100);
-
-    // Get emitted events
-    let events = env.events().all();
-
-    // Verify event was emitted
-    assert_eq!(events.len(), 1);
-    // ... verify event data
-}
-<span class="boring">}</span></code></pre>
-<h2 id="-running-tests"><a class="header" href="#-running-tests">🚀 Running Tests</a></h2>
-<h3 id="basic-test-run"><a class="header" href="#basic-test-run">Basic Test Run</a></h3>
-<pre><code class="language-bash">cargo test
-</code></pre>
-<h3 id="run-specific-test"><a class="header" href="#run-specific-test">Run Specific Test</a></h3>
-<pre><code class="language-bash">cargo test test_transfer
-</code></pre>
-<h3 id="run-with-output"><a class="header" href="#run-with-output">Run with Output</a></h3>
-<pre><code class="language-bash">cargo test -- --nocapture
-</code></pre>
-<h3 id="run-with-multiple-threads"><a class="header" href="#run-with-multiple-threads">Run with Multiple Threads</a></h3>
-<pre><code class="language-bash">cargo test -- --test-threads=4
-</code></pre>
-<h3 id="run-integration-tests-only"><a class="header" href="#run-integration-tests-only">Run Integration Tests Only</a></h3>
-<pre><code class="language-bash">cargo test --test integration
-</code></pre>
-<h2 id="-test-coverage"><a class="header" href="#-test-coverage">📊 Test Coverage</a></h2>
-<h3 id="install-tarpaulin-linux-only"><a class="header" href="#install-tarpaulin-linux-only">Install Tarpaulin (Linux only)</a></h3>
-<pre><code class="language-bash">cargo install cargo-tarpaulin
-</code></pre>
-<h3 id="generate-coverage-report"><a class="header" href="#generate-coverage-report">Generate Coverage Report</a></h3>
-<pre><code class="language-bash">cargo tarpaulin --out Html
-</code></pre>
-<h3 id="view-coverage"><a class="header" href="#view-coverage">View Coverage</a></h3>
-<pre><code class="language-bash">open tarpaulin-report.html
-</code></pre>
-<h2 id="-debugging-tests"><a class="header" href="#-debugging-tests">🐛 Debugging Tests</a></h2>
-<h3 id="print-debugging"><a class="header" href="#print-debugging">Print Debugging</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn debug_test() {
-    let env = Env::default();
-
-    // Use env.logs() for debugging
-    env.logs().enable();
-
-    // Your test code
-    let result = some_function();
-
-    // Check logs
-    println!("{:?}", env.logs().all());
-}
-<span class="boring">}</span></code></pre>
-<h3 id="test-isolation"><a class="header" href="#test-isolation">Test Isolation</a></h3>
-<p>Each test runs in isolation - tests don’t share state:</p>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_a() {
-    // Has its own Env
-}
-
-#[test]
-fn test_b() {
-    // Completely separate Env
-}
-<span class="boring">}</span></code></pre>
-<h2 id="-examples"><a class="header" href="#-examples">📚 Examples</a></h2>
-<p>Check out our test examples:</p>
-<ul>
-<li><a href="../examples/basics/01-hello-world/src/test.rs">Basic Tests</a></li>
-<li><a href="../examples/basics/02-storage-patterns/src/test.rs">Storage Tests</a></li>
-<li><a href="../examples/basics/03-authentication/src/test.rs">Auth Tests</a></li>
-</ul>
-<h2 id="-resources"><a class="header" href="#-resources">🔗 Resources</a></h2>
-<ul>
-<li><a href="https://developers.stellar.org/docs/smart-contracts/testing">Soroban Testing Documentation</a></li>
-<li><a href="https://doc.rust-lang.org/book/ch11-00-testing.html">Rust Testing Best Practices</a></li>
-<li><a href="https://docs.rs/soroban-sdk/latest/soroban_sdk/testutils/">SDK Test Utilities</a></li>
-</ul>
-<hr>
-<p><strong>Next:</strong> Learn about <a href="./deployment.html">Deployment</a></p>
+<p>Reports are written to <code>coverage/</code>. Open <code>coverage/tarpaulin-report.html</code> in a browser for a line-by-line view of what your tests are (and aren’t) hitting.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guides/getting-started.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/macos-setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../guides/deployment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../guides/local-simulation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -889,11 +827,11 @@ fn test_b() {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guides/getting-started.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/macos-setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../guides/deployment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../guides/local-simulation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

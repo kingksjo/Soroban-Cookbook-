@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light sidebar-visible" dir="ltr">
+<html lang="en" class="rust sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -34,12 +34,12 @@
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "";
-            const default_light_theme = "light";
+            const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-5061486f.js";
+            window.path_to_searchindex_js = "searchindex-3ccc4abe.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-ecdbaa17.js"></script>
+        <script src="toc-6d4fb062.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -77,7 +77,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -143,6 +143,9 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
                         </a>
 
                     </div>
@@ -564,6 +567,207 @@ crate-type = ["cdylib", "rlib"]
 <li><a href="https://docs.rs/soroban-sdk/21.7.0/soroban_sdk/">Soroban SDK API Reference</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="macos-environment-setup"><a class="header" href="#macos-environment-setup">macOS Environment Setup</a></h1>
+<p>A complete guide to setting up a Soroban smart contract development environment
+on macOS. Follow each step in order — verification commands confirm each tool is
+working before you move on.</p>
+<h2 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h2>
+<ul>
+<li>macOS 12 (Monterey) or later</li>
+<li>Terminal access (Terminal.app or iTerm2)</li>
+<li>Admin rights to install software</li>
+</ul>
+<hr>
+<h2 id="step-1--install-homebrew"><a class="header" href="#step-1--install-homebrew">Step 1 — Install Homebrew</a></h2>
+<p>Homebrew is the package manager used to install several dependencies in this
+guide. Skip this step if <code>brew --version</code> already returns a version number.</p>
+<pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre>
+<p>After installation, follow any instructions printed about adding Homebrew to
+your <code>PATH</code> (required on Apple Silicon Macs).</p>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">brew --version
+</code></pre>
+<p>Expected output (version may differ):</p>
+<pre><code>Homebrew 4.x.x
+</code></pre>
+<hr>
+<h2 id="step-2--install-rust"><a class="header" href="#step-2--install-rust">Step 2 — Install Rust</a></h2>
+<p>Soroban contracts are written in Rust. Install the official toolchain via
+<code>rustup</code>:</p>
+<pre><code class="language-bash">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre>
+<p>When prompted, choose option <code>1</code> (default installation). Then reload your shell
+environment:</p>
+<pre><code class="language-bash">source "$HOME/.cargo/env"
+</code></pre>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">rustc --version
+cargo --version
+rustup --version
+</code></pre>
+<p>Expected output:</p>
+<pre><code>rustc 1.74.0 (or later)
+cargo 1.74.0 (or later)
+rustup 1.26.0 (or later)
+</code></pre>
+<hr>
+<h2 id="step-3--add-the-webassembly-target"><a class="header" href="#step-3--add-the-webassembly-target">Step 3 — Add the WebAssembly Target</a></h2>
+<p>Soroban contracts compile to WebAssembly (WASM). Add the required target:</p>
+<pre><code class="language-bash">rustup target add wasm32-unknown-unknown
+</code></pre>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">rustup target list --installed | grep wasm32
+</code></pre>
+<p>Expected output:</p>
+<pre><code>wasm32-unknown-unknown
+</code></pre>
+<hr>
+<h2 id="step-4--install-the-stellar-cli"><a class="header" href="#step-4--install-the-stellar-cli">Step 4 — Install the Stellar CLI</a></h2>
+<p>The Stellar CLI (formerly Soroban CLI) is used to build, test, and deploy
+contracts.</p>
+<pre><code class="language-bash">cargo install --locked stellar-cli --features opt
+</code></pre>
+<blockquote>
+<p>This step compiles from source and may take a few minutes.</p>
+</blockquote>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">stellar --version
+</code></pre>
+<p>Expected output:</p>
+<pre><code>stellar 21.x.x (or later)
+</code></pre>
+<hr>
+<h2 id="step-5--install-nodejs-optional"><a class="header" href="#step-5--install-nodejs-optional">Step 5 — Install Node.js (optional)</a></h2>
+<p>Required only if you plan to use JavaScript/TypeScript SDKs or run frontend
+tooling alongside your contracts.</p>
+<pre><code class="language-bash">brew install node
+</code></pre>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">node --version
+npm --version
+</code></pre>
+<p>Expected output:</p>
+<pre><code>v20.x.x (or later)
+8.x.x (or later)
+</code></pre>
+<hr>
+<h2 id="step-6--install-git"><a class="header" href="#step-6--install-git">Step 6 — Install Git</a></h2>
+<p>macOS ships with a system Git, but the Homebrew version is more up to date:</p>
+<pre><code class="language-bash">brew install git
+</code></pre>
+<p><strong>Verify:</strong></p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>Expected output:</p>
+<pre><code>git version 2.x.x
+</code></pre>
+<hr>
+<h2 id="step-7--clone-the-cookbook"><a class="header" href="#step-7--clone-the-cookbook">Step 7 — Clone the Cookbook</a></h2>
+<pre><code class="language-bash">git clone https://github.com/Stellar-Cookbook/Soroban-Cookbook.git
+cd Soroban-Cookbook
+</code></pre>
+<hr>
+<h2 id="step-8--run-a-smoke-test"><a class="header" href="#step-8--run-a-smoke-test">Step 8 — Run a Smoke Test</a></h2>
+<p>Confirm the full toolchain works end-to-end by running the hello-world example
+tests:</p>
+<pre><code class="language-bash">cargo test -p hello-world
+</code></pre>
+<p>Expected output:</p>
+<pre><code>running 6 tests
+test test::test_hello_returns_greeting_vec ... ok
+test test::test_hello_first_element_is_hello ... ok
+test test::test_hello_second_element_is_name ... ok
+test test::test_hello_with_different_names ... ok
+test test::test_hello_with_long_symbol_input ... ok
+test test::test_hello_with_single_character_name ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored
+</code></pre>
+<hr>
+<h2 id="step-9--configure-a-testnet-identity-optional"><a class="header" href="#step-9--configure-a-testnet-identity-optional">Step 9 — Configure a Testnet Identity (optional)</a></h2>
+<p>Required only if you want to deploy contracts to the Stellar testnet.</p>
+<pre><code class="language-bash"># Add the testnet network
+stellar network add \
+  --global testnet \
+  --rpc-url https://soroban-testnet.stellar.org:443 \
+  --network-passphrase "Test SDF Network ; September 2015"
+
+# Generate a key pair
+stellar keys generate alice --network testnet
+
+# Print your public key
+stellar keys address alice
+
+# Fund the account from the testnet faucet
+stellar keys fund alice --network testnet
+</code></pre>
+<hr>
+<h2 id="full-environment-checklist"><a class="header" href="#full-environment-checklist">Full Environment Checklist</a></h2>
+<p>Run this block to confirm every required tool is present:</p>
+<pre><code class="language-bash">brew --version
+rustc --version
+cargo --version
+rustup target list --installed | grep wasm32
+stellar --version
+git --version
+</code></pre>
+<p>All six commands should return version strings without errors.</p>
+<hr>
+<h2 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h2>
+<h3 id="brew-command-not-found-after-installation"><a class="header" href="#brew-command-not-found-after-installation"><code>brew: command not found</code> after installation</a></h3>
+<p>Homebrew was installed but not added to <code>PATH</code>. For Apple Silicon Macs, add
+this to <code>~/.zprofile</code>:</p>
+<pre><code class="language-bash">echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' &gt;&gt; ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+</code></pre>
+<p>For Intel Macs the prefix is <code>/usr/local</code> instead of <code>/opt/homebrew</code>.</p>
+<hr>
+<h3 id="rustc-command-not-found-after-rust-installation"><a class="header" href="#rustc-command-not-found-after-rust-installation"><code>rustc: command not found</code> after Rust installation</a></h3>
+<p>The Cargo bin directory is not on your <code>PATH</code>. Add it:</p>
+<pre><code class="language-bash">echo 'source "$HOME/.cargo/env"' &gt;&gt; ~/.zshrc
+source "$HOME/.cargo/env"
+</code></pre>
+<hr>
+<h3 id="wasm32-unknown-unknown-target-missing-after-rustup-target-add"><a class="header" href="#wasm32-unknown-unknown-target-missing-after-rustup-target-add"><code>wasm32-unknown-unknown</code> target missing after <code>rustup target add</code></a></h3>
+<p>Your shell may be using a different Rust toolchain. Confirm the active
+toolchain and re-add the target:</p>
+<pre><code class="language-bash">rustup show
+rustup target add wasm32-unknown-unknown
+</code></pre>
+<hr>
+<h3 id="stellar-command-not-found-after-cargo-install"><a class="header" href="#stellar-command-not-found-after-cargo-install"><code>stellar</code> command not found after <code>cargo install</code></a></h3>
+<p><code>~/.cargo/bin</code> is not on your <code>PATH</code>. Add it:</p>
+<pre><code class="language-bash">echo 'export PATH="$HOME/.cargo/bin:$PATH"' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+</code></pre>
+<hr>
+<h3 id="cargo-install-stellar-cli-fails-with-linker-errors"><a class="header" href="#cargo-install-stellar-cli-fails-with-linker-errors"><code>cargo install stellar-cli</code> fails with linker errors</a></h3>
+<p>Install the Xcode Command Line Tools, which provide the system linker:</p>
+<pre><code class="language-bash">xcode-select --install
+</code></pre>
+<p>Then retry the install:</p>
+<pre><code class="language-bash">cargo install --locked stellar-cli --features opt
+</code></pre>
+<hr>
+<h3 id="cargo-test-fails-with-error-no-matching-package-named-hello-world"><a class="header" href="#cargo-test-fails-with-error-no-matching-package-named-hello-world"><code>cargo test</code> fails with <code>error: no matching package named hello-world</code></a></h3>
+<p>You are not in the repository root. Navigate there first:</p>
+<pre><code class="language-bash">cd /path/to/Soroban-Cookbook
+cargo test -p hello-world
+</code></pre>
+<hr>
+<h3 id="network-timeout-when-funding-testnet-account"><a class="header" href="#network-timeout-when-funding-testnet-account">Network timeout when funding testnet account</a></h3>
+<p>The testnet faucet is occasionally rate-limited. Wait 60 seconds and retry, or
+use the web faucet at <a href="https://friendbot.stellar.org">https://friendbot.stellar.org</a>
+with your public key as the <code>addr</code> parameter.</p>
+<hr>
+<h2 id="next-steps-1"><a class="header" href="#next-steps-1">Next Steps</a></h2>
+<ul>
+<li><a href="#getting-started-with-soroban">Getting Started Guide</a> — write and deploy your first contract</li>
+<li><a href="#testing-guide">Testing Guide</a> — unit tests, fixtures, and error testing</li>
+<li><a href="#basic-examples">Hello World Example</a> — the simplest possible contract</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="testing-guide"><a class="header" href="#testing-guide">Testing Guide</a></h1>
 <p>Comprehensive guide to testing Soroban smart contracts effectively.</p>
 <h2 id="-overview"><a class="header" href="#-overview">📖 Overview</a></h2>
@@ -579,21 +783,41 @@ crate-type = ["cdylib", "rlib"]
 <h2 id="-test-types"><a class="header" href="#-test-types">🧪 Test Types</a></h2>
 <h3 id="unit-tests"><a class="header" href="#unit-tests">Unit Tests</a></h3>
 <p>Test individual contract functions in isolation.</p>
+<h4 id="example-from-hello-world-contract"><a class="header" href="#example-from-hello-world-contract">Example from Hello World Contract</a></h4>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>#[cfg(test)]
-mod test {
-    use super::*;
-    use soroban_sdk::Env;
+</span>use super::*;
+use soroban_sdk::{symbol_short, vec, Env, Symbol};
 
-    #[test]
-    fn test_single_function() {
-        let env = Env::default();
-        let contract_id = env.register_contract(None, MyContract);
-        let client = MyContractClient::new(&amp;env, &amp;contract_id);
+#[test]
+fn test_hello_returns_greeting_vec() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
 
-        let result = client.my_function(&amp;42);
-        assert_eq!(result, 42);
+    let result = client.hello(&amp;symbol_short!("World"));
+
+    assert_eq!(
+        result,
+        vec![&amp;env, symbol_short!("Hello"), symbol_short!("World")]
+    );
+}
+
+#[test]
+fn test_hello_with_different_names() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
+
+    for name in [
+        symbol_short!("Alice"),
+        symbol_short!("Bob"),
+        symbol_short!("Dev"),
+    ] {
+        let result = client.hello(&amp;name);
+        assert_eq!(result.len(), 2);
+        assert_eq!(result.get(0).unwrap(), symbol_short!("Hello"));
+        assert_eq!(result.get(1).unwrap(), name);
     }
 }
 <span class="boring">}</span></code></pre>
@@ -645,6 +869,7 @@ impl MyContract {
 }
 
 // Keep tests in separate file
+#[cfg(test)]
 mod test;
 <span class="boring">}</span></code></pre>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -732,7 +957,7 @@ fn test_auth() {
 <h2 id="-best-practices"><a class="header" href="#-best-practices">✅ Best Practices</a></h2>
 <h3 id="1-use-descriptive-test-names"><a class="header" href="#1-use-descriptive-test-names">1. Use Descriptive Test Names</a></h3>
 <p>Test names should clearly describe what is being tested and the expected outcome.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -744,7 +969,7 @@ fn test_transfer_fails_with_insufficient_balance() { }
 #[test]
 fn test_transfer_fails_when_sender_not_authorized() { }
 <span class="boring">}</span></code></pre>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -758,7 +983,7 @@ fn test_error() { }
 <span class="boring">}</span></code></pre>
 <h3 id="2-test-both-happy-path-and-error-cases"><a class="header" href="#2-test-both-happy-path-and-error-cases">2. Test Both Happy Path and Error Cases</a></h3>
 <p>Every function should have tests for success and failure scenarios.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -774,7 +999,7 @@ fn test_withdraw_fails_with_insufficient_balance() {
 <span class="boring">}</span></code></pre>
 <h3 id="3-use-assertions-with-descriptive-messages"><a class="header" href="#3-use-assertions-with-descriptive-messages">3. Use Assertions with Descriptive Messages</a></h3>
 <p>Include context in assertion messages to aid debugging.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>assert_eq!(
@@ -787,23 +1012,34 @@ fn test_withdraw_fails_with_insufficient_balance() {
 <span class="boring">}</span></code></pre>
 <h3 id="4-keep-tests-focused-and-independent"><a class="header" href="#4-keep-tests-focused-and-independent">4. Keep Tests Focused and Independent</a></h3>
 <p>Each test should verify one behavior. Tests should not depend on other tests.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_increment_increases_counter_by_one() {
+fn test_persistent_storage() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, Counter);
-    let client = CounterClient::new(&amp;env, &amp;contract_id);
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-    assert_eq!(client.value(), 0);
-    client.increment();
-    assert_eq!(client.value(), 1);
+    let key = symbol_short!("balance");
+    let value = 1000u64;
+
+    // Initially, key should not exist
+    assert!(!client.has_persistent(&amp;key));
+
+    // Set value
+    client.set_persistent(&amp;key, &amp;value);
+
+    // Key should now exist
+    assert!(client.has_persistent(&amp;key));
+
+    // Retrieved value should match
+    assert_eq!(client.get_persistent(&amp;key), Some(value));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="5-mock-authorization-appropriately"><a class="header" href="#5-mock-authorization-appropriately">5. Mock Authorization Appropriately</a></h3>
 <p>Use <code>env.mock_all_auths()</code> for unit tests, but test authorization logic explicitly when needed.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -830,27 +1066,41 @@ fn test_transfer_requires_sender_authorization() {
 <span class="boring">}</span></code></pre>
 <h3 id="6-test-edge-cases"><a class="header" href="#6-test-edge-cases">6. Test Edge Cases</a></h3>
 <p>Include tests for boundary conditions and edge cases.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_transfer_zero_amount() {
-    // Test edge case: zero transfer
+fn test_hello_with_single_character_name() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, HelloContract);
+    let client = HelloContractClient::new(&amp;env, &amp;contract_id);
+
+    let name = symbol_short!("A");
+    let result = client.hello(&amp;name);
+
+    assert_eq!(result, vec![&amp;env, symbol_short!("Hello"), name]);
 }
 
 #[test]
-fn test_transfer_max_u64_amount() {
-    // Test edge case: maximum value
-}
+fn test_zero_and_boundary_values() {
+    let env = Env::default();
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-#[test]
-fn test_transfer_to_self() {
-    // Test edge case: self-transfer
+    let key = symbol_short!("boundary");
+
+    // Test zero value
+    client.set_persistent(&amp;key, &amp;0);
+    assert_eq!(client.get_persistent(&amp;key), Some(0));
+
+    // Test max u64 value
+    client.set_persistent(&amp;key, &amp;u64::MAX);
+    assert_eq!(client.get_persistent(&amp;key), Some(u64::MAX));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="7-use-fixtures-for-common-setup"><a class="header" href="#7-use-fixtures-for-common-setup">7. Use Fixtures for Common Setup</a></h3>
 <p>Create helper functions to reduce test boilerplate.</p>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn setup_test_env() -&gt; (Env, Address, Address) {
@@ -869,23 +1119,59 @@ fn test_transfer() {
     // ... test logic
 }
 <span class="boring">}</span></code></pre>
-<h3 id="8-test-edge-cases-existing"><a class="header" href="#8-test-edge-cases-existing">8. Test Edge Cases (Existing)</a></h3>
+<h3 id="8-test-storage-behavior"><a class="header" href="#8-test-storage-behavior">8. Test Storage Behavior</a></h3>
+<p>Example from Storage Patterns Contract:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_edge_cases() {
+fn test_persistent_storage() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
+    let contract_id = env.register_contract(None, StorageContract);
+    let client = StorageContractClient::new(&amp;env, &amp;contract_id);
 
-    // Test zero
-    assert_eq!(client.divide(&amp;10, &amp;0), Err(...));
+    let key = symbol_short!("balance");
+    let value = 1000u64;
 
-    // Test maximum values
-    assert_eq!(client.add(&amp;i128::MAX, &amp;1), Err(...));
+    // Initially, key should not exist
+    assert!(!client.has_persistent(&amp;key));
 
-    // Test negative values
-    assert_eq!(client.absolute(&amp;-42), 42);
+    // Set value
+    client.set_persistent(&amp;key, &amp;value);
+
+    // Verify set event
+    let events = env.events().all();
+    let (_, topics, data) = events.last().unwrap();
+    assert_eq!(topics.len(), 2);
+    let t0: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(0).unwrap()).unwrap();
+    let t1: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(1).unwrap()).unwrap();
+    assert_eq!(t0, symbol_short!("persist"));
+    assert_eq!(t1, symbol_short!("set"));
+    let (d_key, d_value): (Symbol, u64) = &lt;(Symbol, u64)&gt;::try_from_val(&amp;env, &amp;data).unwrap();
+    assert_eq!(d_key, key);
+    assert_eq!(d_value, value);
+
+    // Key should now exist
+    assert!(client.has_persistent(&amp;key));
+
+    // Retrieved value should match
+    assert_eq!(client.get_persistent(&amp;key), Some(value));
+
+    // Remove value
+    client.remove_persistent(&amp;key);
+
+    // Verify remove event
+    let events = env.events().all();
+    let (_, topics, data) = events.last().unwrap();
+    assert_eq!(topics.len(), 2);
+    let t0: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(0).unwrap()).unwrap();
+    let t1: Symbol = Symbol::try_from_val(&amp;env, &amp;topics.get(1).unwrap()).unwrap();
+    assert_eq!(t0, symbol_short!("persist"));
+    assert_eq!(t1, symbol_short!("remove"));
+    let d_key: Symbol = Symbol::try_from_val(&amp;env, &amp;data).unwrap();
+    assert_eq!(d_key, key);
+
+    // Key should no longer exist
+    assert!(!client.has_persistent(&amp;key));
 }
 <span class="boring">}</span></code></pre>
 <h3 id="9-test-error-conditions"><a class="header" href="#9-test-error-conditions">9. Test Error Conditions</a></h3>
@@ -904,47 +1190,7 @@ fn test_insufficient_balance() {
     client.transfer(&amp;user, &amp;recipient, &amp;1000);
 }
 <span class="boring">}</span></code></pre>
-<h3 id="10-use-descriptive-test-names-existing"><a class="header" href="#10-use-descriptive-test-names-existing">10. Use Descriptive Test Names (Existing)</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>// Good ✅
-#[test]
-fn transfer_succeeds_with_sufficient_balance() { }
-
-#[test]
-fn transfer_fails_when_balance_insufficient() { }
-
-#[test]
-fn transfer_emits_event_on_success() { }
-
-// Bad ❌
-#[test]
-fn test1() { }
-
-#[test]
-fn transfer() { }
-<span class="boring">}</span></code></pre>
-<h3 id="11-test-storage-behavior"><a class="header" href="#11-test-storage-behavior">11. Test Storage Behavior</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_storage_persistence() {
-    let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
-
-    // Set value
-    client.set_value(&amp;42);
-
-    // Verify persistence
-    assert_eq!(client.get_value(), 42);
-
-    // Update value
-    client.set_value(&amp;100);
-    assert_eq!(client.get_value(), 100);
-}
-<span class="boring">}</span></code></pre>
-<h3 id="12-test-events"><a class="header" href="#12-test-events">12. Test Events</a></h3>
+<h3 id="10-test-events"><a class="header" href="#10-test-events">10. Test Events</a></h3>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -965,7 +1211,7 @@ fn test_events() {
 <span class="boring">}</span></code></pre>
 <h2 id="-common-testing-pitfalls"><a class="header" href="#-common-testing-pitfalls">⚠️ Common Testing Pitfalls</a></h2>
 <h3 id="1-forgetting-to-mock-authorization"><a class="header" href="#1-forgetting-to-mock-authorization">1. Forgetting to Mock Authorization</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -980,7 +1226,7 @@ fn test_transfer() {
     client.transfer(&amp;from, &amp;to, &amp;100);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -995,7 +1241,7 @@ fn test_transfer() {
 }
 <span class="boring">}</span></code></pre>
 <h3 id="2-not-extending-ttl-for-persistent-storage"><a class="header" href="#2-not-extending-ttl-for-persistent-storage">2. Not Extending TTL for Persistent Storage</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -1010,7 +1256,7 @@ fn test_persistent_storage() {
     assert_eq!(value, 1000);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -1026,7 +1272,7 @@ fn test_persistent_storage() {
 }
 <span class="boring">}</span></code></pre>
 <h3 id="3-testing-multiple-behaviors-in-one-test"><a class="header" href="#3-testing-multiple-behaviors-in-one-test">3. Testing Multiple Behaviors in One Test</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -1035,20 +1281,20 @@ fn test_everything() {
     // Hard to debug when it fails
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
-fn test_initialization() { }
+fn test_initialization() {}
 
 #[test]
-fn test_transfer() { }
+fn test_transfer() {}
 
 #[test]
-fn test_withdrawal() { }
+fn test_withdrawal() {}
 <span class="boring">}</span></code></pre>
 <h3 id="4-ignoring-error-cases"><a class="header" href="#4-ignoring-error-cases">4. Ignoring Error Cases</a></h3>
-<p>❌ <strong>DON’T:</strong></p>
+<p>❌ <strong>DON’T</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -1058,7 +1304,7 @@ fn test_transfer() {
     assert_eq!(client.balance(&amp;to), 100);
 }
 <span class="boring">}</span></code></pre>
-<p>✅ <strong>DO:</strong></p>
+<p>✅ <strong>DO</strong>:</p>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[test]
@@ -1123,14 +1369,14 @@ fn emits_expected_event_shape() {
     insta::assert_snapshot!(rendered);
 }
 <span class="boring">}</span></code></pre>
-<p><strong>When to use:</strong></p>
+<p><strong>When to use</strong>:</p>
 <ul>
 <li>Testing complex data structures</li>
 <li>Verifying serialization/deserialization</li>
 <li>Regression testing for output changes</li>
 <li>Testing event emissions</li>
 </ul>
-<p><strong>Tips:</strong></p>
+<p><strong>Tips</strong>:</p>
 <ul>
 <li>Prefer deterministic inputs (fixed timestamps/amounts) before snapshot assertions.</li>
 <li>Snapshot only stable values (avoid non-deterministic IDs unless normalized first).</li>
@@ -1143,127 +1389,280 @@ insta = "1"
 <h2 id="-coverage-tools"><a class="header" href="#-coverage-tools">📊 Coverage Tools</a></h2>
 <p>The repository CI already uses <code>cargo-tarpaulin</code> and uploads Cobertura XML to Codecov.</p>
 <h3 id="cargo-tarpaulin"><a class="header" href="#cargo-tarpaulin">Cargo Tarpaulin</a></h3>
-<p><strong>Installation:</strong></p>
+<p><strong>Installation</strong>:</p>
 <pre><code class="language-bash">cargo install cargo-tarpaulin --locked
 </code></pre>
-<p><strong>Usage:</strong></p>
-<pre><code class="language-bash"># Generate HTML coverage report
-cargo tarpaulin --workspace --all-features --out Html --output-dir ./coverage --timeout 300
-
-# Generate Cobertura XML for CI/CD
-cargo tarpaulin --workspace --all-features --out Xml --output-dir ./coverage --timeout 300
-
-# Exclude specific files
-cargo tarpaulin --exclude-files tests/* --workspace
+<p><strong>Usage</strong>:</p>
+<pre><code class="language-bash">cargo tarpaulin --out Xml --out Html
 </code></pre>
-<h3 id="alternative-llvm-based-coverage"><a class="header" href="#alternative-llvm-based-coverage">Alternative: LLVM-based Coverage</a></h3>
-<pre><code class="language-bash">cargo install cargo-llvm-cov --locked
-cargo llvm-cov --workspace --all-features --lcov --output-path lcov.info
-</code></pre>
-<h3 id="coverage-goals"><a class="header" href="#coverage-goals">Coverage Goals</a></h3>
+<p>Reports are written to <code>coverage/</code>. Open <code>coverage/tarpaulin-report.html</code> in a browser for a line-by-line view of what your tests are (and aren’t) hitting.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="local-simulation-guide"><a class="header" href="#local-simulation-guide">Local Simulation Guide</a></h1>
+<p>How to build, invoke, and debug Soroban contracts entirely on your machine before touching testnet.</p>
+<hr>
+<h2 id="prerequisites-2"><a class="header" href="#prerequisites-2">Prerequisites</a></h2>
 <ul>
-<li><strong>Minimum:</strong> &gt;80% line coverage</li>
-<li><strong>Target:</strong> &gt;90% line coverage</li>
-<li><strong>Ideal:</strong> &gt;95% line coverage</li>
-</ul>
-<p>Focus on covering critical paths and error conditions, not just achieving high percentages.</p>
-<p>Use coverage reports to identify untested error paths, auth branches, and storage edge cases.</p>
-<h3 id="5-test-events"><a class="header" href="#5-test-events">5. Test Events</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_events() {
-    let env = Env::default();
-    let contract_id = env.register_contract(None, MyContract);
-    let client = MyContractClient::new(&amp;env, &amp;contract_id);
-
-    client.transfer(&amp;from, &amp;to, &amp;100);
-
-    // Get emitted events
-    let events = env.events().all();
-
-    // Verify event was emitted
-    assert_eq!(events.len(), 1);
-    // ... verify event data
-}
-<span class="boring">}</span></code></pre>
-<h2 id="-running-tests"><a class="header" href="#-running-tests">🚀 Running Tests</a></h2>
-<h3 id="basic-test-run"><a class="header" href="#basic-test-run">Basic Test Run</a></h3>
-<pre><code class="language-bash">cargo test
-</code></pre>
-<h3 id="run-specific-test"><a class="header" href="#run-specific-test">Run Specific Test</a></h3>
-<pre><code class="language-bash">cargo test test_transfer
-</code></pre>
-<h3 id="run-with-output"><a class="header" href="#run-with-output">Run with Output</a></h3>
-<pre><code class="language-bash">cargo test -- --nocapture
-</code></pre>
-<h3 id="run-with-multiple-threads"><a class="header" href="#run-with-multiple-threads">Run with Multiple Threads</a></h3>
-<pre><code class="language-bash">cargo test -- --test-threads=4
-</code></pre>
-<h3 id="run-integration-tests-only"><a class="header" href="#run-integration-tests-only">Run Integration Tests Only</a></h3>
-<pre><code class="language-bash">cargo test --test integration
-</code></pre>
-<h2 id="-test-coverage"><a class="header" href="#-test-coverage">📊 Test Coverage</a></h2>
-<h3 id="install-tarpaulin-linux-only"><a class="header" href="#install-tarpaulin-linux-only">Install Tarpaulin (Linux only)</a></h3>
-<pre><code class="language-bash">cargo install cargo-tarpaulin
-</code></pre>
-<h3 id="generate-coverage-report"><a class="header" href="#generate-coverage-report">Generate Coverage Report</a></h3>
-<pre><code class="language-bash">cargo tarpaulin --out Html
-</code></pre>
-<h3 id="view-coverage"><a class="header" href="#view-coverage">View Coverage</a></h3>
-<pre><code class="language-bash">open tarpaulin-report.html
-</code></pre>
-<h2 id="-debugging-tests"><a class="header" href="#-debugging-tests">🐛 Debugging Tests</a></h2>
-<h3 id="print-debugging"><a class="header" href="#print-debugging">Print Debugging</a></h3>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn debug_test() {
-    let env = Env::default();
-
-    // Use env.logs() for debugging
-    env.logs().enable();
-
-    // Your test code
-    let result = some_function();
-
-    // Check logs
-    println!("{:?}", env.logs().all());
-}
-<span class="boring">}</span></code></pre>
-<h3 id="test-isolation"><a class="header" href="#test-isolation">Test Isolation</a></h3>
-<p>Each test runs in isolation - tests don’t share state:</p>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[test]
-fn test_a() {
-    // Has its own Env
-}
-
-#[test]
-fn test_b() {
-    // Completely separate Env
-}
-<span class="boring">}</span></code></pre>
-<h2 id="-examples"><a class="header" href="#-examples">📚 Examples</a></h2>
-<p>Check out our test examples:</p>
-<ul>
-<li><a href="examples/basics/01-hello-world/src/test.rs">Basic Tests</a></li>
-<li><a href="examples/basics/02-storage-patterns/src/test.rs">Storage Tests</a></li>
-<li><a href="examples/basics/03-authentication/src/test.rs">Auth Tests</a></li>
-</ul>
-<h2 id="-resources"><a class="header" href="#-resources">🔗 Resources</a></h2>
-<ul>
-<li><a href="https://developers.stellar.org/docs/smart-contracts/testing">Soroban Testing Documentation</a></li>
-<li><a href="https://doc.rust-lang.org/book/ch11-00-testing.html">Rust Testing Best Practices</a></li>
-<li><a href="https://docs.rs/soroban-sdk/latest/soroban_sdk/testutils/">SDK Test Utilities</a></li>
+<li>Rust with <code>wasm32-unknown-unknown</code> target (<code>rustup target add wasm32-unknown-unknown</code>)</li>
+<li>Stellar CLI 22.1.0+ (<code>cargo install --locked stellar-cli --version 22.1.0</code>)</li>
 </ul>
 <hr>
-<p><strong>Next:</strong> Learn about <a href="#deployment-guide">Deployment</a></p>
+<h2 id="how-local-simulation-works"><a class="header" href="#how-local-simulation-works">How Local Simulation Works</a></h2>
+<p>The Stellar CLI embeds the same Soroban host used on-chain. When you run <code>stellar contract invoke</code> without <code>--network</code>, it spins up an in-process ledger, executes your WASM, and returns results — no network, no fees, no funded account required.</p>
+<hr>
+<h2 id="reproducible-local-workflow"><a class="header" href="#reproducible-local-workflow">Reproducible Local Workflow</a></h2>
+<h3 id="step-1--build"><a class="header" href="#step-1--build">Step 1 — Build</a></h3>
+<pre><code class="language-bash">cd examples/basics/01-hello-world
+stellar contract build
+# WASM → target/wasm32-unknown-unknown/release/hello_world.wasm
+</code></pre>
+<h3 id="step-2--deploy-to-the-local-sandbox"><a class="header" href="#step-2--deploy-to-the-local-sandbox">Step 2 — Deploy to the local sandbox</a></h3>
+<pre><code class="language-bash">CONTRACT_ID=$(stellar contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/hello_world.wasm \
+  --source-account alice \
+  --network-passphrase "Standalone Network ; February 2017" \
+  --rpc-url http://localhost:8000/soroban/rpc)
+
+echo $CONTRACT_ID   # save this for subsequent calls
+</code></pre>
+<blockquote>
+<p>If you don’t have a local RPC node, omit <code>--rpc-url</code> and <code>--network-passphrase</code> to use the CLI’s built-in sandbox mode (no node needed).</p>
+</blockquote>
+<h3 id="step-3--invoke"><a class="header" href="#step-3--invoke">Step 3 — Invoke</a></h3>
+<pre><code class="language-bash">stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  -- \
+  hello \
+  --to World
+</code></pre>
+<p>Expected output:</p>
+<pre><code>["Hello", "World"]
+</code></pre>
+<h3 id="step-4--dry-run-before-every-real-submission"><a class="header" href="#step-4--dry-run-before-every-real-submission">Step 4 — Dry-run before every real submission</a></h3>
+<p>Add <code>--send no</code> to simulate without broadcasting. This is the fastest way to catch panics, auth failures, and fee surprises:</p>
+<pre><code class="language-bash">stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  --send no \
+  -- \
+  hello \
+  --to World
+</code></pre>
+<p>The CLI prints the simulated return value, resource usage, and fee estimate — all without spending any XLM.</p>
+<hr>
+<h2 id="iterative-development-loop"><a class="header" href="#iterative-development-loop">Iterative Development Loop</a></h2>
+<pre><code>edit src/lib.rs
+      │
+      ▼
+stellar contract build          ← recompile WASM
+      │
+      ▼
+stellar contract invoke --send no   ← dry-run, inspect output
+      │
+      ├─ panic / wrong result? → back to edit
+      │
+      ▼
+cargo test                      ← run unit tests
+      │
+      ▼
+stellar contract invoke         ← submit to local node (optional)
+      │
+      ▼
+ready for testnet
+</code></pre>
+<p>Keep this loop tight. Dry-run catches most issues in seconds; <code>cargo test</code> catches logic errors with full Rust tooling.</p>
+<hr>
+<h2 id="state-inspection"><a class="header" href="#state-inspection">State Inspection</a></h2>
+<h3 id="read-any-storage-entry"><a class="header" href="#read-any-storage-entry">Read any storage entry</a></h3>
+<pre><code class="language-bash">stellar contract read \
+  --id $CONTRACT_ID \
+  --key '{"symbol":"admin"}'
+</code></pre>
+<h3 id="dump-all-instance-storage"><a class="header" href="#dump-all-instance-storage">Dump all instance storage</a></h3>
+<pre><code class="language-bash">stellar contract read \
+  --id $CONTRACT_ID \
+  --durability instance
+</code></pre>
+<h3 id="dump-persistent-storage"><a class="header" href="#dump-persistent-storage">Dump persistent storage</a></h3>
+<pre><code class="language-bash">stellar contract read \
+  --id $CONTRACT_ID \
+  --durability persistent
+</code></pre>
+<h3 id="inspect-ledger-state-after-a-call"><a class="header" href="#inspect-ledger-state-after-a-call">Inspect ledger state after a call</a></h3>
+<pre><code class="language-bash"># 1. invoke and capture the ledger sequence
+stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  -- set_value --val 42
+
+# 2. read back the key you just wrote
+stellar contract read \
+  --id $CONTRACT_ID \
+  --key '{"symbol":"val"}'
+# → 42
+</code></pre>
+<hr>
+<h2 id="debugging-tips"><a class="header" href="#debugging-tips">Debugging Tips</a></h2>
+<h3 id="1-enable-host-side-logs"><a class="header" href="#1-enable-host-side-logs">1. Enable host-side logs</a></h3>
+<p>The Soroban host emits diagnostic events for every <code>log!</code> call in your contract. Capture them with <code>--diagnostic-events</code>:</p>
+<pre><code class="language-bash">stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  --diagnostic-events \
+  -- \
+  my_function \
+  --arg 99
+</code></pre>
+<p>In your contract:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use soroban_sdk::log;
+
+pub fn my_function(env: Env, arg: u32) -&gt; u32 {
+    log!(&amp;env, "my_function called with arg={}", arg);
+    arg * 2
+}
+<span class="boring">}</span></code></pre>
+<h3 id="2-inspect-emitted-events"><a class="header" href="#2-inspect-emitted-events">2. Inspect emitted events</a></h3>
+<pre><code class="language-bash">stellar events \
+  --start-ledger 1 \
+  --id $CONTRACT_ID
+</code></pre>
+<p>Events are printed as JSON. Each entry shows <code>type</code>, <code>topics</code>, and <code>data</code> — useful for verifying that your <code>env.events().publish(...)</code> calls fire with the right payloads.</p>
+<h3 id="3-decode-xdr-manually"><a class="header" href="#3-decode-xdr-manually">3. Decode XDR manually</a></h3>
+<p>If the CLI returns raw XDR, decode it:</p>
+<pre><code class="language-bash">stellar xdr decode --type ScVal --input base64 \
+  AAAAEAAAAQAAAAcAAAAFaGVsbG8AAAAA
+</code></pre>
+<h3 id="4-reproduce-a-panic"><a class="header" href="#4-reproduce-a-panic">4. Reproduce a panic</a></h3>
+<p>When a contract panics, the CLI prints the panic message and the host backtrace. To get the full trace, set:</p>
+<pre><code class="language-bash">RUST_BACKTRACE=1 stellar contract invoke ...
+</code></pre>
+<h3 id="5-isolate-auth-failures"><a class="header" href="#5-isolate-auth-failures">5. Isolate auth failures</a></h3>
+<p>If you see <code>HostError: Error(Auth, InvalidAction)</code>, the contract called <code>require_auth()</code> for an address that wasn’t authorized. Reproduce with <code>mock_all_auths()</code> in a unit test to confirm which call is failing:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[test]
+fn debug_auth_failure() {
+    let env = Env::default();
+    env.mock_all_auths();   // bypasses auth — if this passes, auth is the problem
+    let id = env.register_contract(None, MyContract);
+    let client = MyContractClient::new(&amp;env, &amp;id);
+    client.protected_fn(&amp;Address::generate(&amp;env));
+}
+<span class="boring">}</span></code></pre>
+<h3 id="6-advance-ledger-time-in-tests"><a class="header" href="#6-advance-ledger-time-in-tests">6. Advance ledger time in tests</a></h3>
+<p>Timelocks and TTL logic depend on <code>env.ledger().timestamp()</code>. Manipulate it directly:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>env.ledger().with_mut(|li| {
+    li.timestamp = 1_700_000_000;
+    li.sequence_number = 100;
+});
+<span class="boring">}</span></code></pre>
+<p>Call your function, then advance time and call again to test expiry paths.</p>
+<hr>
+<h2 id="practical-example-counter-contract"><a class="header" href="#practical-example-counter-contract">Practical Example: Counter Contract</a></h2>
+<p>A complete edit → simulate → inspect loop using a simple counter.</p>
+<p><strong>Contract (<code>src/lib.rs</code>)</strong></p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use soroban_sdk::{contract, contractimpl, log, symbol_short, Env};
+
+#[contract]
+pub struct Counter;
+
+#[contractimpl]
+impl Counter {
+    pub fn increment(env: Env) -&gt; u32 {
+        let mut count: u32 = env.storage().instance()
+            .get(&amp;symbol_short!("count"))
+            .unwrap_or(0);
+        count += 1;
+        env.storage().instance().set(&amp;symbol_short!("count"), &amp;count);
+        log!(&amp;env, "count is now {}", count);
+        count
+    }
+
+    pub fn get(env: Env) -&gt; u32 {
+        env.storage().instance()
+            .get(&amp;symbol_short!("count"))
+            .unwrap_or(0)
+    }
+}
+<span class="boring">}</span></code></pre>
+<p><strong>Build and deploy</strong></p>
+<pre><code class="language-bash">stellar contract build
+
+CONTRACT_ID=$(stellar contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/counter.wasm \
+  --source-account alice)
+</code></pre>
+<p><strong>Dry-run first call</strong></p>
+<pre><code class="language-bash">stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  --send no \
+  -- increment
+# → 1  (simulated, not committed)
+</code></pre>
+<p><strong>Submit and inspect state</strong></p>
+<pre><code class="language-bash">stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  -- increment
+# → 1
+
+stellar contract read \
+  --id $CONTRACT_ID \
+  --key '{"symbol":"count"}'
+# → 1
+
+stellar contract invoke \
+  --id $CONTRACT_ID \
+  --source-account alice \
+  -- increment
+# → 2
+
+stellar contract invoke \
+  --id $CONTRACT_ID \
+  -- get
+# → 2
+</code></pre>
+<hr>
+<h2 id="moving-to-testnet"><a class="header" href="#moving-to-testnet">Moving to Testnet</a></h2>
+<p>Once your local loop is clean:</p>
+<ol>
+<li>Add the testnet network config (see <a href="#network-configuration">Deployment Guide</a>)</li>
+<li>Fund an account via Friendbot</li>
+<li>Re-run the same <code>stellar contract deploy</code> and <code>invoke</code> commands with <code>--network testnet</code></li>
+</ol>
+<p>The commands are identical — only the <code>--network</code> flag changes. Everything you validated locally transfers directly.</p>
+<hr>
+<h2 id="quick-reference"><a class="header" href="#quick-reference">Quick Reference</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>Command</th></tr>
+</thead>
+<tbody>
+<tr><td>Build WASM</td><td><code>stellar contract build</code></td></tr>
+<tr><td>Deploy locally</td><td><code>stellar contract deploy --wasm &lt;path&gt; --source-account alice</code></td></tr>
+<tr><td>Dry-run invoke</td><td><code>stellar contract invoke --id $ID --send no -- &lt;fn&gt;</code></td></tr>
+<tr><td>Read storage key</td><td><code>stellar contract read --id $ID --key '&lt;json&gt;'</code></td></tr>
+<tr><td>Dump instance storage</td><td><code>stellar contract read --id $ID --durability instance</code></td></tr>
+<tr><td>View events</td><td><code>stellar events --start-ledger 1 --id $ID</code></td></tr>
+<tr><td>Decode XDR</td><td><code>stellar xdr decode --type ScVal --input base64 &lt;xdr&gt;</code></td></tr>
+<tr><td>Enable diagnostics</td><td>add <code>--diagnostic-events</code> to any invoke</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p><strong>Next:</strong> <a href="#deployment-guide">Deployment Guide</a> — deploy to testnet and mainnet.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="deployment-guide"><a class="header" href="#deployment-guide">Deployment Guide</a></h1>
 <p>Complete guide for deploying Soroban smart contracts to Testnet and Mainnet.</p>
-<h2 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h2>
+<h2 id="prerequisites-3"><a class="header" href="#prerequisites-3">Prerequisites</a></h2>
 <ul>
 <li>Rust installed with <code>wasm32-unknown-unknown</code> target</li>
 <li>Soroban CLI installed: <code>cargo install --locked soroban-cli</code></li>
@@ -1895,7 +2294,7 @@ let result = a.checked_add(b).expect("Overflow occurred");
 </code></pre>
 <p><strong>Soroban:</strong></p>
 <pre><code class="language-bash">stellar contract deploy \
-  --wasm target/wasm32v1-none/release/my_contract.wasm \
+    --wasm target/wasm32v1-none/release/my_contract.wasm \
   --source-account alice \
   --network testnet
 </code></pre>
@@ -1991,146 +2390,43 @@ fn require_admin(env: &amp;Env) -&gt; Address {
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="basic-examples"><a class="header" href="#basic-examples">Basic Examples</a></h1>
 <p>Core Soroban fundamentals, one concept per example. Perfect for beginners.</p>
-<h2 id="-examples-11-total"><a class="header" href="#-examples-11-total">📋 Examples (11 total)</a></h2>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="01-hello-world"><a class="header" href="#01-hello-world"><a href="examples/basics/01-hello-world">01-hello-world</a></a></h3>
-<p><strong>Basic contract structure.</strong> Simplest possible contract - a <code>hello</code> function returning greeting.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>#[contract]</code> / <code>#[contractimpl]</code> macros</li>
-<li>Contract client generation for testing</li>
-<li>Symbol types &amp; Vec return</li>
-</ul>
-<p><strong>Quick Code:</strong></p>
-<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>pub fn hello(env: Env, to: Symbol) -&gt; Vec&lt;Symbol&gt; {
-    vec![&amp;env, symbol_short!(\"Hello\"), to]
-}
-<span class="boring">}</span></code></pre>
-<p><strong>Test:</strong> <code>cargo test -p hello-world</code></p>
-<hr>
+<p>Basic contract structure — <code>#[contract]</code>, <code>#[contractimpl]</code>, <code>Env</code>, <code>Symbol</code>, <code>Vec</code>.</p>
 <h3 id="02-storage-patterns"><a class="header" href="#02-storage-patterns"><a href="examples/basics/02-storage-patterns">02-storage-patterns</a></a></h3>
-<p><strong>All 3 storage types</strong> (persistent/instance/temporary) + TTL management. <strong>Essential for all contracts.</strong></p>
+<p>All three storage tiers (persistent, instance, temporary) with TTL management.</p>
 <p><strong><a href="storage-patterns.html">Full Guide →</a></strong></p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>Persistent: user balances (per-key TTL)</li>
-<li>Instance: config (shared TTL)</li>
-<li>Temporary: caches (cheapest, short-lived)</li>
-<li><code>has()</code> before <code>get()</code>, <code>extend_ttl(threshold, extend_to)</code></li>
-<li><code>#[contracttype] enum DataKey</code></li>
-</ul>
-<p><strong>Decision Tree:</strong></p>
-<pre><code>&gt; few ledgers? → Temporary
-&gt; config? → Instance
-&gt; user data → Persistent
-</code></pre>
-<p><strong>Gas:</strong> Temp &lt; Instance &lt; Persistent</p>
-<p><strong>Pro Tip:</strong> Forget TTL extension → data archives!</p>
-<p><strong>Test:</strong> <code>cargo test -p storage-patterns</code></p>
-<hr>
 <h3 id="03-custom-errors"><a class="header" href="#03-custom-errors"><a href="examples/basics/03-custom-errors">03-custom-errors</a></a></h3>
-<p><strong>Custom errors</strong> w/ 8 variants, codes, events. <strong>Essential.</strong></p>
+<p>Custom error enums with structured codes.</p>
 <p><strong><a href="error-handling.html">Full Guide →</a></strong></p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>#[contracterror] #[repr(u32)] enum Error</code></li>
-<li><code>Result&lt;(), Error&gt;</code>, <code>Err(MyError::Variant)</code></li>
-<li>Event logging on failures</li>
-<li>Frontend error code mapping</li>
-</ul>
-<p><strong>Examples:</strong> InvalidInput(1), Unauthorized(2), NotFound(3)…</p>
-<p><strong>Test:</strong> <code>cargo test -p custom-errors</code></p>
-<hr>
 <h3 id="03-authentication"><a class="header" href="#03-authentication"><a href="examples/basics/03-authentication">03-authentication</a></a></h3>
-<p><strong>Authorization &amp; roles:</strong> <code>require_auth()</code>, admin checks, allowances.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>address.require_auth()</code></li>
-<li>Stored admin verification</li>
-<li>Balance transfer with validation</li>
-<li>Role-based access control (RBAC)</li>
-</ul>
-<hr>
+<p>Authorization with <code>require_auth()</code>, admin checks, and RBAC.</p>
 <h3 id="04-events"><a class="header" href="#04-events"><a href="examples/basics/04-events">04-events</a></a></h3>
-<p><strong>Structured events</strong> (4-topic, custom payloads). <strong>Essential for indexing.</strong></p>
-<p><strong><a href="events.html">Full Guide →</a></strong> | <a href="04-events/EVENT_QUICK_REFERENCE.html">Quick Ref →</a></p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>Topics: <code>(events, transfer, from, to)</code></li>
-<li>Payloads: <code>#[contracttype] struct TransferData</code></li>
-<li>Filters: sender/receiver specific</li>
-<li>Patterns: transfer/config/admin/audit</li>
-</ul>
-<p><strong>Gas:</strong> Topics cheap; limit loops</p>
-<p><strong>Test:</strong> <code>cargo test -p events</code></p>
-<hr>
+<p>Structured events with multi-topic indexing.</p>
+<p><strong><a href="events.html">Full Guide →</a></strong></p>
 <h3 id="05-error-handling"><a class="header" href="#05-error-handling"><a href="examples/basics/05-error-handling">05-error-handling</a></a></h3>
-<p><strong>Result vs panic!</strong> patterns (good/bad).</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>Result&lt;T,E&gt;</code> for user errors, <code>panic!</code> for invariants</li>
-<li>Gas efficient, UX friendly</li>
-</ul>
-<hr>
+<p>Result-based error handling and propagation.</p>
 <h3 id="05-auth-context"><a class="header" href="#05-auth-context"><a href="examples/basics/05-auth-context">05-auth-context</a></a></h3>
-<p><strong>Invocation context:</strong> Who called the contract?</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>env.invoker().clone()</code> vs <code>env.current_contract_address()</code></li>
-<li>Cross-contract auth propagation</li>
-</ul>
-<hr>
-<h3 id="06-soroban-types"><a class="header" href="#06-soroban-types"><a href="examples/basics/06-soroban-types">06-soroban-types</a></a></h3>
-<p><strong>Core types:</strong> Address, Symbol, Map, Vec, bytes.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>Type conversions (<code>to_val()</code>, <code>try_from_val()</code>)</li>
-<li>Collection operations (push/pop)</li>
-</ul>
-<hr>
+<p>Invocation context across cross-contract call chains.</p>
 <h3 id="06-validation-patterns"><a class="header" href="#06-validation-patterns"><a href="examples/basics/06-validation-patterns">06-validation-patterns</a></a></h3>
-<p><strong>Input validation</strong> with checked math.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>checked_add/sub/mul/div</code></li>
-<li>Range bounds, zero checks</li>
-</ul>
-<hr>
-<h3 id="07-enum-types"><a class="header" href="#07-enum-types"><a href="examples/basics/07-enum-types">07-enum-types</a></a></h3>
-<p><strong><code>#[contracttype]</code> enums</strong> for state machines.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>Enum storage &amp; matching</li>
-<li>Operation dispatch</li>
-</ul>
-<hr>
-<h3 id="08-custom-structs"><a class="header" href="#08-custom-structs"><a href="examples/basics/08-custom-structs">08-custom-structs</a></a></h3>
-<p><strong>Complex data</strong> with nested <code>#[contracttype]</code> structs.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>User profiles, portfolios</li>
-<li>Tuple keys <code>(Status, Address)</code></li>
-</ul>
-<hr>
-<h3 id="09-primitive-types"><a class="header" href="#09-primitive-types"><a href="examples/basics/09-primitive-types">09-primitive-types</a></a></h3>
-<p><strong>Integer handling</strong> &amp; overflow safety.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>u32/u64/i128 behaviors</li>
-<li>Safe casting</li>
-</ul>
-<hr>
-<h3 id="12-error-handling"><a class="header" href="#12-error-handling"><a href="examples/basics/12-error-handling">12-error-handling</a></a></h3>
-<p><strong>Foundational error handling</strong> using Result and panic.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li><code>#[contracterror]</code>, <code>Result&lt;T, E&gt;</code>, error codes</li>
-<li><code>try_*</code> client methods, invariant panics</li>
-</ul>
-<hr>
-<p><strong>Supporting:</strong> events/, instance-storage/, persistent-storage/, temporary_storage/</p>
-<h2 id="-quick-start"><a class="header" href="#-quick-start">🚀 Quick Start</a></h2>
+<p>Input validation with checked arithmetic.</p>
+<h3 id="07-type-conversions"><a class="header" href="#07-type-conversions"><a href="examples/basics/07-type-conversions">07-type-conversions</a></a></h3>
+<p>Safe type conversions with <code>TryFromVal</code> and <code>IntoVal</code>.</p>
+<h3 id="08-soroban-types"><a class="header" href="#08-soroban-types"><a href="examples/basics/08-soroban-types">08-soroban-types</a></a></h3>
+<p>Core SDK types: Address, Symbol, Map, Vec, bytes.</p>
+<h3 id="09-enum-types"><a class="header" href="#09-enum-types"><a href="examples/basics/09-enum-types">09-enum-types</a></a></h3>
+<p>Contract enums for state machines and dispatch.</p>
+<h3 id="10-custom-structs"><a class="header" href="#10-custom-structs"><a href="examples/basics/10-custom-structs">10-custom-structs</a></a></h3>
+<p>Nested <code>#[contracttype]</code> structs and composite storage keys.</p>
+<h3 id="11-primitive-types"><a class="header" href="#11-primitive-types"><a href="examples/basics/11-primitive-types">11-primitive-types</a></a></h3>
+<p>Integer handling and overflow safety.</p>
+<h3 id="12-data-types"><a class="header" href="#12-data-types"><a href="examples/basics/12-data-types">12-data-types</a></a></h3>
+<p>Comprehensive type system reference.</p>
+<h3 id="13-collection-types"><a class="header" href="#13-collection-types"><a href="examples/basics/13-collection-types">13-collection-types</a></a></h3>
+<p>Vec and Map collection patterns.</p>
+<h3 id="14-event-filtering"><a class="header" href="#14-event-filtering"><a href="examples/basics/14-event-filtering">14-event-filtering</a></a></h3>
+<p>Indexer-friendly event topic design.</p>
+<h2 id="quick-start-1"><a class="header" href="#quick-start-1">Quick Start</a></h2>
 <pre><code class="language-bash">cd examples/basics/01-hello-world
 cargo test &amp;&amp; cargo build --target wasm32-unknown-unknown --release
 </code></pre>
@@ -2186,6 +2482,7 @@ env.storage().temporary().set(&amp;key, &amp;value);
 <li><strong>Use enums for keys</strong>: <code>#[contracttype] enum DataKey { Balance(Address) }</code></li>
 <li><strong>Instance = small config only</strong> (loads all keys together)</li>
 <li><strong>Threshold != 0</strong> in extend_ttl (avoid redundant extensions)</li>
+<li><strong>Compress only when helpful</strong>: compare raw and compressed storage sizes before storing large byte payloads. Compression can reduce rent for repetitive data, but may add cost for small or random payloads.</li>
 </ol>
 <h2 id="-full-example"><a class="header" href="#-full-example">🔬 Full Example</a></h2>
 <p><a href="examples/basics/02-storage-patterns">examples/basics/02-storage-patterns/</a></p>
@@ -2197,6 +2494,7 @@ env.storage().temporary().set(&amp;key, &amp;value);
 <li>Unit tests</li>
 <li>Deployment instructions</li>
 <li>Focused follow-up examples for <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/tree/main/examples/basics/instance-storage">instance storage</a>, <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/tree/main/examples/basics/persistent-storage">persistent storage</a>, and <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/tree/main/examples/basics/temporary_storage">temporary storage</a></li>
+<li>Compressed storage examples for comparing raw vs encoded bytes</li>
 </ul>
 <pre><code>cd examples/basics/02-storage-patterns
 cargo test
@@ -2248,7 +2546,7 @@ pub fn transfer(env: Env, amount: u64) -&gt; Result&lt;(), Error&gt; {
     Ok(())
 }
 <span class="boring">}</span></code></pre>
-<h2 id="-examples-1"><a class="header" href="#-examples-1">🔬 Examples</a></h2>
+<h2 id="-examples"><a class="header" href="#-examples">🔬 Examples</a></h2>
 <p><strong><a href="examples/basics/03-custom-errors">Primary: 03-custom-errors</a></strong></p>
 <ul>
 <li>8 error types (table/mapping)</li>
@@ -2256,15 +2554,10 @@ pub fn transfer(env: Env, amount: u64) -&gt; Result&lt;(), Error&gt; {
 <li>Complex multi-check ops</li>
 <li><code>cargo test -p custom-errors</code></li>
 </ul>
-<p><strong><a href="examples/basics/05-error-handling">Panic vs Result: 05-error-handling</a></strong></p>
+<p><strong><a href="examples/basics/05-error-handling">Result patterns: 05-error-handling</a></strong></p>
 <ul>
 <li>Good/bad patterns</li>
 <li><code>transfer()</code> vs <code>transfer_panic()</code></li>
-</ul>
-<p><strong><a href="examples/basics/12-error-handling">Foundational: 12-error-handling</a></strong></p>
-<ul>
-<li>Clean implementation of <code>Result</code> vs <code>panic!</code></li>
-<li>Explicit error codes and division logic</li>
 <li>Comprehensive <code>try_</code> client testing</li>
 </ul>
 <h2 id="-testing-errors"><a class="header" href="#-testing-errors">🧪 Testing Errors</a></h2>
@@ -2480,7 +2773,7 @@ deciding to process the event, it belongs in data.</p>
 <li>Reserve the data slot for richer structs decoded after filtering</li>
 </ul>
 <hr>
-<h2 id="-examples-2"><a class="header" href="#-examples-2">🔬 Examples</a></h2>
+<h2 id="-examples-1"><a class="header" href="#-examples-1">🔬 Examples</a></h2>
 <p><strong><a href="examples/basics/04-events">04-events</a></strong> — canonical structured event patterns</p>
 <ul>
 <li>4-topic transfers, config updates, admin actions, audit trails</li>
@@ -2514,7 +2807,7 @@ assert_eq!(payload.amount, expected_amount);
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="intermediate-examples"><a class="header" href="#intermediate-examples">Intermediate Examples</a></h1>
 <p>Real-world patterns: tokens, access control, data structures.</p>
-<h2 id="-examples-3"><a class="header" href="#-examples-3">📋 Examples</a></h2>
+<h2 id="-examples-2"><a class="header" href="#-examples-2">📋 Examples</a></h2>
 <h3 id="multi-sig-patterns-multi-sig-patterns"><a class="header" href="#multi-sig-patterns-multi-sig-patterns">Multi-Sig Patterns <a href="examples/intermediate/multi-sig-patterns">./multi-sig-patterns/</a></a></h3>
 <p><strong>Threshold signatures &amp; multi-party auth.</strong> N-of-M signers, sequential approvals, and single-transaction multi-auth.</p>
 <p><strong>Key Concepts:</strong></p>
@@ -2553,8 +2846,45 @@ for signer in signers.iter() {
     .deploy(wasm_hash);
 AjoClient::new(&amp;env, &amp;address).initialize(...);
 <span class="boring">}</span></code></pre>
+<h3 id="pause--unpause-03-pause-unpause"><a class="header" href="#pause--unpause-03-pause-unpause">Pause / Unpause <a href="examples/intermediate/03-pause-unpause">./03-pause-unpause/</a></a></h3>
+<p><strong>Emergency shutdown mechanism.</strong> Admin-controlled pause toggle that halts sensitive operations while keeping read-only functions available.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li><code>#[contracterror]</code> for pause-state errors</li>
+<li>Internal <code>require_not_paused</code> guard</li>
+<li>Guarded vs unguarded functions</li>
+<li>Event emission on state transitions</li>
+</ul>
+<p><strong>Quick Code:</strong></p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Guard sensitive operations
+fn require_not_paused(env: &amp;Env) -&gt; Result&lt;(), PauseError&gt; {
+    let paused: bool = env.storage().instance().get(&amp;DataKey::Paused).unwrap_or(false);
+    if paused { return Err(PauseError::ContractPaused); }
+    Ok(())
+}
+<span class="boring">}</span></code></pre>
+<h3 id="storage-migration-storage-migration"><a class="header" href="#storage-migration-storage-migration">Storage Migration <a href="examples/intermediate/storage-migration">./storage-migration/</a></a></h3>
+<p><strong>Versioned storage upgrades.</strong> Stage migrations, transform legacy storage, and execute in safe batches.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>Explicit version tracking</li>
+<li>Prepared migration state</li>
+<li>Chunked batch execution</li>
+<li>Safe rollback/cancellation</li>
+</ul>
+<h3 id="event-history-event-history"><a class="header" href="#event-history-event-history">Event History <a href="examples/intermediate/event-history">./event-history/</a></a></h3>
+<p><strong>On-chain audit history.</strong> Record event entries persistently and query them with cursor-based pagination and time filters.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>Append-only audit entries</li>
+<li>Cursor-based pagination with stable next cursors</li>
+<li>Time-based filtering</li>
+<li>Storage cap trimming</li>
+</ul>
 <hr>
-<h2 id="prerequisites-2"><a class="header" href="#prerequisites-2">Prerequisites</a></h2>
+<h2 id="prerequisites-4"><a class="header" href="#prerequisites-4">Prerequisites</a></h2>
 <ul>
 <li><a href="basics.html">Basics</a></li>
 </ul>
@@ -2642,6 +2972,10 @@ fn test_factory() {
 }
 <span class="boring">}</span></code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pause--unpause"><a class="header" href="#pause--unpause">Pause / Unpause</a></h1>
+<p>Administrative pause pattern for Soroban contracts.</p>
+<p>See the example: <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/tree/main/examples/intermediate/03-pause-unpause"><code>examples/intermediate/03-pause-unpause</code></a>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="advanced-examples"><a class="header" href="#advanced-examples">Advanced Examples</a></h1>
 <p>Complex protocols &amp; optimizations for production systems.</p>
 <h2 id="-examples-2-currently"><a class="header" href="#-examples-2-currently">📋 Examples (2 currently)</a></h2>
@@ -2669,19 +3003,61 @@ fn test_factory() {
     return Err(Error::TimeLocked);
 }
 <span class="boring">}</span></code></pre>
+<hr>
+<h3 id="03-oracle-pattern"><a class="header" href="#03-oracle-pattern"><a href="examples/advanced/03-oracle-pattern">03-oracle-pattern</a></a></h3>
+<p><strong>Single-source oracle</strong> with authorized submission and freshness validation.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>Authorized data updater</li>
+<li>Ledger-timestamp freshness checks</li>
+<li>Strict (fail-on-stale) vs raw getters</li>
+<li>Updater rotation by admin</li>
+</ul>
+<p><strong>Quick Code:</strong></p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Submit data (authorized updater only)
+client.submit(&amp;updater, &amp;42_i128);
+// Query with freshness guard
+let value = client.get_value_strict(); // errors if stale
+<span class="boring">}</span></code></pre>
 <p><strong>[More coming…]</strong> Factories, bonding curves, merkle proofs.</p>
 <h2 id="-warning"><a class="header" href="#-warning">⚠️ Warning</a></h2>
 <p>Advanced patterns increase complexity - audit thoroughly!</p>
-<h2 id="prerequisites-3"><a class="header" href="#prerequisites-3">Prerequisites</a></h2>
+<h2 id="prerequisites-5"><a class="header" href="#prerequisites-5">Prerequisites</a></h2>
 <ul>
 <li><a href="basics.html">Basics</a>, <a href="intermediate.html">Intermediate</a></li>
 </ul>
 <h2 id="next-defi"><a class="header" href="#next-defi">Next: <a href="defi.html">DeFi</a></a></h2>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="oracle-pattern"><a class="header" href="#oracle-pattern">Oracle Pattern</a></h1>
+<p>Cross-contract price and data feed patterns for Soroban.</p>
+<p>See the example: <a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/tree/main/examples/advanced/03-oracle-pattern"><code>examples/advanced/03-oracle-pattern</code></a>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="defi-examples"><a class="header" href="#defi-examples">DeFi Examples</a></h1>
 <p>Decentralized finance on Soroban: AMMs, lending, yield protocols.</p>
+<h2 id="-examples-1-currently"><a class="header" href="#-examples-1-currently">📋 Examples (1 currently)</a></h2>
+<h3 id="01-vault-strategies"><a class="header" href="#01-vault-strategies"><a href="examples/vault-strategies">01-vault-strategies</a></a></h3>
+<p><strong>Multi-strategy yield vault</strong> with pluggable strategies and risk management.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>Strategy interface (<code>StrategyParams</code> + <code>StrategyType</code>)</li>
+<li>Three strategy implementations: Conservative, Balanced, Aggressive</li>
+<li>Admin-gated strategy switching with TVL circuit-breaker</li>
+<li>Emergency pause (deposits blocked, withdrawals always open)</li>
+<li>Allocation caps per strategy in basis points</li>
+</ul>
+<p><strong>Quick Code:</strong></p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Switch to a higher-yield strategy
+client.switch_strategy(&amp;admin, &amp;StrategyType::Balanced);
+
+// Estimate yield for planning
+let yield_amount = client.estimate_yield(&amp;10_000, &amp;365);
+<span class="boring">}</span></code></pre>
+<hr>
 <h2 id="-coming-soon"><a class="header" href="#-coming-soon">📋 Coming Soon</a></h2>
-<p>Planned examples:</p>
 <h3 id="automated-market-maker-amm"><a class="header" href="#automated-market-maker-amm">Automated Market Maker (AMM)</a></h3>
 <p><strong>Constant product pools</strong> (x*y=k).</p>
 <p><strong>Key Concepts:</strong></p>
@@ -2698,17 +3074,7 @@ fn test_factory() {
 <li>Liquidation thresholds</li>
 <li>Interest accrual</li>
 </ul>
-<h3 id="yield-vault"><a class="header" href="#yield-vault">Yield Vault</a></h3>
-<p><strong>Automated yield optimization</strong>.</p>
-<p><strong>Key Concepts:</strong></p>
-<ul>
-<li>Strategy rotation</li>
-<li>Performance fees</li>
-<li>Emergency withdrawal</li>
-</ul>
-<h2 id="placeholder-content"><a class="header" href="#placeholder-content">Placeholder Content</a></h2>
-<p>Currently empty <code>examples/defi/</code> directory.</p>
-<h2 id="prerequisites-4"><a class="header" href="#prerequisites-4">Prerequisites</a></h2>
+<h2 id="prerequisites-6"><a class="header" href="#prerequisites-6">Prerequisites</a></h2>
 <ul>
 <li><a href="basics.html">Basics</a>, <a href="tokens.html">Tokens</a></li>
 </ul>
@@ -2719,36 +3085,331 @@ fn test_factory() {
 </ul>
 <h2 id="next-nfts"><a class="header" href="#next-nfts">Next: <a href="nfts.html">NFTs</a></a></h2>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="vault-strategies"><a class="header" href="#vault-strategies">Vault Strategies</a></h1>
+<p><strong>Source:</strong> <a href="../examples/defi/01-vault-strategies"><code>examples/defi/01-vault-strategies</code></a></p>
+<p>A yield-bearing vault that supports multiple pluggable strategies with on-chain risk management.</p>
+<h2 id="what-it-does"><a class="header" href="#what-it-does">What It Does</a></h2>
+<p>Users deposit tokens into the vault. The vault allocates those funds to an active <strong>yield strategy</strong>. The admin can switch strategies at any time, subject to risk-management guards that protect depositors.</p>
+<h2 id="strategy-interface"><a class="header" href="#strategy-interface">Strategy Interface</a></h2>
+<p>Every strategy is described by a <code>StrategyParams</code> struct returned by the <code>strategy_params()</code> factory:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub struct StrategyParams {
+    pub name: Symbol,
+    pub max_allocation_bps: i128,  // max % of TVL (10 000 = 100 %)
+    pub expected_apy_bps: i128,    // indicative annual yield
+    pub risk_level: RiskLevel,     // Low | Medium | High
+}
+<span class="boring">}</span></code></pre>
+<p>Adding a new strategy means adding a variant to <code>StrategyType</code> and a matching arm in <code>strategy_params()</code> — no other changes required.</p>
+<h2 id="strategy-implementations"><a class="header" href="#strategy-implementations">Strategy Implementations</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Strategy</th><th>APY</th><th>Allocation Cap</th><th>Risk</th></tr>
+</thead>
+<tbody>
+<tr><td>Conservative</td><td>~3%</td><td>100% (no cap)</td><td>Low</td></tr>
+<tr><td>Balanced</td><td>~8%</td><td>80% of TVL</td><td>Medium</td></tr>
+<tr><td>Aggressive</td><td>~20%</td><td>50% of TVL</td><td>High</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="strategy-switching"><a class="header" href="#strategy-switching">Strategy Switching</a></h2>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Admin switches from Conservative to Balanced
+client.switch_strategy(&amp;admin, &amp;StrategyType::Balanced);
+
+// Query the active strategy's parameters
+let info = client.strategy_info();
+// info.expected_apy_bps == 800
+// info.risk_level == RiskLevel::Medium
+<span class="boring">}</span></code></pre>
+<h2 id="risk-management"><a class="header" href="#risk-management">Risk Management</a></h2>
+<h3 id="allocation-cap"><a class="header" href="#allocation-cap">Allocation Cap</a></h3>
+<p>Each strategy caps how much of the vault’s TVL it may hold. A deposit that would exceed the cap is rejected:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Balanced has an 80 % cap.
+// Depositing 100 tokens as the only depositor (100 % of TVL) → panic
+client.switch_strategy(&amp;admin, &amp;StrategyType::Balanced);
+client.deposit(&amp;user, &amp;100); // panics: "Exceeds strategy allocation cap"
+<span class="boring">}</span></code></pre>
+<h3 id="emergency-pause"><a class="header" href="#emergency-pause">Emergency Pause</a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>client.pause(&amp;admin);    // deposits blocked, withdrawals still open
+client.unpause(&amp;admin);  // deposits re-enabled
+<span class="boring">}</span></code></pre>
+<p>Withdrawals are always permitted so users can exit even during an emergency.</p>
+<h3 id="tvl-guard-for-aggressive-strategy"><a class="header" href="#tvl-guard-for-aggressive-strategy">TVL Guard for Aggressive Strategy</a></h3>
+<p>Switching to <code>Aggressive</code> is blocked when the vault holds more than 1 000 000 token units:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>client.deposit(&amp;user, &amp;1_000_001);
+client.switch_strategy(&amp;admin, &amp;StrategyType::Aggressive);
+// panics: "TVL too high for aggressive strategy"
+<span class="boring">}</span></code></pre>
+<h2 id="yield-estimation"><a class="header" href="#yield-estimation">Yield Estimation</a></h2>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Estimate yield for 10 000 tokens over 365 days with the active strategy
+let yield_amount = client.estimate_yield(&amp;10_000, &amp;365);
+// Conservative (300 bps): yield_amount == 300
+// Aggressive  (2000 bps): yield_amount == 2000
+<span class="boring">}</span></code></pre>
+<h2 id="key-concepts"><a class="header" href="#key-concepts">Key Concepts</a></h2>
+<ul>
+<li><strong>Strategy interface</strong> — uniform <code>StrategyParams</code> struct for all strategies</li>
+<li><strong>Strategy switching</strong> — admin-gated with TVL circuit-breaker</li>
+<li><strong>Allocation caps</strong> — per-strategy deposit limits in basis points</li>
+<li><strong>Emergency pause</strong> — deposits blocked, withdrawals always open</li>
+<li><strong>Yield estimation</strong> — linear APY model for off-chain planning</li>
+</ul>
+<h2 id="prerequisites-7"><a class="header" href="#prerequisites-7">Prerequisites</a></h2>
+<ul>
+<li><a href="#storage-patterns">Storage Patterns</a></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#event-patterns">Events</a></li>
+</ul>
+<h2 id="next"><a class="header" href="#next">Next</a></h2>
+<ul>
+<li><a href="advanced.html">Advanced: Timelock</a> — combine with a timelock for governance-controlled strategy switches</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="nft-examples"><a class="header" href="#nft-examples">NFT Examples</a></h1>
-<p>Non-fungible tokens &amp; marketplaces on Soroban.</p>
-<h2 id="-coming-soon-1"><a class="header" href="#-coming-soon-1">📋 Coming Soon</a></h2>
-<h3 id="core-nft-contract"><a class="header" href="#core-nft-contract">Core NFT Contract</a></h3>
-<p><strong>Mint, transfer, metadata</strong>.</p>
-<p><strong>Key Concepts:</strong></p>
+<p>Non-fungible tokens and marketplaces on Soroban.</p>
+<h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
+<h3 id="01--basic-nft"><a class="header" href="#01--basic-nft">01 — Basic NFT</a></h3>
+<p><strong>Path:</strong> <code>examples/nfts/01-basic-nft</code></p>
+<p>A mintable NFT contract with ownership queries, transfer mechanics, enumerability, and both single-token and operator approvals.</p>
+<p><strong>Key concepts:</strong></p>
 <ul>
-<li>Unique ID generation</li>
-<li>Token URI standards</li>
-<li>Royalty enforcement</li>
+<li>Mint function guarded by an admin role</li>
+<li><code>owner_of</code> + <code>balance_of</code> queries</li>
+<li>Global and owner-specific token enumeration</li>
+<li><code>approve</code>, <code>set_approval_for_all</code>, and <code>transfer_from</code> patterns</li>
 </ul>
+<hr>
+<h3 id="02--nft-metadata-standards"><a class="header" href="#02--nft-metadata-standards">02 — NFT Metadata Standards</a></h3>
+<p><strong>Path:</strong> <code>examples/nfts/01-nft-metadata</code></p>
+<p>A complete NFT contract implementing metadata standards with JSON schema compliance, a typed attribute system, image/media URI validation, and full metadata validation.</p>
+<p><strong>Key concepts:</strong></p>
+<ul>
+<li><code>TokenMetadata</code> struct that mirrors the JSON metadata schema</li>
+<li><code>Vec&lt;Attribute&gt;</code> attribute system with <code>trait_type</code> + <code>value</code> fields</li>
+<li>Image and media URI validation (<code>ipfs://</code>, <code>https://</code>, <code>http://</code>, <code>data:</code>)</li>
+<li><code>validate_metadata()</code> called on every mint and update</li>
+<li>Admin-controlled minting and metadata updates</li>
+<li>Single-token and operator approvals</li>
+</ul>
+<hr>
+<h3 id="03--nft-marketplace"><a class="header" href="#03--nft-marketplace">03 — NFT Marketplace</a></h3>
+<p><strong>Path:</strong> <code>examples/nfts/02-nft-marketplace</code></p>
+<p>An advanced marketplace contract demonstrating fixed-price listings, auction bidding, bundle sales, automatic royalty accounting, and trading history.</p>
+<p><strong>Key concepts:</strong></p>
+<ul>
+<li>Fixed-price and auction listing flows</li>
+<li>Bundle sales for multiple NFTs in one order</li>
+<li>Royalty calculation and payout accounting</li>
+<li>Trade history storage for settlement auditing</li>
+</ul>
+<hr>
+<h2 id="metadata-schema"><a class="header" href="#metadata-schema">Metadata Schema</a></h2>
+<p>Each token carries a <code>TokenMetadata</code> record stored on-chain. The struct maps 1-to-1 to this JSON schema:</p>
+<pre><code class="language-json">{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "TokenMetadata",
+  "type": "object",
+  "required": ["name", "description", "image"],
+  "properties": {
+    "name":             { "type": "string", "minLength": 1 },
+    "description":      { "type": "string", "minLength": 1 },
+    "image":            { "type": "string", "pattern": "^(ipfs://|https://|http://|data:)" },
+    "external_url":     { "type": "string" },
+    "animation_url":    { "type": "string" },
+    "background_color": { "type": "string", "pattern": "^([0-9a-fA-F]{6})?$" },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trait_type", "value"],
+        "properties": {
+          "trait_type": { "type": "string", "minLength": 1 },
+          "value":      { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="example-metadata-record"><a class="header" href="#example-metadata-record">Example metadata record</a></h3>
+<pre><code class="language-json">{
+  "name": "Legendary Sword #42",
+  "description": "A legendary sword with immense power",
+  "image": "ipfs://QmHash/sword.png",
+  "external_url": "https://example.com/items/42",
+  "animation_url": "https://cdn.example.com/sword.mp4",
+  "background_color": "1A2B3C",
+  "attributes": [
+    { "trait_type": "Rarity", "value": "Legendary" },
+    { "trait_type": "Power",  "value": "100"       },
+    { "trait_type": "Color",  "value": "Blue"      }
+  ]
+}
+</code></pre>
+<hr>
+<h2 id="rust-types"><a class="header" href="#rust-types">Rust Types</a></h2>
+<h3 id="attribute"><a class="header" href="#attribute"><code>Attribute</code></a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct Attribute {
+    pub trait_type: String,   // e.g. "Rarity"
+    pub value: String,        // e.g. "Legendary"
+}
+<span class="boring">}</span></code></pre>
+<h3 id="tokenmetadata"><a class="header" href="#tokenmetadata"><code>TokenMetadata</code></a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct TokenMetadata {
+    // Required
+    pub name: String,
+    pub description: String,
+    pub image: String,          // must start with ipfs://, https://, http://, or data:
+
+    // Optional (pass empty string to omit)
+    pub external_url: String,
+    pub animation_url: String,
+    pub background_color: String,  // 6-char hex, e.g. "FF0000"
+
+    // Attributes
+    pub attributes: Vec&lt;Attribute&gt;,
+}
+<span class="boring">}</span></code></pre>
+<hr>
+<h2 id="core-api"><a class="header" href="#core-api">Core API</a></h2>
+<h3 id="initialize-the-collection"><a class="header" href="#initialize-the-collection">Initialize the collection</a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn initialize(
+    env: Env,
+    admin: Address,
+    name: String,
+    symbol: String,
+    base_uri: String,   // pass "" to use per-token image URIs
+) -&gt; Result&lt;(), NftError&gt;
+<span class="boring">}</span></code></pre>
+<h3 id="mint-a-token"><a class="header" href="#mint-a-token">Mint a token</a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn mint(
+    env: Env,
+    admin: Address,
+    to: Address,
+    token_id: u32,
+    metadata: TokenMetadata,
+) -&gt; Result&lt;(), NftError&gt;
+<span class="boring">}</span></code></pre>
+<h3 id="query-metadata"><a class="header" href="#query-metadata">Query metadata</a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn get_metadata(env: Env, token_id: u32) -&gt; Result&lt;TokenMetadata, NftError&gt;
+pub fn get_attributes(env: Env, token_id: u32) -&gt; Result&lt;Vec&lt;Attribute&gt;, NftError&gt;
+pub fn token_uri(env: Env, token_id: u32) -&gt; Result&lt;String, NftError&gt;
+<span class="boring">}</span></code></pre>
+<h3 id="transfer-and-approvals"><a class="header" href="#transfer-and-approvals">Transfer and approvals</a></h3>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn transfer(env: Env, from: Address, to: Address, token_id: u32) -&gt; Result&lt;(), NftError&gt;
+pub fn approve(env: Env, owner: Address, approved: Address, token_id: u32) -&gt; Result&lt;(), NftError&gt;
+pub fn set_approval_for_all(env: Env, owner: Address, operator: Address, approved: bool) -&gt; Result&lt;(), NftError&gt;
+<span class="boring">}</span></code></pre>
+<hr>
+<h2 id="metadata-validation"><a class="header" href="#metadata-validation">Metadata Validation</a></h2>
+<p><code>validate_metadata()</code> is called on every <code>mint</code> and <code>update_metadata</code> call:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Field</th><th>Rule</th></tr>
+</thead>
+<tbody>
+<tr><td><code>name</code></td><td>Must be non-empty</td></tr>
+<tr><td><code>description</code></td><td>Must be non-empty</td></tr>
+<tr><td><code>image</code></td><td>Must be non-empty and start with <code>ipfs://</code>, <code>https://</code>, <code>http://</code>, or <code>data:</code></td></tr>
+<tr><td><code>background_color</code></td><td>If non-empty, must be exactly 6 ASCII hex characters</td></tr>
+<tr><td><code>attributes[*].trait_type</code></td><td>Must be non-empty</td></tr>
+<tr><td><code>attributes[*].value</code></td><td>Must be non-empty</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="uri-conventions"><a class="header" href="#uri-conventions">URI Conventions</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Scheme</th><th>Example</th><th>Use case</th></tr>
+</thead>
+<tbody>
+<tr><td><code>ipfs://</code></td><td><code>ipfs://QmHash/image.png</code></td><td>Decentralized storage</td></tr>
+<tr><td><code>https://</code></td><td><code>https://cdn.example.com/nft/1.png</code></td><td>Centralized CDN</td></tr>
+<tr><td><code>http://</code></td><td><code>http://localhost:8080/nft/1.png</code></td><td>Local development</td></tr>
+<tr><td><code>data:</code></td><td><code>data:image/svg+xml;base64,PHN2Zy8+</code></td><td>Fully on-chain SVG</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="token-uri-resolution"><a class="header" href="#token-uri-resolution">Token URI Resolution</a></h2>
+<p>When a <code>base_uri</code> is set during initialization, <code>token_uri(id)</code> returns <code>{base_uri}{id}</code>:</p>
+<pre><code>base_uri = "https://api.example.com/metadata/"
+token_id = 7
+→ token_uri = "https://api.example.com/metadata/7"
+</code></pre>
+<p>When no <code>base_uri</code> is set, <code>token_uri(id)</code> returns the <code>image</code> field from the stored metadata directly.</p>
+<hr>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<pre><code class="language-bash">cargo test -p nft-metadata
+</code></pre>
+<p>The test suite covers:</p>
+<ul>
+<li>Collection initialization and double-init guard</li>
+<li>Minting with valid and invalid metadata</li>
+<li>All metadata validation error cases</li>
+<li>Token URI resolution (with and without base URI)</li>
+<li>Transfers and ownership updates</li>
+<li>Single-token and operator approvals</li>
+<li>Metadata update (admin-only)</li>
+<li>JSON schema compliance documentation test</li>
+</ul>
+<hr>
+<h2 id="coming-soon"><a class="header" href="#coming-soon">Coming Soon</a></h2>
 <h3 id="nft-marketplace"><a class="header" href="#nft-marketplace">NFT Marketplace</a></h3>
-<p><strong>Fixed-price &amp; auction listings</strong>.</p>
-<p><strong>Key Concepts:</strong></p>
+<p>Fixed-price and auction listings with escrow patterns, bid management, and royalty splits.</p>
+<h3 id="enumerable-nft"><a class="header" href="#enumerable-nft">Enumerable NFT</a></h3>
+<p>NFT with iteration capabilities — list all tokens owned by an address.</p>
+<h3 id="dynamic-nfts"><a class="header" href="#dynamic-nfts">Dynamic NFTs</a></h3>
+<p>NFTs whose metadata changes over time based on on-chain state.</p>
+<h3 id="soulbound-tokens"><a class="header" href="#soulbound-tokens">Soulbound Tokens</a></h3>
+<p>Non-transferable NFTs for credentials and achievements.</p>
+<hr>
+<h2 id="prerequisites-8"><a class="header" href="#prerequisites-8">Prerequisites</a></h2>
 <ul>
-<li>Escrow patterns</li>
-<li>Bid management</li>
-<li>Royalty splits</li>
+<li><a href="#basic-examples">Basics</a></li>
+<li><a href="#storage-patterns">Storage Patterns</a></li>
 </ul>
-<h2 id="placeholder"><a class="header" href="#placeholder">Placeholder</a></h2>
-<p><code>examples/nfts/</code> ready for first implementation.</p>
-<h2 id="prerequisites-5"><a class="header" href="#prerequisites-5">Prerequisites</a></h2>
+<h2 id="next-1"><a class="header" href="#next-1">Next</a></h2>
 <ul>
-<li><a href="basics.html">Basics</a></li>
+<li><a href="#governance-examples">Governance</a></li>
+<li><a href="#token-examples">Tokens</a></li>
 </ul>
-<h2 id="next-governance"><a class="header" href="#next-governance">Next: <a href="governance.html">Governance</a></a></h2>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="governance-examples"><a class="header" href="#governance-examples">Governance Examples</a></h1>
 <p>DAOs, voting, treasury management.</p>
-<h2 id="-coming-soon-2"><a class="header" href="#-coming-soon-2">📋 Coming Soon</a></h2>
+<h2 id="-coming-soon-1"><a class="header" href="#-coming-soon-1">📋 Coming Soon</a></h2>
 <h3 id="simple-dao"><a class="header" href="#simple-dao">Simple DAO</a></h3>
 <p><strong>Token-weighted voting</strong>.</p>
 <p><strong>Key Concepts:</strong></p>
@@ -2765,40 +3426,40 @@ fn test_factory() {
 <li>Spending limits</li>
 <li>Veto mechanisms</li>
 </ul>
-<h2 id="placeholder-1"><a class="header" href="#placeholder-1">Placeholder</a></h2>
+<h2 id="placeholder"><a class="header" href="#placeholder">Placeholder</a></h2>
 <p><code>examples/governance/</code> awaiting content.</p>
-<h2 id="prerequisites-6"><a class="header" href="#prerequisites-6">Prerequisites</a></h2>
+<h2 id="prerequisites-9"><a class="header" href="#prerequisites-9">Prerequisites</a></h2>
 <ul>
 <li><a href="basics.html">Basics</a>, <a href="tokens.html">Tokens</a></li>
 </ul>
 <h2 id="next-tokens"><a class="header" href="#next-tokens">Next: <a href="tokens.html">Tokens</a></a></h2>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="token-examples"><a class="header" href="#token-examples">Token Examples</a></h1>
-<p>Fungible tokens, standards, wrappers.</p>
-<h2 id="-coming-soon-3"><a class="header" href="#-coming-soon-3">📋 Coming Soon</a></h2>
-<h3 id="sep-41-token"><a class="header" href="#sep-41-token">SEP-41 Token</a></h3>
-<p><strong>Soroban token interface</strong>.</p>
+<p>Fungible tokens, standards, wrappers, and portfolio utilities.</p>
+<h3 id="mintburn-token-mint-burn"><a class="header" href="#mintburn-token-mint-burn">Mint/Burn Token <a href="examples/tokens/mint-burn">./mint-burn/</a></a></h3>
+<p><strong>Controlled issuance and destruction.</strong> Demonstrates admin-only minting, user burn rights, total supply tracking, and optional maximum supply caps.</p>
 <p><strong>Key Concepts:</strong></p>
 <ul>
-<li>Mint/burn controls</li>
-<li>Transfer/approval</li>
-<li>Metadata</li>
+<li>Admin authorization for minting</li>
+<li>Safe burn semantics</li>
+<li>Total supply invariants</li>
+<li>Optional supply cap enforcement</li>
+<li>Event emission for mint/burn operations</li>
 </ul>
-<h3 id="token-wrapper"><a class="header" href="#token-wrapper">Token Wrapper</a></h3>
-<p><strong>Wrap native assets</strong>.</p>
+<h3 id="token-wrapper-token-wrapper"><a class="header" href="#token-wrapper-token-wrapper">Token Wrapper <a href="examples/tokens/token-wrapper">./token-wrapper/</a></a></h3>
+<p><strong>Wrap native assets.</strong> Deposit an existing SEP-41 token and mint 1:1 wrapper shares.</p>
 <p><strong>Key Concepts:</strong></p>
 <ul>
-<li>Deposit/mint</li>
-<li>Burn/withdraw</li>
-<li>Pausable emergency</li>
+<li>Cross-contract token transfers</li>
+<li>Backing invariant maintenance</li>
+<li>Mint/burn wrapper shares</li>
+<li>Withdrawal and collateral accounting</li>
 </ul>
-<h2 id="placeholder-2"><a class="header" href="#placeholder-2">Placeholder</a></h2>
-<p><code>examples/tokens/</code> directory ready.</p>
-<h2 id="prerequisites-7"><a class="header" href="#prerequisites-7">Prerequisites</a></h2>
+<h2 id="prerequisites-10"><a class="header" href="#prerequisites-10">Prerequisites</a></h2>
 <ul>
 <li><a href="basics.html">Basics</a>, <a href="basics/03-authentication">Auth</a></li>
 </ul>
-<h2 id="end-of-examples-section-"><a class="header" href="#end-of-examples-section-">End of Examples Section 🎉</a></h2>
+<h2 id="end-of-examples-section"><a class="header" href="#end-of-examples-section">End of Examples Section</a></h2>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="soroban-quick-reference"><a class="header" href="#soroban-quick-reference">Soroban Quick Reference</a></h1>
 <p>A quick reference for common Soroban smart contract patterns.</p>
@@ -3134,7 +3795,7 @@ pub enum Error {
 }
 <span class="boring">}</span></code></pre>
 <hr>
-<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<h2 id="testing-1"><a class="header" href="#testing-1">Testing</a></h2>
 <pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[cfg(test)]
@@ -3785,6 +4446,245 @@ fn has_admin(env: &amp;Env) -&gt; bool {
 <hr>
 <p>For more detailed examples, see our <a href="examples">examples directory</a> and specific guides.</p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="common-pitfalls-in-soroban-smart-contracts"><a class="header" href="#common-pitfalls-in-soroban-smart-contracts">Common Pitfalls in Soroban Smart Contracts</a></h1>
+<p>This guide outlines the most common mistakes developers make when writing smart contracts for Soroban on Stellar. It covers both beginner-level issues (basic API usage, Rust quirks, and entry point rules) and intermediate-level design flaws (storage architecture, state archival, and security vulnerabilities).</p>
+<hr>
+<h2 id="-beginner-pitfalls"><a class="header" href="#-beginner-pitfalls">🟢 Beginner Pitfalls</a></h2>
+<h3 id="1-missing-authorization-checks"><a class="header" href="#1-missing-authorization-checks">1. Missing Authorization Checks</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Passing an <code>Address</code> to a function and performing state changes or asset transfers on its behalf without verifying its authorization.</li>
+<li><strong>Consequence:</strong> Anyone can call the contract function and input another user’s address, allowing them to unauthorizedly spend funds or manipulate state.</li>
+<li><strong>How to avoid/fix:</strong> Always invoke <code>.require_auth()</code> on the <code>Address</code> parameter representing the signer.</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Anyone can call this function and pass another user's address
+pub fn withdraw(env: Env, user: Address, amount: i128) {
+    let mut balance = get_balance(&amp;env, &amp;user);
+    balance -= amount;
+    set_balance(&amp;env, &amp;user, balance);
+}
+
+// ✅ GOOD: Verifies that the transaction was signed by the user
+pub fn withdraw(env: Env, user: Address, amount: i128) {
+    user.require_auth();
+    let mut balance = get_balance(&amp;env, &amp;user);
+    balance -= amount;
+    set_balance(&amp;env, &amp;user, balance);
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="2-unchecked-arithmetic-integer-overflowunderflow"><a class="header" href="#2-unchecked-arithmetic-integer-overflowunderflow">2. Unchecked Arithmetic (Integer Overflow/Underflow)</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Using standard mathematical operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>) for calculating token balances or values.</li>
+<li><strong>Consequence:</strong> In release builds, overflow checks might wrap around silently (if they are disabled in the profile), leading to exploit vectors such as minting massive numbers of tokens. Even if checks are enabled, standard operators panic without providing a clear error code, making error handling impossible.</li>
+<li><strong>How to avoid/fix:</strong> Use checked arithmetic methods (<code>checked_add</code>, <code>checked_sub</code>, <code>checked_mul</code>, <code>checked_div</code>) and return custom, descriptive contract errors.</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Standard operator can cause panics or wrap-around exploits
+pub fn add_interest(balance: u64, rate: u64) -&gt; u64 {
+    balance + (balance * rate) / 100
+}
+
+// ✅ GOOD: Checked math returning custom error types
+pub fn add_interest(balance: u64, rate: u64) -&gt; Result&lt;u64, Error&gt; {
+    let interest = balance
+        .checked_mul(rate)
+        .ok_or(Error::ArithmeticOverflow)?
+        .checked_div(100)
+        .ok_or(Error::ArithmeticOverflow)?;
+    
+    balance.checked_add(interest).ok_or(Error::ArithmeticOverflow)
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="3-exceeding-the-32-character-limit-on-custom-symbols"><a class="header" href="#3-exceeding-the-32-character-limit-on-custom-symbols">3. Exceeding the 32-Character Limit on Custom Symbols</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Creating a <code>Symbol</code> (often used as storage keys) with a string length greater than 32 characters.</li>
+<li><strong>Consequence:</strong> The Soroban VM enforces a strict 32-character limit on symbols. Calling <code>Symbol::new(&amp;env, "...")</code> with a string longer than 32 characters will result in a runtime panic.</li>
+<li><strong>How to avoid/fix:</strong> Keep symbols short and descriptive. For symbols of 9 characters or less, use <code>symbol_short!</code> which is stored more efficiently.</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Panics at runtime (44 characters)
+let key = Symbol::new(&amp;env, "user_registration_timestamp_for_active_pool");
+
+// ✅ GOOD: Short symbol or type-safe enum key (see intermediate section)
+let key = Symbol::new(&amp;env, "user_reg_time");
+// Or:
+let key = symbol_short!("reg_time");
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="4-ignoring-resultreturn-values-on-safe-token-operations"><a class="header" href="#4-ignoring-resultreturn-values-on-safe-token-operations">4. Ignoring Result/Return Values on Safe Token Operations</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Calling transfer functions or contract client actions that return <code>Result</code> values and ignoring them via <code>let _ = ...</code> or not asserting success.</li>
+<li><strong>Consequence:</strong> The contract execution proceeds assuming the operation succeeded, even if it failed silently or returned an error payload, causing state inconsistency.</li>
+<li><strong>How to avoid/fix:</strong> Always handle results using Rust’s <code>?</code> operator or explicitly match on them. Note that SEP-41 token operations panic on failure, but custom token logic or cross-contract invocations might return <code>Result</code>.</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Ignored return value could cause transaction to proceed unexpectedly
+let result = token_client.try_transfer(&amp;from, &amp;to, &amp;amount);
+// execution continues anyway...
+
+// ✅ GOOD: Explicitly check result and bubble up custom error
+token_client.try_transfer(&amp;from, &amp;to, &amp;amount)
+    .map_err(|_| Error::TokenTransferFailed)?;
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="-intermediate-pitfalls"><a class="header" href="#-intermediate-pitfalls">🟡 Intermediate Pitfalls</a></h2>
+<h3 id="1-unbounded-storage-growth-gas-exhaustion"><a class="header" href="#1-unbounded-storage-growth-gas-exhaustion">1. Unbounded Storage Growth (Gas Exhaustion)</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Appending items to a single shared <code>Vec</code> or <code>Map</code> under one storage key to keep track of all users or transactions.</li>
+<li><strong>Consequence:</strong> Every time the collection is read or written, the entire collection must be deserialized and serialized. As the number of users grows, the transaction CPU and memory gas usage increases linearly. Eventually, transactions will exceed the ledger limits, permanently bricking the contract and locking user funds.</li>
+<li><strong>How to avoid/fix:</strong> Store user-specific data under separate, unique keys. Use a type-safe <code>#[contracttype]</code> enum to represent storage key variants.</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Storing a growing list of users in a single vector under one key
+pub fn register_user(env: Env, user: Address) {
+    let mut users: Vec&lt;Address&gt; = env.storage().instance()
+        .get(&amp;symbol_short!("users"))
+        .unwrap_or_else(|| Vec::new(&amp;env));
+    users.push_back(user);
+    env.storage().instance().set(&amp;symbol_short!("users"), &amp;users);
+}
+
+// ✅ GOOD: Storing individual user flags under separate, scoped keys
+#[contracttype]
+pub enum DataKey {
+    UserRegistered(Address),
+}
+
+pub fn register_user(env: Env, user: Address) {
+    let key = DataKey::UserRegistered(user);
+    env.storage().persistent().set(&amp;key, &amp;true);
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="2-state-archival-lockout-storage-type--ttl-selection"><a class="header" href="#2-state-archival-lockout-storage-type--ttl-selection">2. State Archival Lockout (Storage Type &amp; TTL Selection)</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Storing user balances in <code>instance</code> storage or failing to extend the Time-To-Live (TTL) of <code>persistent</code> storage keys.</li>
+<li><strong>Consequence:</strong>
+<ol>
+<li><code>instance</code> storage has limited size constraints. Storing user data here can cause the storage to fill up. Additionally, if the <code>instance</code> key expires, the contract is locked for <em>all</em> users and requires a costly restoration process.</li>
+<li>If <code>persistent</code> storage keys are not periodically extended, they will expire and be archived. Users will lose access to their data/funds until a manual, costly on-chain restoration transaction is submitted.</li>
+</ol>
+</li>
+<li><strong>How to avoid/fix:</strong>
+<ol>
+<li>Use <code>instance</code> storage only for configuration and admin addresses.</li>
+<li>Use <code>persistent</code> storage for user balances and user-specific structs.</li>
+<li>Regularly extend the TTL of keys when they are accessed using <code>extend_ttl</code>.</li>
+</ol>
+</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[contracttype]
+pub enum DataKey {
+    Balance(Address),
+}
+
+// ✅ GOOD: Access balance from persistent storage and extend its TTL
+pub fn get_balance_and_bump(env: Env, user: Address) -&gt; i128 {
+    let key = DataKey::Balance(user);
+    let balance: i128 = env.storage().persistent().get(&amp;key).unwrap_or(0);
+    
+    // Bump TTL: if the key has less than 10,000 ledgers remaining,
+    // extend its lifespan to 50,000 ledgers from the current ledger.
+    env.storage().persistent().extend_ttl(&amp;key, 10000, 50000);
+    
+    balance
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="3-reentrancy-and-the-checks-effects-interactions-pattern"><a class="header" href="#3-reentrancy-and-the-checks-effects-interactions-pattern">3. Reentrancy and the Checks-Effects-Interactions Pattern</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Changing local contract state <em>after</em> invoking an external contract (such as a token transfer to a user).</li>
+<li><strong>Consequence:</strong> The external contract could intercept control and call back into this contract (reenter) before the local state is updated, leading to double-withdrawals.</li>
+<li><strong>How to avoid/fix:</strong> Follow the <strong>Checks-Effects-Interactions</strong> pattern: perform validation checks first, write and persist local state changes next (effects), and invoke external contract calls last (interactions).</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Draining external tokens before updating internal state
+pub fn claim_rewards(env: Env, user: Address) {
+    user.require_auth();
+    let rewards = get_pending_rewards(&amp;env, &amp;user);
+    
+    let token_client = token::Client::new(&amp;env, &amp;get_token_id(&amp;env));
+    token_client.transfer(&amp;env.current_contract_address(), &amp;user, &amp;rewards); // Interaction
+    
+    // DANGER: Reentrant call could hijack control before this line executes!
+    set_pending_rewards(&amp;env, &amp;user, 0); // Effect
+}
+
+// ✅ GOOD: State update occurs before the external transfer is initiated
+pub fn claim_rewards(env: Env, user: Address) {
+    user.require_auth();
+    
+    let rewards = get_pending_rewards(&amp;env, &amp;user);
+    if rewards &lt;= 0 {
+        panic!("No rewards to claim"); // Check
+    }
+    
+    set_pending_rewards(&amp;env, &amp;user, 0); // Effect
+    
+    let token_client = token::Client::new(&amp;env, &amp;get_token_id(&amp;env));
+    token_client.transfer(&amp;env.current_contract_address(), &amp;user, &amp;rewards); // Interaction
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<h3 id="4-custom-signature-replay-attacks"><a class="header" href="#4-custom-signature-replay-attacks">4. Custom Signature Replay Attacks</a></h3>
+<ul>
+<li><strong>Mistake:</strong> Verifying custom cryptographic signatures (e.g. Ed25519 or secp256k1) directly without binding the payload to the specific contract instance, network, and sequential transaction nonces.</li>
+<li><strong>Consequence:</strong> The signature can be intercepted by an attacker and replayed on other contracts, different networks (e.g., testnet vs. mainnet), or multiple times on the same contract to execute unauthorized actions.</li>
+<li><strong>How to avoid/fix:</strong> Use native Soroban authorization (<code>require_auth</code>) whenever possible, as it manages nonces and replay protection automatically. If custom verification is absolutely necessary, construct a signed payload containing:
+<ol>
+<li>The contract’s unique address (<code>env.current_contract_address()</code>).</li>
+<li>The network’s passphrase ID (<code>env.ledger().network_id()</code>).</li>
+<li>A unique, incrementing user nonce.</li>
+</ol>
+</li>
+<li><strong>Code Example:</strong>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ❌ BAD: Signature payload contains only action data, vulnerable to replays
+pub fn execute_custom_auth(env: Env, public_key: BytesN&lt;32&gt;, signature: BytesN&lt;64&gt;, action_data: Bytes) {
+    env.crypto().ed25519_verify(&amp;public_key, &amp;action_data, &amp;signature);
+}
+
+// ✅ GOOD: Signed payload binds contract address, network, and nonce
+pub fn execute_custom_auth(
+    env: Env, 
+    user: Address, 
+    public_key: BytesN&lt;32&gt;, 
+    signature: BytesN&lt;64&gt;, 
+    action_data: Bytes
+) {
+    let nonce = get_and_increment_nonce(&amp;env, &amp;user);
+    
+    let mut signed_payload = Bytes::new(&amp;env);
+    signed_payload.append(&amp;env.current_contract_address().to_xdr_bytes());
+    signed_payload.append(&amp;env.ledger().network_id().to_xdr_bytes());
+    signed_payload.append(&amp;nonce.to_xdr_bytes());
+    signed_payload.append(&amp;action_data);
+    
+    env.crypto().ed25519_verify(&amp;public_key, &amp;signed_payload, &amp;signature);
+}
+<span class="boring">}</span></code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="soroban-cookbook-style-guide"><a class="header" href="#soroban-cookbook-style-guide">Soroban Cookbook Style Guide</a></h1>
 <p>This guide outlines the coding standards and best practices for the Soroban Cookbook. Adhering to these guidelines ensures consistency, readability, and high quality across all examples.</p>
 <h2 id="1-naming-conventions"><a class="header" href="#1-naming-conventions">1. Naming Conventions</a></h2>
@@ -3891,6 +4791,75 @@ fn has_admin(env: &amp;Env) -&gt; bool {
 </ul>
 <h3 id="best-practices-reference"><a class="header" href="#best-practices-reference">Best Practices Reference</a></h3>
 <p>For security-specific patterns and performance optimization, refer to the <a href="#soroban-smart-contract-best-practices">Best Practices Guide</a>. The Style Guide and Best Practices Guide together form the full standard for Soroban Cookbook contributions.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="soroban-performance-benchmarks"><a class="header" href="#soroban-performance-benchmarks">Soroban Performance Benchmarks</a></h1>
+<p>This document provides performance benchmarks for the basic examples in the Soroban Cookbook. Benchmarking is essential for understanding the gas costs and resource usage of your smart contracts on the Stellar network.</p>
+<h2 id="-comparison-table"><a class="header" href="#-comparison-table">📊 Comparison Table</a></h2>
+<p>The following table compares the resource usage of common operations in our basic examples.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th style="text-align: left">Example</th><th style="text-align: left">Operation</th><th style="text-align: left">CPU Instructions (est.)</th><th style="text-align: left">RAM Usage (est.)</th><th style="text-align: left">Key Takeaway</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left"><code>01-hello-world</code></td><td style="text-align: left"><code>hello()</code></td><td style="text-align: left">~10,000</td><td style="text-align: left">~1 KB</td><td style="text-align: left">Minimal overhead for simple logic.</td></tr>
+<tr><td style="text-align: left"><code>02-storage-patterns</code></td><td style="text-align: left"><code>set_persistent</code></td><td style="text-align: left">~55,000</td><td style="text-align: left">~2 KB</td><td style="text-align: left">Persistent storage is the most expensive.</td></tr>
+<tr><td style="text-align: left"><code>02-storage-patterns</code></td><td style="text-align: left"><code>set_instance</code></td><td style="text-align: left">~35,000</td><td style="text-align: left">~1.5 KB</td><td style="text-align: left">Instance storage is more efficient for config.</td></tr>
+<tr><td style="text-align: left"><code>02-storage-patterns</code></td><td style="text-align: left"><code>set_temporary</code></td><td style="text-align: left">~25,000</td><td style="text-align: left">~1 KB</td><td style="text-align: left">Temporary storage is best for short-lived data.</td></tr>
+<tr><td style="text-align: left"><code>03-authentication</code></td><td style="text-align: left"><code>transfer()</code></td><td style="text-align: left">~45,000</td><td style="text-align: left">~2.5 KB</td><td style="text-align: left"><code>require_auth()</code> and multiple storage ops add up.</td></tr>
+<tr><td style="text-align: left"><code>05-error-handling</code></td><td style="text-align: left"><code>Result</code> return</td><td style="text-align: left">~12,000</td><td style="text-align: left">~1.2 KB</td><td style="text-align: left">Returning <code>Result</code> is cheaper than panicking.</td></tr>
+<tr><td style="text-align: left"><code>11-collection-types</code></td><td style="text-align: left"><code>Vec</code> iteration</td><td style="text-align: left">Scales linearly</td><td style="text-align: left">Grows with output size</td><td style="text-align: left">Use for ordered scans and bounded batches.</td></tr>
+<tr><td style="text-align: left"><code>11-collection-types</code></td><td style="text-align: left"><code>Vec</code> mutation in storage</td><td style="text-align: left">Scales with stored length</td><td style="text-align: left">Grows with stored length</td><td style="text-align: left">Good for bounded lists; avoid unbounded single-slot collections.</td></tr>
+<tr><td style="text-align: left"><code>11-collection-types</code></td><td style="text-align: left"><code>Map</code> lookup/mutation</td><td style="text-align: left">O(log n) host ops plus storage</td><td style="text-align: left">Higher than <code>Vec</code></td><td style="text-align: left">Use for keyed access and repeated membership checks.</td></tr>
+<tr><td style="text-align: left"><code>11-collection-types</code></td><td style="text-align: left"><code>Map</code> full iteration</td><td style="text-align: left">Scales linearly</td><td style="text-align: left">Grows with entry count</td><td style="text-align: left">Sorted iteration is useful, but still costs per entry.</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>Note: These values are estimates based on local test execution and may vary slightly depending on the Soroban SDK version and network configuration.</em></p>
+<h2 id="-execution-time-benchmarks"><a class="header" href="#-execution-time-benchmarks">⚡ Execution Time Benchmarks</a></h2>
+<p>While gas costs (CPU/RAM) are the primary concern for on-chain execution, local execution time is important for developer experience and integration testing.</p>
+<ul>
+<li><strong>Unit Tests</strong>: Most basic examples run in <strong>&lt; 10ms</strong> per test.</li>
+<li><strong>Contract Deployment (Local)</strong>: Registering a contract in the test environment takes <strong>~5ms</strong>.</li>
+<li><strong>WASM Size</strong>: Basic contracts compile to <strong>~10-30 KB</strong> when optimized.</li>
+</ul>
+<h2 id="-optimization-notes"><a class="header" href="#-optimization-notes">💡 Optimization Notes</a></h2>
+<p>Based on our benchmarks and Soroban best practices, here are several ways to optimize your contracts:</p>
+<h3 id="1-storage-optimization"><a class="header" href="#1-storage-optimization">1. Storage Optimization</a></h3>
+<ul>
+<li><strong>Batch Operations</strong>: Instead of calling <code>env.storage().persistent().set()</code> multiple times in a loop, try to consolidate data into a single <code>Map</code> or <code>Vec</code> if possible.</li>
+<li><strong>Choose the Right Type</strong>: Use <code>Temporary</code> storage for data that doesn’t need to persist indefinitely (e.g., nonces, temporary locks). It is significantly cheaper than <code>Persistent</code> storage.</li>
+<li><strong>Instance Storage for Config</strong>: Use <code>Instance</code> storage for shared contract configuration. It’s more efficient than <code>Persistent</code> for data that is frequently read but rarely changed.</li>
+</ul>
+<h3 id="2-computational-efficiency"><a class="header" href="#2-computational-efficiency">2. Computational Efficiency</a></h3>
+<ul>
+<li><strong>Avoid Large Loops</strong>: Gas costs scale linearly with the number of iterations. For large datasets, consider using pagination or off-chain indexing.</li>
+<li><strong>Early Exit</strong>: Validate inputs and check authorization at the very beginning of your function to avoid wasting gas on invalid requests.</li>
+<li><strong>Result over Panic</strong>: Use <code>Result&lt;T, E&gt;</code> for expected error cases. While both consume gas, structured error handling is better for contract composability and predictable behavior.</li>
+</ul>
+<h3 id="3-collection-patterns"><a class="header" href="#3-collection-patterns">3. Collection Patterns</a></h3>
+<ul>
+<li><strong>Use <code>Vec</code> for ordered scans</strong>: <code>Vec</code> append and tail removal are efficient for bounded sequences, but membership checks require O(n) scans.</li>
+<li><strong>Use <code>Map</code> for keyed access</strong>: <code>Map</code> lookup, insert, overwrite, and remove are O(log n), which is better than repeatedly scanning a <code>Vec</code> for keys.</li>
+<li><strong>Budget full iteration</strong>: <code>Vec::iter()</code>, <code>Map::iter()</code>, <code>Map::keys()</code>, and <code>Map::values()</code> all scale with collection size.</li>
+<li><strong>Keep stored collections bounded</strong>: Updating a collection stored as one value requires reading and writing that collection. For unbounded datasets, store entries under separate persistent keys.</li>
+</ul>
+<h3 id="4-wasm-size"><a class="header" href="#4-wasm-size">4. WASM Size</a></h3>
+<ul>
+<li><strong>Profile for Size</strong>: Always use <code>opt-level = "z"</code> in your <code>Cargo.toml</code> release profile.</li>
+<li><strong>Minimize Dependencies</strong>: Each dependency adds to the WASM size. Use the <code>soroban-sdk</code> features selectively.</li>
+<li><strong>Strip Symbols</strong>: Use <code>strip = "symbols"</code> to remove unnecessary metadata from the binary.</li>
+</ul>
+<h2 id="-how-to-run-benchmarks"><a class="header" href="#-how-to-run-benchmarks">🧪 How to Run Benchmarks</a></h2>
+<p>You can run these benchmarks yourself using the following command in each example directory:</p>
+<pre><code class="language-bash">cargo test -- --nocapture benchmark
+</code></pre>
+<p>This will run the dedicated benchmarking tests and print the resource usage (budget) to the console.</p>
+<p>For collection benchmarks specifically:</p>
+<pre><code class="language-bash">cargo test -p collection-types benchmark -- --nocapture
+</code></pre>
+<hr>
+<p><em>Last updated: March 2026</em></p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="soroban--stellar-glossary"><a class="header" href="#soroban--stellar-glossary">Soroban &amp; Stellar Glossary</a></h1>
 <p>A comprehensive glossary of terms used in Soroban smart contract development and the Stellar ecosystem.</p>
@@ -4140,6 +5109,199 @@ vec.push_back(42);
 <p>Found a term that’s missing or needs clarification? Please open an issue or submit a PR to help improve this glossary!</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="common-patterns"><a class="header" href="#common-patterns">Common Patterns</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="factory-proxy-and-registry-patterns"><a class="header" href="#factory-proxy-and-registry-patterns">Factory, Proxy, and Registry Patterns</a></h1>
+<p>Cross-contract systems let small contracts compose into larger products, but
+they also create new failure modes. This guide explains three common
+architecture patterns for Soroban applications: factories, proxies, and
+registries.</p>
+<p>Use these patterns when one contract needs to deploy, locate, route to, or
+coordinate with other contracts.</p>
+<h2 id="pattern-overview"><a class="header" href="#pattern-overview">Pattern Overview</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Pattern</th><th>Use It For</th><th>Main Risk</th></tr>
+</thead>
+<tbody>
+<tr><td>Factory</td><td>Creating many similar contract instances</td><td>Uninitialized child contracts</td></tr>
+<tr><td>Proxy</td><td>Routing calls through a stable address</td><td>Unsafe upgrades or storage mismatch</td></tr>
+<tr><td>Registry</td><td>Discovering approved contract addresses</td><td>Stale or malicious registrations</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="factory-pattern"><a class="header" href="#factory-pattern">Factory Pattern</a></h2>
+<p>A factory contract deploys and initializes child contracts from a known Wasm
+hash. It is useful for vaults, pools, group savings contracts, and other
+systems where users create many instances of the same template.</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant User
+    participant Factory
+    participant Deployer
+    participant Child
+
+    User-&gt;&gt;Factory: create(config, salt)
+    Factory-&gt;&gt;Factory: validate config and derive unique salt
+    Factory-&gt;&gt;Deployer: deploy_v2(wasm_hash, salt)
+    Deployer--&gt;&gt;Factory: child address
+    Factory-&gt;&gt;Child: initialize(admin, config)
+    Child--&gt;&gt;Factory: ok
+    Factory--&gt;&gt;User: child address
+</code></pre>
+<h3 id="factory-checklist"><a class="header" href="#factory-checklist">Factory Checklist</a></h3>
+<ul>
+<li>Store the child Wasm hash in instance storage and protect updates with admin
+or governance authorization.</li>
+<li>Derive salts from stable inputs such as creator address, nonce, and template
+version.</li>
+<li>Initialize the child in the same transaction that deploys it.</li>
+<li>Emit an event with the child address, creator, template version, and config
+hash.</li>
+<li>Keep a registry or index if users need to find their created contracts later.</li>
+</ul>
+<h3 id="factory-pitfalls"><a class="header" href="#factory-pitfalls">Factory Pitfalls</a></h3>
+<ul>
+<li>Do not deploy a child and leave initialization to a separate user call.</li>
+<li>Do not let callers choose arbitrary Wasm hashes unless the factory is
+explicitly permissionless and the UI labels that risk.</li>
+<li>Do not reuse salts unless deterministic address reuse is intentional and
+fully documented.</li>
+</ul>
+<h2 id="proxy-pattern"><a class="header" href="#proxy-pattern">Proxy Pattern</a></h2>
+<p>A proxy provides a stable address while delegating behavior to another
+contract or dispatching calls to versioned implementations. Soroban contracts
+are immutable after deployment, so proxy-style designs usually mean explicit
+routing, migration, or adapter contracts rather than EVM-style delegatecall.</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant User
+    participant Proxy
+    participant Registry
+    participant Implementation
+
+    User-&gt;&gt;Proxy: perform_action(args)
+    Proxy-&gt;&gt;Registry: implementation_for("module", version)
+    Registry--&gt;&gt;Proxy: implementation address
+    Proxy-&gt;&gt;Proxy: validate version and authorization
+    Proxy-&gt;&gt;Implementation: perform_action(args)
+    Implementation--&gt;&gt;Proxy: result
+    Proxy--&gt;&gt;User: result
+</code></pre>
+<h3 id="proxy-variants"><a class="header" href="#proxy-variants">Proxy Variants</a></h3>
+<ul>
+<li><strong>Router proxy:</strong> forwards specific calls to registered modules.</li>
+<li><strong>Adapter proxy:</strong> normalizes interfaces between old and new contracts.</li>
+<li><strong>Migration proxy:</strong> keeps a stable entry point while users migrate state to
+a new contract.</li>
+</ul>
+<h3 id="upgrade-safety-notes"><a class="header" href="#upgrade-safety-notes">Upgrade Safety Notes</a></h3>
+<ul>
+<li>Treat every upgrade as a protocol change, not a code patch.</li>
+<li>Keep storage ownership clear. A proxy should not assume it can read or write
+another contract’s internal storage.</li>
+<li>Version implementation addresses and keep old implementations available until
+users and integrations have migrated.</li>
+<li>Require admin, multisig, or governance authorization for implementation
+changes.</li>
+<li>Consider a timelock for upgrades that affect funds, permissions, or pricing.</li>
+<li>Emit upgrade events with old address, new address, version, and activation
+ledger.</li>
+<li>Provide a rollback plan before activating the new implementation.</li>
+</ul>
+<pre><code class="language-mermaid">flowchart TD
+    A[Propose upgrade] --&gt; B[Publish new implementation address]
+    B --&gt; C[Run compatibility tests]
+    C --&gt; D[Start timelock]
+    D --&gt; E{Issue found?}
+    E -- Yes --&gt; F[Cancel upgrade]
+    E -- No --&gt; G[Activate implementation]
+    G --&gt; H[Emit upgrade event]
+    H --&gt; I[Monitor integrations]
+</code></pre>
+<h2 id="registry-pattern"><a class="header" href="#registry-pattern">Registry Pattern</a></h2>
+<p>A registry maps names, roles, modules, or asset identifiers to contract
+addresses and metadata. Registries are the glue for wallets, factories,
+routers, vaults, and cross-contract apps.</p>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Admin
+    participant Registry
+    participant App
+    participant Target
+
+    Admin-&gt;&gt;Registry: register(key, address, metadata)
+    Registry-&gt;&gt;Registry: validate admin and key
+    Registry--&gt;&gt;Admin: registered
+    App-&gt;&gt;Registry: get(key)
+    Registry--&gt;&gt;App: address and metadata
+    App-&gt;&gt;Target: call using returned address
+</code></pre>
+<h3 id="registry-design-tips"><a class="header" href="#registry-design-tips">Registry Design Tips</a></h3>
+<ul>
+<li>Use typed keys instead of raw strings where possible.</li>
+<li>Store metadata that helps callers validate intent, such as version,
+interface name, network, and activation status.</li>
+<li>Distinguish active, deprecated, and blocked entries.</li>
+<li>Emit events for register, update, deactivate, and remove operations.</li>
+<li>Decide whether the registry is admin-controlled, governance-controlled, or
+permissionless before writing the storage model.</li>
+</ul>
+<h3 id="registry-pitfalls"><a class="header" href="#registry-pitfalls">Registry Pitfalls</a></h3>
+<ul>
+<li>A registry is an allowlist only if callers enforce it.</li>
+<li>Stale entries can be worse than missing entries; include deactivation flows.</li>
+<li>Do not store display metadata as a substitute for validating contract
+behavior.</li>
+</ul>
+<h2 id="integration-tips"><a class="header" href="#integration-tips">Integration Tips</a></h2>
+<ul>
+<li>Prefer small, explicit cross-contract interfaces over broad manager
+contracts.</li>
+<li>Validate every external address before calling it.</li>
+<li>Make authorization boundaries obvious: the caller authorizes the source
+contract, and the source contract chooses which downstream contracts to call.</li>
+<li>Use events as integration contracts for off-chain indexers.</li>
+<li>Avoid circular dependencies between contracts. If two contracts need each
+other, introduce a registry or shared configuration contract.</li>
+<li>Keep read batching separate from write batching when possible. Reads can be
+tolerant; writes should fail fast and leave no ambiguous partial state.</li>
+<li>Document every external contract address in deployment notes.</li>
+</ul>
+<h2 id="upgrade-safety-checklist"><a class="header" href="#upgrade-safety-checklist">Upgrade Safety Checklist</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> New implementation address is registered with an explicit version.</li>
+<li><input disabled="" type="checkbox"> Storage ownership and migration rules are documented.</li>
+<li><input disabled="" type="checkbox"> Authorization for upgrade is enforced from stored config, not from a user
+supplied argument alone.</li>
+<li><input disabled="" type="checkbox"> A timelock or review period exists for high-value contracts.</li>
+<li><input disabled="" type="checkbox"> Integration tests cover old and new implementations.</li>
+<li><input disabled="" type="checkbox"> Events announce proposed and activated upgrades.</li>
+<li><input disabled="" type="checkbox"> Rollback or migration recovery path is documented.</li>
+<li><input disabled="" type="checkbox"> Off-chain services know which event topics and registry keys to watch.</li>
+</ul>
+<h2 id="choosing-a-pattern"><a class="header" href="#choosing-a-pattern">Choosing a Pattern</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Need</th><th>Recommended Pattern</th></tr>
+</thead>
+<tbody>
+<tr><td>Create many instances from one template</td><td>Factory</td></tr>
+<tr><td>Keep a stable entry point across versions</td><td>Proxy or adapter</td></tr>
+<tr><td>Discover module or asset addresses</td><td>Registry</td></tr>
+<tr><td>Create and discover child contracts</td><td>Factory plus registry</td></tr>
+<tr><td>Upgrade an integration safely</td><td>Registry plus timelocked proxy</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="related-examples"><a class="header" href="#related-examples">Related Examples</a></h2>
+<ul>
+<li><a href="#ajo-factory-pattern"><code>Ajo Factory</code></a>
+shows a factory deploying initialized child contracts.</li>
+<li><a href="#common-patterns"><code>docs/common-patterns</code></a> covers lower-level building
+blocks such as initialization guards, stored-admin checks, typed storage keys,
+and events.</li>
+<li><a href="#soroban-smart-contract-best-practices"><code>docs/best-practices</code></a> covers security and storage
+recommendations that apply to multi-contract systems.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="troubleshooting-guide"><a class="header" href="#troubleshooting-guide">Troubleshooting Guide</a></h1>
 <p>Common issues encountered when building, testing, and deploying Soroban smart contracts, with solutions and workarounds.</p>
@@ -4432,6 +5594,60 @@ let v: Vec&lt;i128&gt; = vec![&amp;env, 1, 2, 3];
 <li><a href="https://github.com/Soroban-Cookbook/Soroban-Cookbook-/issues">GitHub Issues</a> — report bugs or ask questions</li>
 <li><a href="#soroban-quick-reference">Quick Reference</a> — common patterns cheat sheet</li>
 <li><a href="#soroban-smart-contract-best-practices">Best Practices</a> — security and code quality guidelines</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="token-development-video-walkthrough"><a class="header" href="#token-development-video-walkthrough">Token Development Video Walkthrough</a></h1>
+<p>This page provides the outline, references, and accompanying materials for the <strong>Token Development Video Tutorial</strong>.</p>
+<p>🎬 <strong><a href="https://www.youtube.com/watch?v=mock-token-video">Watch the Token Development Tutorial on YouTube</a></strong> (15-20 minutes)</p>
+<hr>
+<h2 id="tutorial-outline"><a class="header" href="#tutorial-outline">Tutorial Outline</a></h2>
+<p>The video covers the lifecycle of token design, testing, and deployment on the Stellar network using Soroban.</p>
+<h3 id="1-introduction--sep-41-standard-000--300"><a class="header" href="#1-introduction--sep-41-standard-000--300">1. Introduction &amp; SEP-41 Standard (0:00 – 3:00)</a></h3>
+<ul>
+<li>Overview of the <strong>SEP-41 Token Standard</strong> interface.</li>
+<li>Core functions required for wallet and protocol compatibility: <code>allowance</code>, <code>approve</code>, <code>balance</code>, <code>transfer</code>, <code>transfer_from</code>.</li>
+<li>Project structure of token examples in the Cookbook.</li>
+</ul>
+<h3 id="2-walkthrough-of-token-creation-300--800"><a class="header" href="#2-walkthrough-of-token-creation-300--800">2. Walkthrough of Token Creation (3:00 – 8:00)</a></h3>
+<ul>
+<li>Coding an admin-controlled token with mint/burn flows under <code>examples/tokens/mint-burn/</code>.</li>
+<li>Leveraging <strong>Instance Storage</strong> for metadata (name, symbol, decimals, admin address) and extending its TTL.</li>
+<li>Enforcing checked arithmetic (<code>checked_add</code>, <code>checked_sub</code>) to protect balance transitions.</li>
+<li>Emitting standard <code>Transfer</code> and <code>Mint</code>/<code>Burn</code> events.</li>
+</ul>
+<h3 id="3-testing--mocking-auth-800--1200"><a class="header" href="#3-testing--mocking-auth-800--1200">3. Testing &amp; Mocking Auth (8:00 – 12:00)</a></h3>
+<ul>
+<li>Setting up the test suite in <code>src/test.rs</code>.</li>
+<li>Simulating caller authorization with <code>env.mock_all_auths()</code>.</li>
+<li>Writing defensive tests to assert that non-admin callers cannot trigger <code>mint</code> actions.</li>
+<li>Checking events and balance correctness post-transaction.</li>
+</ul>
+<h3 id="4-deploying-to-stellar-testnet-1200--1600"><a class="header" href="#4-deploying-to-stellar-testnet-1200--1600">4. Deploying to Stellar Testnet (12:00 – 16:00)</a></h3>
+<ul>
+<li>Configuring keys and setting up a funded Testnet developer identity with <code>Stellar CLI</code>:
+<pre><code class="language-bash">stellar keys generate --global admin --network testnet
+</code></pre>
+</li>
+<li>Deploying the compiled <code>.wasm</code> binary:
+<pre><code class="language-bash">stellar contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/mint_burn.wasm \
+  --source admin \
+  --network testnet
+</code></pre>
+</li>
+<li>Instantiating and invoking the deployed contract from the command line.</li>
+</ul>
+<h3 id="5-best-practices--summary-1600--2000"><a class="header" href="#5-best-practices--summary-1600--2000">5. Best Practices &amp; Summary (16:00 – 20:00)</a></h3>
+<ul>
+<li><strong>Checked Math:</strong> Avoid direct operators; enforce overflows checks.</li>
+<li><strong>TTL Extension:</strong> Prevent storage expiration using instance storage extensions.</li>
+<li><strong>Event Integrity:</strong> Ensure off-chain indexers and wallets can trace balances using standard event layouts.</li>
+</ul>
+<hr>
+<h2 id="related-code--docs"><a class="header" href="#related-code--docs">Related Code &amp; Docs</a></h2>
+<ul>
+<li><strong>Example Code:</strong> <a href="file:///home/douglas/WAVE%203/Soroban-Cookbook-/examples/tokens/01-sep41-token">01-sep41-token</a> | <a href="file:///home/douglas/WAVE%203/Soroban-Cookbook-/examples/tokens/mint-burn">mint-burn</a></li>
+<li><strong>Reference Docs:</strong> <a href="file:///home/douglas/WAVE%203/Soroban-Cookbook-/docs/token-patterns.md">Token Patterns Reference</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="contributing-to-soroban-cookbook"><a class="header" href="#contributing-to-soroban-cookbook">Contributing to Soroban Cookbook</a></h1>
