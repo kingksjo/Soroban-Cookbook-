@@ -10,6 +10,8 @@
 - [Local Simulation](./guides/local-simulation.md)
 - [Deployment Guide](./guides/deployment.md)
 - [Ethereum to Soroban](./guides/ethereum-to-soroban.md)
+- [Video Creation Tools](./guides/video-creation.md)
+- [Introduction Video](./guides/introduction-video.md)
 
 # Examples
 
